@@ -9,7 +9,9 @@ class RfsmGraph {
 
 class State {
 	String name
-	contains State[] states
+	contains State[] states opposite parent
+	container State parent opposite states
+	
 	contains Function[0..1] entry
 	contains Function[0..1] doo
 	contains Function[0..1] exit
