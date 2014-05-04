@@ -1,0 +1,103 @@
+
+return [%root.printGraphToLua();%]
+
+[%//return qualified name according to its root parent%]
+[% operation State getQualifiedName() : String {
+	var qualifiedName : String = self.name;
+	var current : State = self;
+	//do not include root state, because it is not named in Lua code
+	while( current.parent.parent <> null ) {
+		current = current.parent;
+		qualifiedName = current.name.concat(".").concat(qualifiedName);
+	}
+	return qualifiedName;
+}%]
+
+[% operation RfsmGraph printGraphToLua() { 
+	
+	/*print root state*/
+	%]rfsm.state{[%
+	self.rootState.printStateBodyToLua();
+	
+	/*print transitions*/
+	for(transition in self.transitions) {
+		transition.printTransitionToLua();
+	}
+	//if target is direct child of source --> initial transition
+	
+	
+	%]}[%
+}%]
+
+[% operation State printStateToLua() { 
+	%]rfsm.state{[%
+	self.printStateBodyToLua();
+	%]}[%
+}%]
+
+[% operation State printStateBodyToLua() { 
+	
+	/*print states*/
+	for(node in self.states) {
+		%]
+		
+		[%
+		out.print(node.name);%] = [%node.printStateToLua();%],[%
+	}	
+	
+	/*print entry function*/
+	if(self.entry <> null) {
+		%]
+
+entry=function () [%=self.entry.call%] end,[%
+	}
+
+	/*print doo function*/
+	if(self.doo <> null) {
+		%]
+
+doo=function () [%=self.doo.call%] end,[%
+	}
+	
+	/*print exit function*/
+	if(self.exit <> null) {
+		%]
+
+exit=function () [%=self.exit.call%] end[%
+	}
+}%]
+
+[% operation Transition printTransitionToLua() { 
+%]
+
+rfsm.[%self.printTransitionBodyToLua();
+%]},[%
+}%]
+
+[% operation Transition printTransitionBodyToLua() { 
+	
+		
+	%]trans{src='[%
+	//make initial transition if source is direct parent of target
+	if(self.target.parent = self.source)
+		out.print('initial');
+	else
+		out.print(self.source.at(0).getQualifiedName());
+	%]', tgt='[%
+	out.print(self.target.at(0).getQualifiedName());
+	%]'[%
+	
+	/*print priorityNumber*/
+	if(self.priorityNumber <> 0) {
+		%], pn=[%out.print(self.priorityNumber);
+	}
+	
+	/*print events*/
+	if(self.events.size() > 0) {
+		%], events={[%
+		for(event in self.events) {
+			%]'[%=event.event%]',[%
+		}
+		%]}[%
+	}
+}%]
