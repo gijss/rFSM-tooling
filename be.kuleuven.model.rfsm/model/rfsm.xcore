@@ -1,0 +1,32 @@
+package be.kuleuven.model.rfsm
+
+class RfsmGraph {
+	String name
+	contains State rootState
+	contains Transition[] transitions
+	contains RfsmGraph[] rfmsGraphs
+}
+
+class State {
+	String name
+	contains State[] states
+	contains Function[0..1] entry
+	contains Function[0..1] doo
+	contains Function[0..1] exit
+}
+
+class Transition {
+	String name
+	refers State[] source
+	refers State[] target
+	contains Event[] events
+	int priorityNumber
+}
+
+class Event {
+	String event
+}
+
+class Function {
+	String call
+}

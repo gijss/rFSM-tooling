@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.newWizards">
+      <category
+            id="be.kuleuven.graph.rfsm.category"
+            name="State Graph">
+      </category>
+      <wizard
+            category="be.kuleuven.graph.rfsm.category"
+            class="be.kuleuven.graph.rfsm.wizards.NewStateGraphWizard"
+            icon="icons/newfile_wiz.png"
+            id="be.kuleuven.graph.rfsm.wizard.NewStateGraphWizard"
+            name="New rFSM Graph">
+      </wizard>
+   </extension>
+   <extension
+         point="org.eclipse.graphiti.ui.diagramTypeProviders">
+      <diagramTypeProvider
+            class="be.kuleuven.graph.rfsm.diagram.RfsmDiagramTypeProvider"
+            context="org.eclipse.graphiti.ui.diagramEditor"
+            id="be.kuleuven.graph.rfsm.diagramTypeProvider1"
+            name="rFSM Editor">
+         <diagramType
+               id="be.kuleuven.graph.rfsm.diagramType">
+         </diagramType>
+      </diagramTypeProvider>
+   </extension>
+   <extension
+         point="org.eclipse.graphiti.ui.diagramTypes">
+      <diagramType
+            description="Diagram for rFSM"
+            id="be.kuleuven.graph.rfsm.diagramType"
+            name="rFSM Diagram"
+            type="rfsm">
+      </diagramType>
+   </extension>
+
+</plugin>

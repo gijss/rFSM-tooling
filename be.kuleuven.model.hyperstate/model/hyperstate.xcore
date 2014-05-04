@@ -1,0 +1,19 @@
+package be.kuleuven.model.hyperstate
+
+class HyperGraph {
+	String name
+	contains HyperVertex[] hyperVertices
+	contains HyperEdge[] hyperEedges
+	contains HyperGraph[] hypergraphs
+}
+
+class HyperVertex {
+	String name
+	contains HyperVertex[] vertices
+}
+
+class HyperEdge {
+	String name
+	refers HyperVertex[] source
+	refers HyperVertex[] target
+}
