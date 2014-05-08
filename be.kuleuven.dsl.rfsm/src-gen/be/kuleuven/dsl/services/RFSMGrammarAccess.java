@@ -32,13 +32,13 @@ public class RFSMGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cTransitionsTransitionParserRuleCall_2_0 = (RuleCall)cTransitionsAssignment_2.eContents().get(0);
 		
 		//RfsmGraph:
-		//	("[RfsmGraphName:" name=ID "]")? rootState= //can have only one root state
-		//	State //(hyperEdges += Connector)*
+		//	("[RfsmGraphName:" name=ID "]")? rootState=State? //can have only one root state
+		//	//(hyperEdges += Connector)*
 		//	transitions+=Transition*;
 		public ParserRule getRule() { return rule; }
 
-		//("[RfsmGraphName:" name=ID "]")? rootState= //can have only one root state
-		//State //(hyperEdges += Connector)*
+		//("[RfsmGraphName:" name=ID "]")? rootState=State? //can have only one root state
+		////(hyperEdges += Connector)*
 		//transitions+=Transition*
 		public Group getGroup() { return cGroup; }
 
@@ -57,11 +57,9 @@ public class RFSMGrammarAccess extends AbstractGrammarElementFinder {
 		//"]"
 		public Keyword getRightSquareBracketKeyword_0_2() { return cRightSquareBracketKeyword_0_2; }
 
-		//rootState= //can have only one root state
-		//State
+		//rootState=State?
 		public Assignment getRootStateAssignment_1() { return cRootStateAssignment_1; }
 
-		////can have only one root state
 		//State
 		public RuleCall getRootStateStateParserRuleCall_1_0() { return cRootStateStateParserRuleCall_1_0; }
 
@@ -401,8 +399,8 @@ public class RFSMGrammarAccess extends AbstractGrammarElementFinder {
 
 	
 	//RfsmGraph:
-	//	("[RfsmGraphName:" name=ID "]")? rootState= //can have only one root state
-	//	State //(hyperEdges += Connector)*
+	//	("[RfsmGraphName:" name=ID "]")? rootState=State? //can have only one root state
+	//	//(hyperEdges += Connector)*
 	//	transitions+=Transition*;
 	public RfsmGraphElements getRfsmGraphAccess() {
 		return (pRfsmGraph != null) ? pRfsmGraph : (pRfsmGraph = new RfsmGraphElements());

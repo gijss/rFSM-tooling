@@ -275,7 +275,7 @@ rule__RfsmGraph__Group__1__Impl
 :
 (
 { before(grammarAccess.getRfsmGraphAccess().getRootStateAssignment_1()); }
-(rule__RfsmGraph__RootStateAssignment_1)
+(rule__RfsmGraph__RootStateAssignment_1)?
 { after(grammarAccess.getRfsmGraphAccess().getRootStateAssignment_1()); }
 )
 

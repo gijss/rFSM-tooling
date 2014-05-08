@@ -4,7 +4,7 @@ import "be.kuleuven.model.rfsm"
 
 RfsmGraph returns RfsmGraph:
 		('[RfsmGraphName:' name=ID']')?
-		rootState=State	//can have only one root state
+		(rootState=State)?	//can have only one root state
 		//(hyperEdges += Connector)*
 		(transitions += Transition)*	
 ;

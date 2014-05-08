@@ -123,7 +123,7 @@ public class InternalRFSMParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleRfsmGraph"
-    // ../be.kuleuven.dsl.rfsm/src-gen/be/kuleuven/dsl/parser/antlr/internal/InternalRFSM.g:76:1: ruleRfsmGraph returns [EObject current=null] : ( (otherlv_0= '[RfsmGraphName:' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= ']' )? ( (lv_rootState_3_0= ruleState ) ) ( (lv_transitions_4_0= ruleTransition ) )* ) ;
+    // ../be.kuleuven.dsl.rfsm/src-gen/be/kuleuven/dsl/parser/antlr/internal/InternalRFSM.g:76:1: ruleRfsmGraph returns [EObject current=null] : ( (otherlv_0= '[RfsmGraphName:' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= ']' )? ( (lv_rootState_3_0= ruleState ) )? ( (lv_transitions_4_0= ruleTransition ) )* ) ;
     public final EObject ruleRfsmGraph() throws RecognitionException {
         EObject current = null;
 
@@ -138,11 +138,11 @@ public class InternalRFSMParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../be.kuleuven.dsl.rfsm/src-gen/be/kuleuven/dsl/parser/antlr/internal/InternalRFSM.g:79:28: ( ( (otherlv_0= '[RfsmGraphName:' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= ']' )? ( (lv_rootState_3_0= ruleState ) ) ( (lv_transitions_4_0= ruleTransition ) )* ) )
-            // ../be.kuleuven.dsl.rfsm/src-gen/be/kuleuven/dsl/parser/antlr/internal/InternalRFSM.g:80:1: ( (otherlv_0= '[RfsmGraphName:' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= ']' )? ( (lv_rootState_3_0= ruleState ) ) ( (lv_transitions_4_0= ruleTransition ) )* )
+            // ../be.kuleuven.dsl.rfsm/src-gen/be/kuleuven/dsl/parser/antlr/internal/InternalRFSM.g:79:28: ( ( (otherlv_0= '[RfsmGraphName:' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= ']' )? ( (lv_rootState_3_0= ruleState ) )? ( (lv_transitions_4_0= ruleTransition ) )* ) )
+            // ../be.kuleuven.dsl.rfsm/src-gen/be/kuleuven/dsl/parser/antlr/internal/InternalRFSM.g:80:1: ( (otherlv_0= '[RfsmGraphName:' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= ']' )? ( (lv_rootState_3_0= ruleState ) )? ( (lv_transitions_4_0= ruleTransition ) )* )
             {
-            // ../be.kuleuven.dsl.rfsm/src-gen/be/kuleuven/dsl/parser/antlr/internal/InternalRFSM.g:80:1: ( (otherlv_0= '[RfsmGraphName:' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= ']' )? ( (lv_rootState_3_0= ruleState ) ) ( (lv_transitions_4_0= ruleTransition ) )* )
-            // ../be.kuleuven.dsl.rfsm/src-gen/be/kuleuven/dsl/parser/antlr/internal/InternalRFSM.g:80:2: (otherlv_0= '[RfsmGraphName:' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= ']' )? ( (lv_rootState_3_0= ruleState ) ) ( (lv_transitions_4_0= ruleTransition ) )*
+            // ../be.kuleuven.dsl.rfsm/src-gen/be/kuleuven/dsl/parser/antlr/internal/InternalRFSM.g:80:1: ( (otherlv_0= '[RfsmGraphName:' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= ']' )? ( (lv_rootState_3_0= ruleState ) )? ( (lv_transitions_4_0= ruleTransition ) )* )
+            // ../be.kuleuven.dsl.rfsm/src-gen/be/kuleuven/dsl/parser/antlr/internal/InternalRFSM.g:80:2: (otherlv_0= '[RfsmGraphName:' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= ']' )? ( (lv_rootState_3_0= ruleState ) )? ( (lv_transitions_4_0= ruleTransition ) )*
             {
             // ../be.kuleuven.dsl.rfsm/src-gen/be/kuleuven/dsl/parser/antlr/internal/InternalRFSM.g:80:2: (otherlv_0= '[RfsmGraphName:' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= ']' )?
             int alt1=2;
@@ -195,49 +195,60 @@ public class InternalRFSMParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../be.kuleuven.dsl.rfsm/src-gen/be/kuleuven/dsl/parser/antlr/internal/InternalRFSM.g:106:3: ( (lv_rootState_3_0= ruleState ) )
-            // ../be.kuleuven.dsl.rfsm/src-gen/be/kuleuven/dsl/parser/antlr/internal/InternalRFSM.g:107:1: (lv_rootState_3_0= ruleState )
-            {
-            // ../be.kuleuven.dsl.rfsm/src-gen/be/kuleuven/dsl/parser/antlr/internal/InternalRFSM.g:107:1: (lv_rootState_3_0= ruleState )
-            // ../be.kuleuven.dsl.rfsm/src-gen/be/kuleuven/dsl/parser/antlr/internal/InternalRFSM.g:108:3: lv_rootState_3_0= ruleState
-            {
-             
-            	        newCompositeNode(grammarAccess.getRfsmGraphAccess().getRootStateStateParserRuleCall_1_0()); 
-            	    
-            pushFollow(FOLLOW_ruleState_in_ruleRfsmGraph180);
-            lv_rootState_3_0=ruleState();
+            // ../be.kuleuven.dsl.rfsm/src-gen/be/kuleuven/dsl/parser/antlr/internal/InternalRFSM.g:106:3: ( (lv_rootState_3_0= ruleState ) )?
+            int alt2=2;
+            int LA2_0 = input.LA(1);
 
-            state._fsp--;
+            if ( (LA2_0==13) ) {
+                alt2=1;
+            }
+            switch (alt2) {
+                case 1 :
+                    // ../be.kuleuven.dsl.rfsm/src-gen/be/kuleuven/dsl/parser/antlr/internal/InternalRFSM.g:107:1: (lv_rootState_3_0= ruleState )
+                    {
+                    // ../be.kuleuven.dsl.rfsm/src-gen/be/kuleuven/dsl/parser/antlr/internal/InternalRFSM.g:107:1: (lv_rootState_3_0= ruleState )
+                    // ../be.kuleuven.dsl.rfsm/src-gen/be/kuleuven/dsl/parser/antlr/internal/InternalRFSM.g:108:3: lv_rootState_3_0= ruleState
+                    {
+                     
+                    	        newCompositeNode(grammarAccess.getRfsmGraphAccess().getRootStateStateParserRuleCall_1_0()); 
+                    	    
+                    pushFollow(FOLLOW_ruleState_in_ruleRfsmGraph180);
+                    lv_rootState_3_0=ruleState();
+
+                    state._fsp--;
 
 
-            	        if (current==null) {
-            	            current = createModelElementForParent(grammarAccess.getRfsmGraphRule());
-            	        }
-                   		set(
-                   			current, 
-                   			"rootState",
-                    		lv_rootState_3_0, 
-                    		"State");
-            	        afterParserOrEnumRuleCall();
-            	    
+                    	        if (current==null) {
+                    	            current = createModelElementForParent(grammarAccess.getRfsmGraphRule());
+                    	        }
+                           		set(
+                           			current, 
+                           			"rootState",
+                            		lv_rootState_3_0, 
+                            		"State");
+                    	        afterParserOrEnumRuleCall();
+                    	    
+
+                    }
+
+
+                    }
+                    break;
 
             }
 
-
-            }
-
-            // ../be.kuleuven.dsl.rfsm/src-gen/be/kuleuven/dsl/parser/antlr/internal/InternalRFSM.g:124:2: ( (lv_transitions_4_0= ruleTransition ) )*
-            loop2:
+            // ../be.kuleuven.dsl.rfsm/src-gen/be/kuleuven/dsl/parser/antlr/internal/InternalRFSM.g:124:3: ( (lv_transitions_4_0= ruleTransition ) )*
+            loop3:
             do {
-                int alt2=2;
-                int LA2_0 = input.LA(1);
+                int alt3=2;
+                int LA3_0 = input.LA(1);
 
-                if ( (LA2_0==19) ) {
-                    alt2=1;
+                if ( (LA3_0==19) ) {
+                    alt3=1;
                 }
 
 
-                switch (alt2) {
+                switch (alt3) {
             	case 1 :
             	    // ../be.kuleuven.dsl.rfsm/src-gen/be/kuleuven/dsl/parser/antlr/internal/InternalRFSM.g:125:1: (lv_transitions_4_0= ruleTransition )
             	    {
@@ -247,7 +258,7 @@ public class InternalRFSMParser extends AbstractInternalAntlrParser {
             	     
             	    	        newCompositeNode(grammarAccess.getRfsmGraphAccess().getTransitionsTransitionParserRuleCall_2_0()); 
             	    	    
-            	    pushFollow(FOLLOW_ruleTransition_in_ruleRfsmGraph201);
+            	    pushFollow(FOLLOW_ruleTransition_in_ruleRfsmGraph202);
             	    lv_transitions_4_0=ruleTransition();
 
             	    state._fsp--;
@@ -271,7 +282,7 @@ public class InternalRFSMParser extends AbstractInternalAntlrParser {
             	    break;
 
             	default :
-            	    break loop2;
+            	    break loop3;
                 }
             } while (true);
 
@@ -308,13 +319,13 @@ public class InternalRFSMParser extends AbstractInternalAntlrParser {
             // ../be.kuleuven.dsl.rfsm/src-gen/be/kuleuven/dsl/parser/antlr/internal/InternalRFSM.g:152:2: iv_ruleState= ruleState EOF
             {
              newCompositeNode(grammarAccess.getStateRule()); 
-            pushFollow(FOLLOW_ruleState_in_entryRuleState238);
+            pushFollow(FOLLOW_ruleState_in_entryRuleState239);
             iv_ruleState=ruleState();
 
             state._fsp--;
 
              current =iv_ruleState; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleState248); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleState249); 
 
             }
 
@@ -361,7 +372,7 @@ public class InternalRFSMParser extends AbstractInternalAntlrParser {
             // ../be.kuleuven.dsl.rfsm/src-gen/be/kuleuven/dsl/parser/antlr/internal/InternalRFSM.g:163:1: (otherlv_0= 'state' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' ( (lv_states_3_0= ruleState ) )* (otherlv_4= 'entry:' ( (lv_entry_5_0= ruleFunction ) ) )? (otherlv_6= 'doo:' ( (lv_doo_7_0= ruleFunction ) ) )? (otherlv_8= 'exit:' ( (lv_exit_9_0= ruleFunction ) ) )? otherlv_10= '}' )
             // ../be.kuleuven.dsl.rfsm/src-gen/be/kuleuven/dsl/parser/antlr/internal/InternalRFSM.g:163:3: otherlv_0= 'state' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' ( (lv_states_3_0= ruleState ) )* (otherlv_4= 'entry:' ( (lv_entry_5_0= ruleFunction ) ) )? (otherlv_6= 'doo:' ( (lv_doo_7_0= ruleFunction ) ) )? (otherlv_8= 'exit:' ( (lv_exit_9_0= ruleFunction ) ) )? otherlv_10= '}'
             {
-            otherlv_0=(Token)match(input,13,FOLLOW_13_in_ruleState285); 
+            otherlv_0=(Token)match(input,13,FOLLOW_13_in_ruleState286); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getStateAccess().getStateKeyword_0());
                 
@@ -371,7 +382,7 @@ public class InternalRFSMParser extends AbstractInternalAntlrParser {
             // ../be.kuleuven.dsl.rfsm/src-gen/be/kuleuven/dsl/parser/antlr/internal/InternalRFSM.g:168:1: (lv_name_1_0= RULE_ID )
             // ../be.kuleuven.dsl.rfsm/src-gen/be/kuleuven/dsl/parser/antlr/internal/InternalRFSM.g:169:3: lv_name_1_0= RULE_ID
             {
-            lv_name_1_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleState302); 
+            lv_name_1_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleState303); 
 
             			newLeafNode(lv_name_1_0, grammarAccess.getStateAccess().getNameIDTerminalRuleCall_1_0()); 
             		
@@ -391,22 +402,22 @@ public class InternalRFSMParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_2=(Token)match(input,14,FOLLOW_14_in_ruleState319); 
+            otherlv_2=(Token)match(input,14,FOLLOW_14_in_ruleState320); 
 
                 	newLeafNode(otherlv_2, grammarAccess.getStateAccess().getLeftCurlyBracketKeyword_2());
                 
             // ../be.kuleuven.dsl.rfsm/src-gen/be/kuleuven/dsl/parser/antlr/internal/InternalRFSM.g:189:1: ( (lv_states_3_0= ruleState ) )*
-            loop3:
+            loop4:
             do {
-                int alt3=2;
-                int LA3_0 = input.LA(1);
+                int alt4=2;
+                int LA4_0 = input.LA(1);
 
-                if ( (LA3_0==13) ) {
-                    alt3=1;
+                if ( (LA4_0==13) ) {
+                    alt4=1;
                 }
 
 
-                switch (alt3) {
+                switch (alt4) {
             	case 1 :
             	    // ../be.kuleuven.dsl.rfsm/src-gen/be/kuleuven/dsl/parser/antlr/internal/InternalRFSM.g:190:1: (lv_states_3_0= ruleState )
             	    {
@@ -416,7 +427,7 @@ public class InternalRFSMParser extends AbstractInternalAntlrParser {
             	     
             	    	        newCompositeNode(grammarAccess.getStateAccess().getStatesStateParserRuleCall_3_0()); 
             	    	    
-            	    pushFollow(FOLLOW_ruleState_in_ruleState340);
+            	    pushFollow(FOLLOW_ruleState_in_ruleState341);
             	    lv_states_3_0=ruleState();
 
             	    state._fsp--;
@@ -440,22 +451,22 @@ public class InternalRFSMParser extends AbstractInternalAntlrParser {
             	    break;
 
             	default :
-            	    break loop3;
+            	    break loop4;
                 }
             } while (true);
 
             // ../be.kuleuven.dsl.rfsm/src-gen/be/kuleuven/dsl/parser/antlr/internal/InternalRFSM.g:207:3: (otherlv_4= 'entry:' ( (lv_entry_5_0= ruleFunction ) ) )?
-            int alt4=2;
-            int LA4_0 = input.LA(1);
+            int alt5=2;
+            int LA5_0 = input.LA(1);
 
-            if ( (LA4_0==15) ) {
-                alt4=1;
+            if ( (LA5_0==15) ) {
+                alt5=1;
             }
-            switch (alt4) {
+            switch (alt5) {
                 case 1 :
                     // ../be.kuleuven.dsl.rfsm/src-gen/be/kuleuven/dsl/parser/antlr/internal/InternalRFSM.g:207:5: otherlv_4= 'entry:' ( (lv_entry_5_0= ruleFunction ) )
                     {
-                    otherlv_4=(Token)match(input,15,FOLLOW_15_in_ruleState354); 
+                    otherlv_4=(Token)match(input,15,FOLLOW_15_in_ruleState355); 
 
                         	newLeafNode(otherlv_4, grammarAccess.getStateAccess().getEntryKeyword_4_0());
                         
@@ -468,7 +479,7 @@ public class InternalRFSMParser extends AbstractInternalAntlrParser {
                      
                     	        newCompositeNode(grammarAccess.getStateAccess().getEntryFunctionParserRuleCall_4_1_0()); 
                     	    
-                    pushFollow(FOLLOW_ruleFunction_in_ruleState375);
+                    pushFollow(FOLLOW_ruleFunction_in_ruleState376);
                     lv_entry_5_0=ruleFunction();
 
                     state._fsp--;
@@ -497,17 +508,17 @@ public class InternalRFSMParser extends AbstractInternalAntlrParser {
             }
 
             // ../be.kuleuven.dsl.rfsm/src-gen/be/kuleuven/dsl/parser/antlr/internal/InternalRFSM.g:229:4: (otherlv_6= 'doo:' ( (lv_doo_7_0= ruleFunction ) ) )?
-            int alt5=2;
-            int LA5_0 = input.LA(1);
+            int alt6=2;
+            int LA6_0 = input.LA(1);
 
-            if ( (LA5_0==16) ) {
-                alt5=1;
+            if ( (LA6_0==16) ) {
+                alt6=1;
             }
-            switch (alt5) {
+            switch (alt6) {
                 case 1 :
                     // ../be.kuleuven.dsl.rfsm/src-gen/be/kuleuven/dsl/parser/antlr/internal/InternalRFSM.g:229:6: otherlv_6= 'doo:' ( (lv_doo_7_0= ruleFunction ) )
                     {
-                    otherlv_6=(Token)match(input,16,FOLLOW_16_in_ruleState390); 
+                    otherlv_6=(Token)match(input,16,FOLLOW_16_in_ruleState391); 
 
                         	newLeafNode(otherlv_6, grammarAccess.getStateAccess().getDooKeyword_5_0());
                         
@@ -520,7 +531,7 @@ public class InternalRFSMParser extends AbstractInternalAntlrParser {
                      
                     	        newCompositeNode(grammarAccess.getStateAccess().getDooFunctionParserRuleCall_5_1_0()); 
                     	    
-                    pushFollow(FOLLOW_ruleFunction_in_ruleState411);
+                    pushFollow(FOLLOW_ruleFunction_in_ruleState412);
                     lv_doo_7_0=ruleFunction();
 
                     state._fsp--;
@@ -549,17 +560,17 @@ public class InternalRFSMParser extends AbstractInternalAntlrParser {
             }
 
             // ../be.kuleuven.dsl.rfsm/src-gen/be/kuleuven/dsl/parser/antlr/internal/InternalRFSM.g:251:4: (otherlv_8= 'exit:' ( (lv_exit_9_0= ruleFunction ) ) )?
-            int alt6=2;
-            int LA6_0 = input.LA(1);
+            int alt7=2;
+            int LA7_0 = input.LA(1);
 
-            if ( (LA6_0==17) ) {
-                alt6=1;
+            if ( (LA7_0==17) ) {
+                alt7=1;
             }
-            switch (alt6) {
+            switch (alt7) {
                 case 1 :
                     // ../be.kuleuven.dsl.rfsm/src-gen/be/kuleuven/dsl/parser/antlr/internal/InternalRFSM.g:251:6: otherlv_8= 'exit:' ( (lv_exit_9_0= ruleFunction ) )
                     {
-                    otherlv_8=(Token)match(input,17,FOLLOW_17_in_ruleState426); 
+                    otherlv_8=(Token)match(input,17,FOLLOW_17_in_ruleState427); 
 
                         	newLeafNode(otherlv_8, grammarAccess.getStateAccess().getExitKeyword_6_0());
                         
@@ -572,7 +583,7 @@ public class InternalRFSMParser extends AbstractInternalAntlrParser {
                      
                     	        newCompositeNode(grammarAccess.getStateAccess().getExitFunctionParserRuleCall_6_1_0()); 
                     	    
-                    pushFollow(FOLLOW_ruleFunction_in_ruleState447);
+                    pushFollow(FOLLOW_ruleFunction_in_ruleState448);
                     lv_exit_9_0=ruleFunction();
 
                     state._fsp--;
@@ -600,7 +611,7 @@ public class InternalRFSMParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_10=(Token)match(input,18,FOLLOW_18_in_ruleState461); 
+            otherlv_10=(Token)match(input,18,FOLLOW_18_in_ruleState462); 
 
                 	newLeafNode(otherlv_10, grammarAccess.getStateAccess().getRightCurlyBracketKeyword_7());
                 
@@ -637,13 +648,13 @@ public class InternalRFSMParser extends AbstractInternalAntlrParser {
             // ../be.kuleuven.dsl.rfsm/src-gen/be/kuleuven/dsl/parser/antlr/internal/InternalRFSM.g:287:2: iv_ruleTransition= ruleTransition EOF
             {
              newCompositeNode(grammarAccess.getTransitionRule()); 
-            pushFollow(FOLLOW_ruleTransition_in_entryRuleTransition497);
+            pushFollow(FOLLOW_ruleTransition_in_entryRuleTransition498);
             iv_ruleTransition=ruleTransition();
 
             state._fsp--;
 
              current =iv_ruleTransition; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleTransition507); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleTransition508); 
 
             }
 
@@ -683,25 +694,25 @@ public class InternalRFSMParser extends AbstractInternalAntlrParser {
             // ../be.kuleuven.dsl.rfsm/src-gen/be/kuleuven/dsl/parser/antlr/internal/InternalRFSM.g:298:1: (otherlv_0= 'transition' ( (lv_name_1_0= RULE_ID ) )? otherlv_2= 'from' ( ( ruleQualifiedName ) ) otherlv_4= 'to' ( ( ruleQualifiedName ) ) ( (lv_events_6_0= ruleEvent ) )* (otherlv_7= 'priority' ( (lv_priorityNumber_8_0= RULE_INT ) ) )? )
             // ../be.kuleuven.dsl.rfsm/src-gen/be/kuleuven/dsl/parser/antlr/internal/InternalRFSM.g:298:3: otherlv_0= 'transition' ( (lv_name_1_0= RULE_ID ) )? otherlv_2= 'from' ( ( ruleQualifiedName ) ) otherlv_4= 'to' ( ( ruleQualifiedName ) ) ( (lv_events_6_0= ruleEvent ) )* (otherlv_7= 'priority' ( (lv_priorityNumber_8_0= RULE_INT ) ) )?
             {
-            otherlv_0=(Token)match(input,19,FOLLOW_19_in_ruleTransition544); 
+            otherlv_0=(Token)match(input,19,FOLLOW_19_in_ruleTransition545); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getTransitionAccess().getTransitionKeyword_0());
                 
             // ../be.kuleuven.dsl.rfsm/src-gen/be/kuleuven/dsl/parser/antlr/internal/InternalRFSM.g:302:1: ( (lv_name_1_0= RULE_ID ) )?
-            int alt7=2;
-            int LA7_0 = input.LA(1);
+            int alt8=2;
+            int LA8_0 = input.LA(1);
 
-            if ( (LA7_0==RULE_ID) ) {
-                alt7=1;
+            if ( (LA8_0==RULE_ID) ) {
+                alt8=1;
             }
-            switch (alt7) {
+            switch (alt8) {
                 case 1 :
                     // ../be.kuleuven.dsl.rfsm/src-gen/be/kuleuven/dsl/parser/antlr/internal/InternalRFSM.g:303:1: (lv_name_1_0= RULE_ID )
                     {
                     // ../be.kuleuven.dsl.rfsm/src-gen/be/kuleuven/dsl/parser/antlr/internal/InternalRFSM.g:303:1: (lv_name_1_0= RULE_ID )
                     // ../be.kuleuven.dsl.rfsm/src-gen/be/kuleuven/dsl/parser/antlr/internal/InternalRFSM.g:304:3: lv_name_1_0= RULE_ID
                     {
-                    lv_name_1_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleTransition561); 
+                    lv_name_1_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleTransition562); 
 
                     			newLeafNode(lv_name_1_0, grammarAccess.getTransitionAccess().getNameIDTerminalRuleCall_1_0()); 
                     		
@@ -724,7 +735,7 @@ public class InternalRFSMParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_2=(Token)match(input,20,FOLLOW_20_in_ruleTransition579); 
+            otherlv_2=(Token)match(input,20,FOLLOW_20_in_ruleTransition580); 
 
                 	newLeafNode(otherlv_2, grammarAccess.getTransitionAccess().getFromKeyword_2());
                 
@@ -742,7 +753,7 @@ public class InternalRFSMParser extends AbstractInternalAntlrParser {
              
             	        newCompositeNode(grammarAccess.getTransitionAccess().getSourceStateCrossReference_3_0()); 
             	    
-            pushFollow(FOLLOW_ruleQualifiedName_in_ruleTransition602);
+            pushFollow(FOLLOW_ruleQualifiedName_in_ruleTransition603);
             ruleQualifiedName();
 
             state._fsp--;
@@ -756,7 +767,7 @@ public class InternalRFSMParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_4=(Token)match(input,21,FOLLOW_21_in_ruleTransition614); 
+            otherlv_4=(Token)match(input,21,FOLLOW_21_in_ruleTransition615); 
 
                 	newLeafNode(otherlv_4, grammarAccess.getTransitionAccess().getToKeyword_4());
                 
@@ -774,7 +785,7 @@ public class InternalRFSMParser extends AbstractInternalAntlrParser {
              
             	        newCompositeNode(grammarAccess.getTransitionAccess().getTargetStateCrossReference_5_0()); 
             	    
-            pushFollow(FOLLOW_ruleQualifiedName_in_ruleTransition637);
+            pushFollow(FOLLOW_ruleQualifiedName_in_ruleTransition638);
             ruleQualifiedName();
 
             state._fsp--;
@@ -789,17 +800,17 @@ public class InternalRFSMParser extends AbstractInternalAntlrParser {
             }
 
             // ../be.kuleuven.dsl.rfsm/src-gen/be/kuleuven/dsl/parser/antlr/internal/InternalRFSM.g:358:2: ( (lv_events_6_0= ruleEvent ) )*
-            loop8:
+            loop9:
             do {
-                int alt8=2;
-                int LA8_0 = input.LA(1);
+                int alt9=2;
+                int LA9_0 = input.LA(1);
 
-                if ( ((LA8_0>=23 && LA8_0<=24)) ) {
-                    alt8=1;
+                if ( ((LA9_0>=23 && LA9_0<=24)) ) {
+                    alt9=1;
                 }
 
 
-                switch (alt8) {
+                switch (alt9) {
             	case 1 :
             	    // ../be.kuleuven.dsl.rfsm/src-gen/be/kuleuven/dsl/parser/antlr/internal/InternalRFSM.g:359:1: (lv_events_6_0= ruleEvent )
             	    {
@@ -809,7 +820,7 @@ public class InternalRFSMParser extends AbstractInternalAntlrParser {
             	     
             	    	        newCompositeNode(grammarAccess.getTransitionAccess().getEventsEventParserRuleCall_6_0()); 
             	    	    
-            	    pushFollow(FOLLOW_ruleEvent_in_ruleTransition658);
+            	    pushFollow(FOLLOW_ruleEvent_in_ruleTransition659);
             	    lv_events_6_0=ruleEvent();
 
             	    state._fsp--;
@@ -833,22 +844,22 @@ public class InternalRFSMParser extends AbstractInternalAntlrParser {
             	    break;
 
             	default :
-            	    break loop8;
+            	    break loop9;
                 }
             } while (true);
 
             // ../be.kuleuven.dsl.rfsm/src-gen/be/kuleuven/dsl/parser/antlr/internal/InternalRFSM.g:376:3: (otherlv_7= 'priority' ( (lv_priorityNumber_8_0= RULE_INT ) ) )?
-            int alt9=2;
-            int LA9_0 = input.LA(1);
+            int alt10=2;
+            int LA10_0 = input.LA(1);
 
-            if ( (LA9_0==22) ) {
-                alt9=1;
+            if ( (LA10_0==22) ) {
+                alt10=1;
             }
-            switch (alt9) {
+            switch (alt10) {
                 case 1 :
                     // ../be.kuleuven.dsl.rfsm/src-gen/be/kuleuven/dsl/parser/antlr/internal/InternalRFSM.g:376:5: otherlv_7= 'priority' ( (lv_priorityNumber_8_0= RULE_INT ) )
                     {
-                    otherlv_7=(Token)match(input,22,FOLLOW_22_in_ruleTransition672); 
+                    otherlv_7=(Token)match(input,22,FOLLOW_22_in_ruleTransition673); 
 
                         	newLeafNode(otherlv_7, grammarAccess.getTransitionAccess().getPriorityKeyword_7_0());
                         
@@ -858,7 +869,7 @@ public class InternalRFSMParser extends AbstractInternalAntlrParser {
                     // ../be.kuleuven.dsl.rfsm/src-gen/be/kuleuven/dsl/parser/antlr/internal/InternalRFSM.g:381:1: (lv_priorityNumber_8_0= RULE_INT )
                     // ../be.kuleuven.dsl.rfsm/src-gen/be/kuleuven/dsl/parser/antlr/internal/InternalRFSM.g:382:3: lv_priorityNumber_8_0= RULE_INT
                     {
-                    lv_priorityNumber_8_0=(Token)match(input,RULE_INT,FOLLOW_RULE_INT_in_ruleTransition689); 
+                    lv_priorityNumber_8_0=(Token)match(input,RULE_INT,FOLLOW_RULE_INT_in_ruleTransition690); 
 
                     			newLeafNode(lv_priorityNumber_8_0, grammarAccess.getTransitionAccess().getPriorityNumberINTTerminalRuleCall_7_1_0()); 
                     		
@@ -917,13 +928,13 @@ public class InternalRFSMParser extends AbstractInternalAntlrParser {
             // ../be.kuleuven.dsl.rfsm/src-gen/be/kuleuven/dsl/parser/antlr/internal/InternalRFSM.g:408:2: iv_ruleEvent= ruleEvent EOF
             {
              newCompositeNode(grammarAccess.getEventRule()); 
-            pushFollow(FOLLOW_ruleEvent_in_entryRuleEvent732);
+            pushFollow(FOLLOW_ruleEvent_in_entryRuleEvent733);
             iv_ruleEvent=ruleEvent();
 
             state._fsp--;
 
              current =iv_ruleEvent; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleEvent742); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleEvent743); 
 
             }
 
@@ -961,17 +972,17 @@ public class InternalRFSMParser extends AbstractInternalAntlrParser {
             // ../be.kuleuven.dsl.rfsm/src-gen/be/kuleuven/dsl/parser/antlr/internal/InternalRFSM.g:419:2: (otherlv_0= '[EventName:' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= ']' )? otherlv_3= 'onevent' ( (lv_event_4_0= RULE_STRING ) )
             {
             // ../be.kuleuven.dsl.rfsm/src-gen/be/kuleuven/dsl/parser/antlr/internal/InternalRFSM.g:419:2: (otherlv_0= '[EventName:' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= ']' )?
-            int alt10=2;
-            int LA10_0 = input.LA(1);
+            int alt11=2;
+            int LA11_0 = input.LA(1);
 
-            if ( (LA10_0==23) ) {
-                alt10=1;
+            if ( (LA11_0==23) ) {
+                alt11=1;
             }
-            switch (alt10) {
+            switch (alt11) {
                 case 1 :
                     // ../be.kuleuven.dsl.rfsm/src-gen/be/kuleuven/dsl/parser/antlr/internal/InternalRFSM.g:419:4: otherlv_0= '[EventName:' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= ']'
                     {
-                    otherlv_0=(Token)match(input,23,FOLLOW_23_in_ruleEvent780); 
+                    otherlv_0=(Token)match(input,23,FOLLOW_23_in_ruleEvent781); 
 
                         	newLeafNode(otherlv_0, grammarAccess.getEventAccess().getEventNameKeyword_0_0());
                         
@@ -981,7 +992,7 @@ public class InternalRFSMParser extends AbstractInternalAntlrParser {
                     // ../be.kuleuven.dsl.rfsm/src-gen/be/kuleuven/dsl/parser/antlr/internal/InternalRFSM.g:424:1: (lv_name_1_0= RULE_ID )
                     // ../be.kuleuven.dsl.rfsm/src-gen/be/kuleuven/dsl/parser/antlr/internal/InternalRFSM.g:425:3: lv_name_1_0= RULE_ID
                     {
-                    lv_name_1_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleEvent797); 
+                    lv_name_1_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleEvent798); 
 
                     			newLeafNode(lv_name_1_0, grammarAccess.getEventAccess().getNameIDTerminalRuleCall_0_1_0()); 
                     		
@@ -1001,7 +1012,7 @@ public class InternalRFSMParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_2=(Token)match(input,12,FOLLOW_12_in_ruleEvent814); 
+                    otherlv_2=(Token)match(input,12,FOLLOW_12_in_ruleEvent815); 
 
                         	newLeafNode(otherlv_2, grammarAccess.getEventAccess().getRightSquareBracketKeyword_0_2());
                         
@@ -1011,7 +1022,7 @@ public class InternalRFSMParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_3=(Token)match(input,24,FOLLOW_24_in_ruleEvent828); 
+            otherlv_3=(Token)match(input,24,FOLLOW_24_in_ruleEvent829); 
 
                 	newLeafNode(otherlv_3, grammarAccess.getEventAccess().getOneventKeyword_1());
                 
@@ -1021,7 +1032,7 @@ public class InternalRFSMParser extends AbstractInternalAntlrParser {
             // ../be.kuleuven.dsl.rfsm/src-gen/be/kuleuven/dsl/parser/antlr/internal/InternalRFSM.g:450:1: (lv_event_4_0= RULE_STRING )
             // ../be.kuleuven.dsl.rfsm/src-gen/be/kuleuven/dsl/parser/antlr/internal/InternalRFSM.g:451:3: lv_event_4_0= RULE_STRING
             {
-            lv_event_4_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleEvent845); 
+            lv_event_4_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleEvent846); 
 
             			newLeafNode(lv_event_4_0, grammarAccess.getEventAccess().getEventSTRINGTerminalRuleCall_2_0()); 
             		
@@ -1074,13 +1085,13 @@ public class InternalRFSMParser extends AbstractInternalAntlrParser {
             // ../be.kuleuven.dsl.rfsm/src-gen/be/kuleuven/dsl/parser/antlr/internal/InternalRFSM.g:477:2: iv_ruleFunction= ruleFunction EOF
             {
              newCompositeNode(grammarAccess.getFunctionRule()); 
-            pushFollow(FOLLOW_ruleFunction_in_entryRuleFunction886);
+            pushFollow(FOLLOW_ruleFunction_in_entryRuleFunction887);
             iv_ruleFunction=ruleFunction();
 
             state._fsp--;
 
              current =iv_ruleFunction; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleFunction896); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleFunction897); 
 
             }
 
@@ -1117,17 +1128,17 @@ public class InternalRFSMParser extends AbstractInternalAntlrParser {
             // ../be.kuleuven.dsl.rfsm/src-gen/be/kuleuven/dsl/parser/antlr/internal/InternalRFSM.g:488:2: (otherlv_0= '[FunctionName:' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= ']' )? ( (lv_call_3_0= RULE_STRING ) )
             {
             // ../be.kuleuven.dsl.rfsm/src-gen/be/kuleuven/dsl/parser/antlr/internal/InternalRFSM.g:488:2: (otherlv_0= '[FunctionName:' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= ']' )?
-            int alt11=2;
-            int LA11_0 = input.LA(1);
+            int alt12=2;
+            int LA12_0 = input.LA(1);
 
-            if ( (LA11_0==25) ) {
-                alt11=1;
+            if ( (LA12_0==25) ) {
+                alt12=1;
             }
-            switch (alt11) {
+            switch (alt12) {
                 case 1 :
                     // ../be.kuleuven.dsl.rfsm/src-gen/be/kuleuven/dsl/parser/antlr/internal/InternalRFSM.g:488:4: otherlv_0= '[FunctionName:' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= ']'
                     {
-                    otherlv_0=(Token)match(input,25,FOLLOW_25_in_ruleFunction934); 
+                    otherlv_0=(Token)match(input,25,FOLLOW_25_in_ruleFunction935); 
 
                         	newLeafNode(otherlv_0, grammarAccess.getFunctionAccess().getFunctionNameKeyword_0_0());
                         
@@ -1137,7 +1148,7 @@ public class InternalRFSMParser extends AbstractInternalAntlrParser {
                     // ../be.kuleuven.dsl.rfsm/src-gen/be/kuleuven/dsl/parser/antlr/internal/InternalRFSM.g:493:1: (lv_name_1_0= RULE_ID )
                     // ../be.kuleuven.dsl.rfsm/src-gen/be/kuleuven/dsl/parser/antlr/internal/InternalRFSM.g:494:3: lv_name_1_0= RULE_ID
                     {
-                    lv_name_1_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleFunction951); 
+                    lv_name_1_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleFunction952); 
 
                     			newLeafNode(lv_name_1_0, grammarAccess.getFunctionAccess().getNameIDTerminalRuleCall_0_1_0()); 
                     		
@@ -1157,7 +1168,7 @@ public class InternalRFSMParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_2=(Token)match(input,12,FOLLOW_12_in_ruleFunction968); 
+                    otherlv_2=(Token)match(input,12,FOLLOW_12_in_ruleFunction969); 
 
                         	newLeafNode(otherlv_2, grammarAccess.getFunctionAccess().getRightSquareBracketKeyword_0_2());
                         
@@ -1173,7 +1184,7 @@ public class InternalRFSMParser extends AbstractInternalAntlrParser {
             // ../be.kuleuven.dsl.rfsm/src-gen/be/kuleuven/dsl/parser/antlr/internal/InternalRFSM.g:515:1: (lv_call_3_0= RULE_STRING )
             // ../be.kuleuven.dsl.rfsm/src-gen/be/kuleuven/dsl/parser/antlr/internal/InternalRFSM.g:516:3: lv_call_3_0= RULE_STRING
             {
-            lv_call_3_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleFunction987); 
+            lv_call_3_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleFunction988); 
 
             			newLeafNode(lv_call_3_0, grammarAccess.getFunctionAccess().getCallSTRINGTerminalRuleCall_1_0()); 
             		
@@ -1226,13 +1237,13 @@ public class InternalRFSMParser extends AbstractInternalAntlrParser {
             // ../be.kuleuven.dsl.rfsm/src-gen/be/kuleuven/dsl/parser/antlr/internal/InternalRFSM.g:542:2: iv_ruleQualifiedName= ruleQualifiedName EOF
             {
              newCompositeNode(grammarAccess.getQualifiedNameRule()); 
-            pushFollow(FOLLOW_ruleQualifiedName_in_entryRuleQualifiedName1029);
+            pushFollow(FOLLOW_ruleQualifiedName_in_entryRuleQualifiedName1030);
             iv_ruleQualifiedName=ruleQualifiedName();
 
             state._fsp--;
 
              current =iv_ruleQualifiedName.getText(); 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleQualifiedName1040); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleQualifiedName1041); 
 
             }
 
@@ -1267,7 +1278,7 @@ public class InternalRFSMParser extends AbstractInternalAntlrParser {
             // ../be.kuleuven.dsl.rfsm/src-gen/be/kuleuven/dsl/parser/antlr/internal/InternalRFSM.g:553:1: (this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )* )
             // ../be.kuleuven.dsl.rfsm/src-gen/be/kuleuven/dsl/parser/antlr/internal/InternalRFSM.g:553:6: this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )*
             {
-            this_ID_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleQualifiedName1080); 
+            this_ID_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleQualifiedName1081); 
 
             		current.merge(this_ID_0);
                 
@@ -1275,26 +1286,26 @@ public class InternalRFSMParser extends AbstractInternalAntlrParser {
                 newLeafNode(this_ID_0, grammarAccess.getQualifiedNameAccess().getIDTerminalRuleCall_0()); 
                 
             // ../be.kuleuven.dsl.rfsm/src-gen/be/kuleuven/dsl/parser/antlr/internal/InternalRFSM.g:560:1: (kw= '.' this_ID_2= RULE_ID )*
-            loop12:
+            loop13:
             do {
-                int alt12=2;
-                int LA12_0 = input.LA(1);
+                int alt13=2;
+                int LA13_0 = input.LA(1);
 
-                if ( (LA12_0==26) ) {
-                    alt12=1;
+                if ( (LA13_0==26) ) {
+                    alt13=1;
                 }
 
 
-                switch (alt12) {
+                switch (alt13) {
             	case 1 :
             	    // ../be.kuleuven.dsl.rfsm/src-gen/be/kuleuven/dsl/parser/antlr/internal/InternalRFSM.g:561:2: kw= '.' this_ID_2= RULE_ID
             	    {
-            	    kw=(Token)match(input,26,FOLLOW_26_in_ruleQualifiedName1099); 
+            	    kw=(Token)match(input,26,FOLLOW_26_in_ruleQualifiedName1100); 
 
             	            current.merge(kw);
             	            newLeafNode(kw, grammarAccess.getQualifiedNameAccess().getFullStopKeyword_1_0()); 
             	        
-            	    this_ID_2=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleQualifiedName1114); 
+            	    this_ID_2=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleQualifiedName1115); 
 
             	    		current.merge(this_ID_2);
             	        
@@ -1306,7 +1317,7 @@ public class InternalRFSMParser extends AbstractInternalAntlrParser {
             	    break;
 
             	default :
-            	    break loop12;
+            	    break loop13;
                 }
             } while (true);
 
@@ -1338,50 +1349,50 @@ public class InternalRFSMParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_EOF_in_entryRuleRfsmGraph85 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_11_in_ruleRfsmGraph123 = new BitSet(new long[]{0x0000000000000010L});
     public static final BitSet FOLLOW_RULE_ID_in_ruleRfsmGraph140 = new BitSet(new long[]{0x0000000000001000L});
-    public static final BitSet FOLLOW_12_in_ruleRfsmGraph157 = new BitSet(new long[]{0x0000000000002000L});
+    public static final BitSet FOLLOW_12_in_ruleRfsmGraph157 = new BitSet(new long[]{0x0000000000082002L});
     public static final BitSet FOLLOW_ruleState_in_ruleRfsmGraph180 = new BitSet(new long[]{0x0000000000080002L});
-    public static final BitSet FOLLOW_ruleTransition_in_ruleRfsmGraph201 = new BitSet(new long[]{0x0000000000080002L});
-    public static final BitSet FOLLOW_ruleState_in_entryRuleState238 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleState248 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_13_in_ruleState285 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleState302 = new BitSet(new long[]{0x0000000000004000L});
-    public static final BitSet FOLLOW_14_in_ruleState319 = new BitSet(new long[]{0x000000000007A000L});
-    public static final BitSet FOLLOW_ruleState_in_ruleState340 = new BitSet(new long[]{0x000000000007A000L});
-    public static final BitSet FOLLOW_15_in_ruleState354 = new BitSet(new long[]{0x0000000002000040L});
-    public static final BitSet FOLLOW_ruleFunction_in_ruleState375 = new BitSet(new long[]{0x0000000000070000L});
-    public static final BitSet FOLLOW_16_in_ruleState390 = new BitSet(new long[]{0x0000000002000040L});
-    public static final BitSet FOLLOW_ruleFunction_in_ruleState411 = new BitSet(new long[]{0x0000000000060000L});
-    public static final BitSet FOLLOW_17_in_ruleState426 = new BitSet(new long[]{0x0000000002000040L});
-    public static final BitSet FOLLOW_ruleFunction_in_ruleState447 = new BitSet(new long[]{0x0000000000040000L});
-    public static final BitSet FOLLOW_18_in_ruleState461 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleTransition_in_entryRuleTransition497 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleTransition507 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_19_in_ruleTransition544 = new BitSet(new long[]{0x0000000000100010L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleTransition561 = new BitSet(new long[]{0x0000000000100000L});
-    public static final BitSet FOLLOW_20_in_ruleTransition579 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_ruleQualifiedName_in_ruleTransition602 = new BitSet(new long[]{0x0000000000200000L});
-    public static final BitSet FOLLOW_21_in_ruleTransition614 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_ruleQualifiedName_in_ruleTransition637 = new BitSet(new long[]{0x0000000001C00002L});
-    public static final BitSet FOLLOW_ruleEvent_in_ruleTransition658 = new BitSet(new long[]{0x0000000001C00002L});
-    public static final BitSet FOLLOW_22_in_ruleTransition672 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_RULE_INT_in_ruleTransition689 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleEvent_in_entryRuleEvent732 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleEvent742 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_23_in_ruleEvent780 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleEvent797 = new BitSet(new long[]{0x0000000000001000L});
-    public static final BitSet FOLLOW_12_in_ruleEvent814 = new BitSet(new long[]{0x0000000001000000L});
-    public static final BitSet FOLLOW_24_in_ruleEvent828 = new BitSet(new long[]{0x0000000000000040L});
-    public static final BitSet FOLLOW_RULE_STRING_in_ruleEvent845 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleFunction_in_entryRuleFunction886 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleFunction896 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_25_in_ruleFunction934 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleFunction951 = new BitSet(new long[]{0x0000000000001000L});
-    public static final BitSet FOLLOW_12_in_ruleFunction968 = new BitSet(new long[]{0x0000000000000040L});
-    public static final BitSet FOLLOW_RULE_STRING_in_ruleFunction987 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleQualifiedName_in_entryRuleQualifiedName1029 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleQualifiedName1040 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleQualifiedName1080 = new BitSet(new long[]{0x0000000004000002L});
-    public static final BitSet FOLLOW_26_in_ruleQualifiedName1099 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleQualifiedName1114 = new BitSet(new long[]{0x0000000004000002L});
+    public static final BitSet FOLLOW_ruleTransition_in_ruleRfsmGraph202 = new BitSet(new long[]{0x0000000000080002L});
+    public static final BitSet FOLLOW_ruleState_in_entryRuleState239 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleState249 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_13_in_ruleState286 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleState303 = new BitSet(new long[]{0x0000000000004000L});
+    public static final BitSet FOLLOW_14_in_ruleState320 = new BitSet(new long[]{0x000000000007A000L});
+    public static final BitSet FOLLOW_ruleState_in_ruleState341 = new BitSet(new long[]{0x000000000007A000L});
+    public static final BitSet FOLLOW_15_in_ruleState355 = new BitSet(new long[]{0x0000000002000040L});
+    public static final BitSet FOLLOW_ruleFunction_in_ruleState376 = new BitSet(new long[]{0x0000000000070000L});
+    public static final BitSet FOLLOW_16_in_ruleState391 = new BitSet(new long[]{0x0000000002000040L});
+    public static final BitSet FOLLOW_ruleFunction_in_ruleState412 = new BitSet(new long[]{0x0000000000060000L});
+    public static final BitSet FOLLOW_17_in_ruleState427 = new BitSet(new long[]{0x0000000002000040L});
+    public static final BitSet FOLLOW_ruleFunction_in_ruleState448 = new BitSet(new long[]{0x0000000000040000L});
+    public static final BitSet FOLLOW_18_in_ruleState462 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleTransition_in_entryRuleTransition498 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleTransition508 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_19_in_ruleTransition545 = new BitSet(new long[]{0x0000000000100010L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleTransition562 = new BitSet(new long[]{0x0000000000100000L});
+    public static final BitSet FOLLOW_20_in_ruleTransition580 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_ruleQualifiedName_in_ruleTransition603 = new BitSet(new long[]{0x0000000000200000L});
+    public static final BitSet FOLLOW_21_in_ruleTransition615 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_ruleQualifiedName_in_ruleTransition638 = new BitSet(new long[]{0x0000000001C00002L});
+    public static final BitSet FOLLOW_ruleEvent_in_ruleTransition659 = new BitSet(new long[]{0x0000000001C00002L});
+    public static final BitSet FOLLOW_22_in_ruleTransition673 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_RULE_INT_in_ruleTransition690 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleEvent_in_entryRuleEvent733 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleEvent743 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_23_in_ruleEvent781 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleEvent798 = new BitSet(new long[]{0x0000000000001000L});
+    public static final BitSet FOLLOW_12_in_ruleEvent815 = new BitSet(new long[]{0x0000000001000000L});
+    public static final BitSet FOLLOW_24_in_ruleEvent829 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_RULE_STRING_in_ruleEvent846 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleFunction_in_entryRuleFunction887 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleFunction897 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_25_in_ruleFunction935 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleFunction952 = new BitSet(new long[]{0x0000000000001000L});
+    public static final BitSet FOLLOW_12_in_ruleFunction969 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_RULE_STRING_in_ruleFunction988 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleQualifiedName_in_entryRuleQualifiedName1030 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleQualifiedName1041 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleQualifiedName1081 = new BitSet(new long[]{0x0000000004000002L});
+    public static final BitSet FOLLOW_26_in_ruleQualifiedName1100 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleQualifiedName1115 = new BitSet(new long[]{0x0000000004000002L});
 
 }
