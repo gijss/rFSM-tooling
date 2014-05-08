@@ -144,74 +144,82 @@ public class RFSMGrammarAccess extends AbstractGrammarElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Transition");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cTransitionKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final Keyword cFromKeyword_1 = (Keyword)cGroup.eContents().get(1);
-		private final Assignment cSourceAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final CrossReference cSourceStateCrossReference_2_0 = (CrossReference)cSourceAssignment_2.eContents().get(0);
-		private final RuleCall cSourceStateQualifiedNameParserRuleCall_2_0_1 = (RuleCall)cSourceStateCrossReference_2_0.eContents().get(1);
-		private final Keyword cToKeyword_3 = (Keyword)cGroup.eContents().get(3);
-		private final Assignment cTargetAssignment_4 = (Assignment)cGroup.eContents().get(4);
-		private final CrossReference cTargetStateCrossReference_4_0 = (CrossReference)cTargetAssignment_4.eContents().get(0);
-		private final RuleCall cTargetStateQualifiedNameParserRuleCall_4_0_1 = (RuleCall)cTargetStateCrossReference_4_0.eContents().get(1);
-		private final Assignment cEventsAssignment_5 = (Assignment)cGroup.eContents().get(5);
-		private final RuleCall cEventsEventParserRuleCall_5_0 = (RuleCall)cEventsAssignment_5.eContents().get(0);
-		private final Group cGroup_6 = (Group)cGroup.eContents().get(6);
-		private final Keyword cPriorityKeyword_6_0 = (Keyword)cGroup_6.eContents().get(0);
-		private final Assignment cPriorityNumberAssignment_6_1 = (Assignment)cGroup_6.eContents().get(1);
-		private final RuleCall cPriorityNumberINTTerminalRuleCall_6_1_0 = (RuleCall)cPriorityNumberAssignment_6_1.eContents().get(0);
+		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cNameIDTerminalRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
+		private final Keyword cFromKeyword_2 = (Keyword)cGroup.eContents().get(2);
+		private final Assignment cSourceAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final CrossReference cSourceStateCrossReference_3_0 = (CrossReference)cSourceAssignment_3.eContents().get(0);
+		private final RuleCall cSourceStateQualifiedNameParserRuleCall_3_0_1 = (RuleCall)cSourceStateCrossReference_3_0.eContents().get(1);
+		private final Keyword cToKeyword_4 = (Keyword)cGroup.eContents().get(4);
+		private final Assignment cTargetAssignment_5 = (Assignment)cGroup.eContents().get(5);
+		private final CrossReference cTargetStateCrossReference_5_0 = (CrossReference)cTargetAssignment_5.eContents().get(0);
+		private final RuleCall cTargetStateQualifiedNameParserRuleCall_5_0_1 = (RuleCall)cTargetStateCrossReference_5_0.eContents().get(1);
+		private final Assignment cEventsAssignment_6 = (Assignment)cGroup.eContents().get(6);
+		private final RuleCall cEventsEventParserRuleCall_6_0 = (RuleCall)cEventsAssignment_6.eContents().get(0);
+		private final Group cGroup_7 = (Group)cGroup.eContents().get(7);
+		private final Keyword cPriorityKeyword_7_0 = (Keyword)cGroup_7.eContents().get(0);
+		private final Assignment cPriorityNumberAssignment_7_1 = (Assignment)cGroup_7.eContents().get(1);
+		private final RuleCall cPriorityNumberINTTerminalRuleCall_7_1_0 = (RuleCall)cPriorityNumberAssignment_7_1.eContents().get(0);
 		
 		//Transition:
-		//	"transition" "from" source+=[State|QualifiedName] "to" target+=[State|QualifiedName] events+=Event* ("priority"
-		//	priorityNumber=INT)?;
+		//	"transition" name=ID "from" source+=[State|QualifiedName] "to" target+=[State|QualifiedName] events+=Event*
+		//	("priority" priorityNumber=INT)?;
 		public ParserRule getRule() { return rule; }
 
-		//"transition" "from" source+=[State|QualifiedName] "to" target+=[State|QualifiedName] events+=Event* ("priority"
+		//"transition" name=ID "from" source+=[State|QualifiedName] "to" target+=[State|QualifiedName] events+=Event* ("priority"
 		//priorityNumber=INT)?
 		public Group getGroup() { return cGroup; }
 
 		//"transition"
 		public Keyword getTransitionKeyword_0() { return cTransitionKeyword_0; }
 
+		//name=ID
+		public Assignment getNameAssignment_1() { return cNameAssignment_1; }
+
+		//ID
+		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
+
 		//"from"
-		public Keyword getFromKeyword_1() { return cFromKeyword_1; }
+		public Keyword getFromKeyword_2() { return cFromKeyword_2; }
 
 		//source+=[State|QualifiedName]
-		public Assignment getSourceAssignment_2() { return cSourceAssignment_2; }
+		public Assignment getSourceAssignment_3() { return cSourceAssignment_3; }
 
 		//[State|QualifiedName]
-		public CrossReference getSourceStateCrossReference_2_0() { return cSourceStateCrossReference_2_0; }
+		public CrossReference getSourceStateCrossReference_3_0() { return cSourceStateCrossReference_3_0; }
 
 		//QualifiedName
-		public RuleCall getSourceStateQualifiedNameParserRuleCall_2_0_1() { return cSourceStateQualifiedNameParserRuleCall_2_0_1; }
+		public RuleCall getSourceStateQualifiedNameParserRuleCall_3_0_1() { return cSourceStateQualifiedNameParserRuleCall_3_0_1; }
 
 		//"to"
-		public Keyword getToKeyword_3() { return cToKeyword_3; }
+		public Keyword getToKeyword_4() { return cToKeyword_4; }
 
 		//target+=[State|QualifiedName]
-		public Assignment getTargetAssignment_4() { return cTargetAssignment_4; }
+		public Assignment getTargetAssignment_5() { return cTargetAssignment_5; }
 
 		//[State|QualifiedName]
-		public CrossReference getTargetStateCrossReference_4_0() { return cTargetStateCrossReference_4_0; }
+		public CrossReference getTargetStateCrossReference_5_0() { return cTargetStateCrossReference_5_0; }
 
 		//QualifiedName
-		public RuleCall getTargetStateQualifiedNameParserRuleCall_4_0_1() { return cTargetStateQualifiedNameParserRuleCall_4_0_1; }
+		public RuleCall getTargetStateQualifiedNameParserRuleCall_5_0_1() { return cTargetStateQualifiedNameParserRuleCall_5_0_1; }
 
 		//events+=Event*
-		public Assignment getEventsAssignment_5() { return cEventsAssignment_5; }
+		public Assignment getEventsAssignment_6() { return cEventsAssignment_6; }
 
 		//Event
-		public RuleCall getEventsEventParserRuleCall_5_0() { return cEventsEventParserRuleCall_5_0; }
+		public RuleCall getEventsEventParserRuleCall_6_0() { return cEventsEventParserRuleCall_6_0; }
 
 		//("priority" priorityNumber=INT)?
-		public Group getGroup_6() { return cGroup_6; }
+		public Group getGroup_7() { return cGroup_7; }
 
 		//"priority"
-		public Keyword getPriorityKeyword_6_0() { return cPriorityKeyword_6_0; }
+		public Keyword getPriorityKeyword_7_0() { return cPriorityKeyword_7_0; }
 
 		//priorityNumber=INT
-		public Assignment getPriorityNumberAssignment_6_1() { return cPriorityNumberAssignment_6_1; }
+		public Assignment getPriorityNumberAssignment_7_1() { return cPriorityNumberAssignment_7_1; }
 
 		//INT
-		public RuleCall getPriorityNumberINTTerminalRuleCall_6_1_0() { return cPriorityNumberINTTerminalRuleCall_6_1_0; }
+		public RuleCall getPriorityNumberINTTerminalRuleCall_7_1_0() { return cPriorityNumberINTTerminalRuleCall_7_1_0; }
 	}
 
 	public class EventElements extends AbstractParserRuleElementFinder {
@@ -351,8 +359,8 @@ public class RFSMGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Transition:
-	//	"transition" "from" source+=[State|QualifiedName] "to" target+=[State|QualifiedName] events+=Event* ("priority"
-	//	priorityNumber=INT)?;
+	//	"transition" name=ID "from" source+=[State|QualifiedName] "to" target+=[State|QualifiedName] events+=Event*
+	//	("priority" priorityNumber=INT)?;
 	public TransitionElements getTransitionAccess() {
 		return (pTransition != null) ? pTransition : (pTransition = new TransitionElements());
 	}

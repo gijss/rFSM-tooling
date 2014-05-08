@@ -12,7 +12,7 @@ import org.eclipse.emf.ecore.EObject;
  * <!-- end-user-doc -->
  *
  * <!-- begin-model-doc -->
- * This rFSM metamodel is based on a HyperGraph model
+ * This rFSM metamodel of is based on a HyperGraph model
  * <!-- end-model-doc -->
  *
  * <p>

@@ -43,7 +43,7 @@ public class RFSMParser extends AbstractContentAssistParser {
 					put(grammarAccess.getStateAccess().getGroup_5(), "rule__State__Group_5__0");
 					put(grammarAccess.getStateAccess().getGroup_6(), "rule__State__Group_6__0");
 					put(grammarAccess.getTransitionAccess().getGroup(), "rule__Transition__Group__0");
-					put(grammarAccess.getTransitionAccess().getGroup_6(), "rule__Transition__Group_6__0");
+					put(grammarAccess.getTransitionAccess().getGroup_7(), "rule__Transition__Group_7__0");
 					put(grammarAccess.getEventAccess().getGroup(), "rule__Event__Group__0");
 					put(grammarAccess.getQualifiedNameAccess().getGroup(), "rule__QualifiedName__Group__0");
 					put(grammarAccess.getQualifiedNameAccess().getGroup_1(), "rule__QualifiedName__Group_1__0");
@@ -54,10 +54,11 @@ public class RFSMParser extends AbstractContentAssistParser {
 					put(grammarAccess.getStateAccess().getEntryAssignment_4_1(), "rule__State__EntryAssignment_4_1");
 					put(grammarAccess.getStateAccess().getDooAssignment_5_1(), "rule__State__DooAssignment_5_1");
 					put(grammarAccess.getStateAccess().getExitAssignment_6_1(), "rule__State__ExitAssignment_6_1");
-					put(grammarAccess.getTransitionAccess().getSourceAssignment_2(), "rule__Transition__SourceAssignment_2");
-					put(grammarAccess.getTransitionAccess().getTargetAssignment_4(), "rule__Transition__TargetAssignment_4");
-					put(grammarAccess.getTransitionAccess().getEventsAssignment_5(), "rule__Transition__EventsAssignment_5");
-					put(grammarAccess.getTransitionAccess().getPriorityNumberAssignment_6_1(), "rule__Transition__PriorityNumberAssignment_6_1");
+					put(grammarAccess.getTransitionAccess().getNameAssignment_1(), "rule__Transition__NameAssignment_1");
+					put(grammarAccess.getTransitionAccess().getSourceAssignment_3(), "rule__Transition__SourceAssignment_3");
+					put(grammarAccess.getTransitionAccess().getTargetAssignment_5(), "rule__Transition__TargetAssignment_5");
+					put(grammarAccess.getTransitionAccess().getEventsAssignment_6(), "rule__Transition__EventsAssignment_6");
+					put(grammarAccess.getTransitionAccess().getPriorityNumberAssignment_7_1(), "rule__Transition__PriorityNumberAssignment_7_1");
 					put(grammarAccess.getEventAccess().getEventAssignment_1(), "rule__Event__EventAssignment_1");
 					put(grammarAccess.getFunctionAccess().getCallAssignment(), "rule__Function__CallAssignment");
 				}

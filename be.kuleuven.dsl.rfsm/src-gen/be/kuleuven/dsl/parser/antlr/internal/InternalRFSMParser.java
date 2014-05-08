@@ -603,40 +603,67 @@ public class InternalRFSMParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleTransition"
-    // ../be.kuleuven.dsl.rfsm/src-gen/be/kuleuven/dsl/parser/antlr/internal/InternalRFSM.g:268:1: ruleTransition returns [EObject current=null] : (otherlv_0= 'transition' otherlv_1= 'from' ( ( ruleQualifiedName ) ) otherlv_3= 'to' ( ( ruleQualifiedName ) ) ( (lv_events_5_0= ruleEvent ) )* (otherlv_6= 'priority' ( (lv_priorityNumber_7_0= RULE_INT ) ) )? ) ;
+    // ../be.kuleuven.dsl.rfsm/src-gen/be/kuleuven/dsl/parser/antlr/internal/InternalRFSM.g:268:1: ruleTransition returns [EObject current=null] : (otherlv_0= 'transition' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= 'from' ( ( ruleQualifiedName ) ) otherlv_4= 'to' ( ( ruleQualifiedName ) ) ( (lv_events_6_0= ruleEvent ) )* (otherlv_7= 'priority' ( (lv_priorityNumber_8_0= RULE_INT ) ) )? ) ;
     public final EObject ruleTransition() throws RecognitionException {
         EObject current = null;
 
         Token otherlv_0=null;
-        Token otherlv_1=null;
-        Token otherlv_3=null;
-        Token otherlv_6=null;
-        Token lv_priorityNumber_7_0=null;
-        EObject lv_events_5_0 = null;
+        Token lv_name_1_0=null;
+        Token otherlv_2=null;
+        Token otherlv_4=null;
+        Token otherlv_7=null;
+        Token lv_priorityNumber_8_0=null;
+        EObject lv_events_6_0 = null;
 
 
          enterRule(); 
             
         try {
-            // ../be.kuleuven.dsl.rfsm/src-gen/be/kuleuven/dsl/parser/antlr/internal/InternalRFSM.g:271:28: ( (otherlv_0= 'transition' otherlv_1= 'from' ( ( ruleQualifiedName ) ) otherlv_3= 'to' ( ( ruleQualifiedName ) ) ( (lv_events_5_0= ruleEvent ) )* (otherlv_6= 'priority' ( (lv_priorityNumber_7_0= RULE_INT ) ) )? ) )
-            // ../be.kuleuven.dsl.rfsm/src-gen/be/kuleuven/dsl/parser/antlr/internal/InternalRFSM.g:272:1: (otherlv_0= 'transition' otherlv_1= 'from' ( ( ruleQualifiedName ) ) otherlv_3= 'to' ( ( ruleQualifiedName ) ) ( (lv_events_5_0= ruleEvent ) )* (otherlv_6= 'priority' ( (lv_priorityNumber_7_0= RULE_INT ) ) )? )
+            // ../be.kuleuven.dsl.rfsm/src-gen/be/kuleuven/dsl/parser/antlr/internal/InternalRFSM.g:271:28: ( (otherlv_0= 'transition' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= 'from' ( ( ruleQualifiedName ) ) otherlv_4= 'to' ( ( ruleQualifiedName ) ) ( (lv_events_6_0= ruleEvent ) )* (otherlv_7= 'priority' ( (lv_priorityNumber_8_0= RULE_INT ) ) )? ) )
+            // ../be.kuleuven.dsl.rfsm/src-gen/be/kuleuven/dsl/parser/antlr/internal/InternalRFSM.g:272:1: (otherlv_0= 'transition' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= 'from' ( ( ruleQualifiedName ) ) otherlv_4= 'to' ( ( ruleQualifiedName ) ) ( (lv_events_6_0= ruleEvent ) )* (otherlv_7= 'priority' ( (lv_priorityNumber_8_0= RULE_INT ) ) )? )
             {
-            // ../be.kuleuven.dsl.rfsm/src-gen/be/kuleuven/dsl/parser/antlr/internal/InternalRFSM.g:272:1: (otherlv_0= 'transition' otherlv_1= 'from' ( ( ruleQualifiedName ) ) otherlv_3= 'to' ( ( ruleQualifiedName ) ) ( (lv_events_5_0= ruleEvent ) )* (otherlv_6= 'priority' ( (lv_priorityNumber_7_0= RULE_INT ) ) )? )
-            // ../be.kuleuven.dsl.rfsm/src-gen/be/kuleuven/dsl/parser/antlr/internal/InternalRFSM.g:272:3: otherlv_0= 'transition' otherlv_1= 'from' ( ( ruleQualifiedName ) ) otherlv_3= 'to' ( ( ruleQualifiedName ) ) ( (lv_events_5_0= ruleEvent ) )* (otherlv_6= 'priority' ( (lv_priorityNumber_7_0= RULE_INT ) ) )?
+            // ../be.kuleuven.dsl.rfsm/src-gen/be/kuleuven/dsl/parser/antlr/internal/InternalRFSM.g:272:1: (otherlv_0= 'transition' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= 'from' ( ( ruleQualifiedName ) ) otherlv_4= 'to' ( ( ruleQualifiedName ) ) ( (lv_events_6_0= ruleEvent ) )* (otherlv_7= 'priority' ( (lv_priorityNumber_8_0= RULE_INT ) ) )? )
+            // ../be.kuleuven.dsl.rfsm/src-gen/be/kuleuven/dsl/parser/antlr/internal/InternalRFSM.g:272:3: otherlv_0= 'transition' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= 'from' ( ( ruleQualifiedName ) ) otherlv_4= 'to' ( ( ruleQualifiedName ) ) ( (lv_events_6_0= ruleEvent ) )* (otherlv_7= 'priority' ( (lv_priorityNumber_8_0= RULE_INT ) ) )?
             {
             otherlv_0=(Token)match(input,17,FOLLOW_17_in_ruleTransition495); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getTransitionAccess().getTransitionKeyword_0());
                 
-            otherlv_1=(Token)match(input,18,FOLLOW_18_in_ruleTransition507); 
-
-                	newLeafNode(otherlv_1, grammarAccess.getTransitionAccess().getFromKeyword_1());
-                
-            // ../be.kuleuven.dsl.rfsm/src-gen/be/kuleuven/dsl/parser/antlr/internal/InternalRFSM.g:280:1: ( ( ruleQualifiedName ) )
-            // ../be.kuleuven.dsl.rfsm/src-gen/be/kuleuven/dsl/parser/antlr/internal/InternalRFSM.g:281:1: ( ruleQualifiedName )
+            // ../be.kuleuven.dsl.rfsm/src-gen/be/kuleuven/dsl/parser/antlr/internal/InternalRFSM.g:276:1: ( (lv_name_1_0= RULE_ID ) )
+            // ../be.kuleuven.dsl.rfsm/src-gen/be/kuleuven/dsl/parser/antlr/internal/InternalRFSM.g:277:1: (lv_name_1_0= RULE_ID )
             {
-            // ../be.kuleuven.dsl.rfsm/src-gen/be/kuleuven/dsl/parser/antlr/internal/InternalRFSM.g:281:1: ( ruleQualifiedName )
-            // ../be.kuleuven.dsl.rfsm/src-gen/be/kuleuven/dsl/parser/antlr/internal/InternalRFSM.g:282:3: ruleQualifiedName
+            // ../be.kuleuven.dsl.rfsm/src-gen/be/kuleuven/dsl/parser/antlr/internal/InternalRFSM.g:277:1: (lv_name_1_0= RULE_ID )
+            // ../be.kuleuven.dsl.rfsm/src-gen/be/kuleuven/dsl/parser/antlr/internal/InternalRFSM.g:278:3: lv_name_1_0= RULE_ID
+            {
+            lv_name_1_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleTransition512); 
+
+            			newLeafNode(lv_name_1_0, grammarAccess.getTransitionAccess().getNameIDTerminalRuleCall_1_0()); 
+            		
+
+            	        if (current==null) {
+            	            current = createModelElement(grammarAccess.getTransitionRule());
+            	        }
+                   		setWithLastConsumed(
+                   			current, 
+                   			"name",
+                    		lv_name_1_0, 
+                    		"ID");
+            	    
+
+            }
+
+
+            }
+
+            otherlv_2=(Token)match(input,18,FOLLOW_18_in_ruleTransition529); 
+
+                	newLeafNode(otherlv_2, grammarAccess.getTransitionAccess().getFromKeyword_2());
+                
+            // ../be.kuleuven.dsl.rfsm/src-gen/be/kuleuven/dsl/parser/antlr/internal/InternalRFSM.g:298:1: ( ( ruleQualifiedName ) )
+            // ../be.kuleuven.dsl.rfsm/src-gen/be/kuleuven/dsl/parser/antlr/internal/InternalRFSM.g:299:1: ( ruleQualifiedName )
+            {
+            // ../be.kuleuven.dsl.rfsm/src-gen/be/kuleuven/dsl/parser/antlr/internal/InternalRFSM.g:299:1: ( ruleQualifiedName )
+            // ../be.kuleuven.dsl.rfsm/src-gen/be/kuleuven/dsl/parser/antlr/internal/InternalRFSM.g:300:3: ruleQualifiedName
             {
 
             			if (current==null) {
@@ -644,9 +671,9 @@ public class InternalRFSMParser extends AbstractInternalAntlrParser {
             	        }
                     
              
-            	        newCompositeNode(grammarAccess.getTransitionAccess().getSourceStateCrossReference_2_0()); 
+            	        newCompositeNode(grammarAccess.getTransitionAccess().getSourceStateCrossReference_3_0()); 
             	    
-            pushFollow(FOLLOW_ruleQualifiedName_in_ruleTransition530);
+            pushFollow(FOLLOW_ruleQualifiedName_in_ruleTransition552);
             ruleQualifiedName();
 
             state._fsp--;
@@ -660,15 +687,15 @@ public class InternalRFSMParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_3=(Token)match(input,19,FOLLOW_19_in_ruleTransition542); 
+            otherlv_4=(Token)match(input,19,FOLLOW_19_in_ruleTransition564); 
 
-                	newLeafNode(otherlv_3, grammarAccess.getTransitionAccess().getToKeyword_3());
+                	newLeafNode(otherlv_4, grammarAccess.getTransitionAccess().getToKeyword_4());
                 
-            // ../be.kuleuven.dsl.rfsm/src-gen/be/kuleuven/dsl/parser/antlr/internal/InternalRFSM.g:299:1: ( ( ruleQualifiedName ) )
-            // ../be.kuleuven.dsl.rfsm/src-gen/be/kuleuven/dsl/parser/antlr/internal/InternalRFSM.g:300:1: ( ruleQualifiedName )
+            // ../be.kuleuven.dsl.rfsm/src-gen/be/kuleuven/dsl/parser/antlr/internal/InternalRFSM.g:317:1: ( ( ruleQualifiedName ) )
+            // ../be.kuleuven.dsl.rfsm/src-gen/be/kuleuven/dsl/parser/antlr/internal/InternalRFSM.g:318:1: ( ruleQualifiedName )
             {
-            // ../be.kuleuven.dsl.rfsm/src-gen/be/kuleuven/dsl/parser/antlr/internal/InternalRFSM.g:300:1: ( ruleQualifiedName )
-            // ../be.kuleuven.dsl.rfsm/src-gen/be/kuleuven/dsl/parser/antlr/internal/InternalRFSM.g:301:3: ruleQualifiedName
+            // ../be.kuleuven.dsl.rfsm/src-gen/be/kuleuven/dsl/parser/antlr/internal/InternalRFSM.g:318:1: ( ruleQualifiedName )
+            // ../be.kuleuven.dsl.rfsm/src-gen/be/kuleuven/dsl/parser/antlr/internal/InternalRFSM.g:319:3: ruleQualifiedName
             {
 
             			if (current==null) {
@@ -676,9 +703,9 @@ public class InternalRFSMParser extends AbstractInternalAntlrParser {
             	        }
                     
              
-            	        newCompositeNode(grammarAccess.getTransitionAccess().getTargetStateCrossReference_4_0()); 
+            	        newCompositeNode(grammarAccess.getTransitionAccess().getTargetStateCrossReference_5_0()); 
             	    
-            pushFollow(FOLLOW_ruleQualifiedName_in_ruleTransition565);
+            pushFollow(FOLLOW_ruleQualifiedName_in_ruleTransition587);
             ruleQualifiedName();
 
             state._fsp--;
@@ -692,7 +719,7 @@ public class InternalRFSMParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../be.kuleuven.dsl.rfsm/src-gen/be/kuleuven/dsl/parser/antlr/internal/InternalRFSM.g:314:2: ( (lv_events_5_0= ruleEvent ) )*
+            // ../be.kuleuven.dsl.rfsm/src-gen/be/kuleuven/dsl/parser/antlr/internal/InternalRFSM.g:332:2: ( (lv_events_6_0= ruleEvent ) )*
             loop6:
             do {
                 int alt6=2;
@@ -705,16 +732,16 @@ public class InternalRFSMParser extends AbstractInternalAntlrParser {
 
                 switch (alt6) {
             	case 1 :
-            	    // ../be.kuleuven.dsl.rfsm/src-gen/be/kuleuven/dsl/parser/antlr/internal/InternalRFSM.g:315:1: (lv_events_5_0= ruleEvent )
+            	    // ../be.kuleuven.dsl.rfsm/src-gen/be/kuleuven/dsl/parser/antlr/internal/InternalRFSM.g:333:1: (lv_events_6_0= ruleEvent )
             	    {
-            	    // ../be.kuleuven.dsl.rfsm/src-gen/be/kuleuven/dsl/parser/antlr/internal/InternalRFSM.g:315:1: (lv_events_5_0= ruleEvent )
-            	    // ../be.kuleuven.dsl.rfsm/src-gen/be/kuleuven/dsl/parser/antlr/internal/InternalRFSM.g:316:3: lv_events_5_0= ruleEvent
+            	    // ../be.kuleuven.dsl.rfsm/src-gen/be/kuleuven/dsl/parser/antlr/internal/InternalRFSM.g:333:1: (lv_events_6_0= ruleEvent )
+            	    // ../be.kuleuven.dsl.rfsm/src-gen/be/kuleuven/dsl/parser/antlr/internal/InternalRFSM.g:334:3: lv_events_6_0= ruleEvent
             	    {
             	     
-            	    	        newCompositeNode(grammarAccess.getTransitionAccess().getEventsEventParserRuleCall_5_0()); 
+            	    	        newCompositeNode(grammarAccess.getTransitionAccess().getEventsEventParserRuleCall_6_0()); 
             	    	    
-            	    pushFollow(FOLLOW_ruleEvent_in_ruleTransition586);
-            	    lv_events_5_0=ruleEvent();
+            	    pushFollow(FOLLOW_ruleEvent_in_ruleTransition608);
+            	    lv_events_6_0=ruleEvent();
 
             	    state._fsp--;
 
@@ -725,7 +752,7 @@ public class InternalRFSMParser extends AbstractInternalAntlrParser {
             	           		add(
             	           			current, 
             	           			"events",
-            	            		lv_events_5_0, 
+            	            		lv_events_6_0, 
             	            		"Event");
             	    	        afterParserOrEnumRuleCall();
             	    	    
@@ -741,7 +768,7 @@ public class InternalRFSMParser extends AbstractInternalAntlrParser {
                 }
             } while (true);
 
-            // ../be.kuleuven.dsl.rfsm/src-gen/be/kuleuven/dsl/parser/antlr/internal/InternalRFSM.g:332:3: (otherlv_6= 'priority' ( (lv_priorityNumber_7_0= RULE_INT ) ) )?
+            // ../be.kuleuven.dsl.rfsm/src-gen/be/kuleuven/dsl/parser/antlr/internal/InternalRFSM.g:350:3: (otherlv_7= 'priority' ( (lv_priorityNumber_8_0= RULE_INT ) ) )?
             int alt7=2;
             int LA7_0 = input.LA(1);
 
@@ -750,21 +777,21 @@ public class InternalRFSMParser extends AbstractInternalAntlrParser {
             }
             switch (alt7) {
                 case 1 :
-                    // ../be.kuleuven.dsl.rfsm/src-gen/be/kuleuven/dsl/parser/antlr/internal/InternalRFSM.g:332:5: otherlv_6= 'priority' ( (lv_priorityNumber_7_0= RULE_INT ) )
+                    // ../be.kuleuven.dsl.rfsm/src-gen/be/kuleuven/dsl/parser/antlr/internal/InternalRFSM.g:350:5: otherlv_7= 'priority' ( (lv_priorityNumber_8_0= RULE_INT ) )
                     {
-                    otherlv_6=(Token)match(input,20,FOLLOW_20_in_ruleTransition600); 
+                    otherlv_7=(Token)match(input,20,FOLLOW_20_in_ruleTransition622); 
 
-                        	newLeafNode(otherlv_6, grammarAccess.getTransitionAccess().getPriorityKeyword_6_0());
+                        	newLeafNode(otherlv_7, grammarAccess.getTransitionAccess().getPriorityKeyword_7_0());
                         
-                    // ../be.kuleuven.dsl.rfsm/src-gen/be/kuleuven/dsl/parser/antlr/internal/InternalRFSM.g:336:1: ( (lv_priorityNumber_7_0= RULE_INT ) )
-                    // ../be.kuleuven.dsl.rfsm/src-gen/be/kuleuven/dsl/parser/antlr/internal/InternalRFSM.g:337:1: (lv_priorityNumber_7_0= RULE_INT )
+                    // ../be.kuleuven.dsl.rfsm/src-gen/be/kuleuven/dsl/parser/antlr/internal/InternalRFSM.g:354:1: ( (lv_priorityNumber_8_0= RULE_INT ) )
+                    // ../be.kuleuven.dsl.rfsm/src-gen/be/kuleuven/dsl/parser/antlr/internal/InternalRFSM.g:355:1: (lv_priorityNumber_8_0= RULE_INT )
                     {
-                    // ../be.kuleuven.dsl.rfsm/src-gen/be/kuleuven/dsl/parser/antlr/internal/InternalRFSM.g:337:1: (lv_priorityNumber_7_0= RULE_INT )
-                    // ../be.kuleuven.dsl.rfsm/src-gen/be/kuleuven/dsl/parser/antlr/internal/InternalRFSM.g:338:3: lv_priorityNumber_7_0= RULE_INT
+                    // ../be.kuleuven.dsl.rfsm/src-gen/be/kuleuven/dsl/parser/antlr/internal/InternalRFSM.g:355:1: (lv_priorityNumber_8_0= RULE_INT )
+                    // ../be.kuleuven.dsl.rfsm/src-gen/be/kuleuven/dsl/parser/antlr/internal/InternalRFSM.g:356:3: lv_priorityNumber_8_0= RULE_INT
                     {
-                    lv_priorityNumber_7_0=(Token)match(input,RULE_INT,FOLLOW_RULE_INT_in_ruleTransition617); 
+                    lv_priorityNumber_8_0=(Token)match(input,RULE_INT,FOLLOW_RULE_INT_in_ruleTransition639); 
 
-                    			newLeafNode(lv_priorityNumber_7_0, grammarAccess.getTransitionAccess().getPriorityNumberINTTerminalRuleCall_6_1_0()); 
+                    			newLeafNode(lv_priorityNumber_8_0, grammarAccess.getTransitionAccess().getPriorityNumberINTTerminalRuleCall_7_1_0()); 
                     		
 
                     	        if (current==null) {
@@ -773,7 +800,7 @@ public class InternalRFSMParser extends AbstractInternalAntlrParser {
                            		setWithLastConsumed(
                            			current, 
                            			"priorityNumber",
-                            		lv_priorityNumber_7_0, 
+                            		lv_priorityNumber_8_0, 
                             		"INT");
                     	    
 
@@ -809,7 +836,7 @@ public class InternalRFSMParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleEvent"
-    // ../be.kuleuven.dsl.rfsm/src-gen/be/kuleuven/dsl/parser/antlr/internal/InternalRFSM.g:362:1: entryRuleEvent returns [EObject current=null] : iv_ruleEvent= ruleEvent EOF ;
+    // ../be.kuleuven.dsl.rfsm/src-gen/be/kuleuven/dsl/parser/antlr/internal/InternalRFSM.g:380:1: entryRuleEvent returns [EObject current=null] : iv_ruleEvent= ruleEvent EOF ;
     public final EObject entryRuleEvent() throws RecognitionException {
         EObject current = null;
 
@@ -817,17 +844,17 @@ public class InternalRFSMParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../be.kuleuven.dsl.rfsm/src-gen/be/kuleuven/dsl/parser/antlr/internal/InternalRFSM.g:363:2: (iv_ruleEvent= ruleEvent EOF )
-            // ../be.kuleuven.dsl.rfsm/src-gen/be/kuleuven/dsl/parser/antlr/internal/InternalRFSM.g:364:2: iv_ruleEvent= ruleEvent EOF
+            // ../be.kuleuven.dsl.rfsm/src-gen/be/kuleuven/dsl/parser/antlr/internal/InternalRFSM.g:381:2: (iv_ruleEvent= ruleEvent EOF )
+            // ../be.kuleuven.dsl.rfsm/src-gen/be/kuleuven/dsl/parser/antlr/internal/InternalRFSM.g:382:2: iv_ruleEvent= ruleEvent EOF
             {
              newCompositeNode(grammarAccess.getEventRule()); 
-            pushFollow(FOLLOW_ruleEvent_in_entryRuleEvent660);
+            pushFollow(FOLLOW_ruleEvent_in_entryRuleEvent682);
             iv_ruleEvent=ruleEvent();
 
             state._fsp--;
 
              current =iv_ruleEvent; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleEvent670); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleEvent692); 
 
             }
 
@@ -845,7 +872,7 @@ public class InternalRFSMParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleEvent"
-    // ../be.kuleuven.dsl.rfsm/src-gen/be/kuleuven/dsl/parser/antlr/internal/InternalRFSM.g:371:1: ruleEvent returns [EObject current=null] : (otherlv_0= 'onevent' ( (lv_event_1_0= RULE_STRING ) ) ) ;
+    // ../be.kuleuven.dsl.rfsm/src-gen/be/kuleuven/dsl/parser/antlr/internal/InternalRFSM.g:389:1: ruleEvent returns [EObject current=null] : (otherlv_0= 'onevent' ( (lv_event_1_0= RULE_STRING ) ) ) ;
     public final EObject ruleEvent() throws RecognitionException {
         EObject current = null;
 
@@ -855,23 +882,23 @@ public class InternalRFSMParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../be.kuleuven.dsl.rfsm/src-gen/be/kuleuven/dsl/parser/antlr/internal/InternalRFSM.g:374:28: ( (otherlv_0= 'onevent' ( (lv_event_1_0= RULE_STRING ) ) ) )
-            // ../be.kuleuven.dsl.rfsm/src-gen/be/kuleuven/dsl/parser/antlr/internal/InternalRFSM.g:375:1: (otherlv_0= 'onevent' ( (lv_event_1_0= RULE_STRING ) ) )
+            // ../be.kuleuven.dsl.rfsm/src-gen/be/kuleuven/dsl/parser/antlr/internal/InternalRFSM.g:392:28: ( (otherlv_0= 'onevent' ( (lv_event_1_0= RULE_STRING ) ) ) )
+            // ../be.kuleuven.dsl.rfsm/src-gen/be/kuleuven/dsl/parser/antlr/internal/InternalRFSM.g:393:1: (otherlv_0= 'onevent' ( (lv_event_1_0= RULE_STRING ) ) )
             {
-            // ../be.kuleuven.dsl.rfsm/src-gen/be/kuleuven/dsl/parser/antlr/internal/InternalRFSM.g:375:1: (otherlv_0= 'onevent' ( (lv_event_1_0= RULE_STRING ) ) )
-            // ../be.kuleuven.dsl.rfsm/src-gen/be/kuleuven/dsl/parser/antlr/internal/InternalRFSM.g:375:3: otherlv_0= 'onevent' ( (lv_event_1_0= RULE_STRING ) )
+            // ../be.kuleuven.dsl.rfsm/src-gen/be/kuleuven/dsl/parser/antlr/internal/InternalRFSM.g:393:1: (otherlv_0= 'onevent' ( (lv_event_1_0= RULE_STRING ) ) )
+            // ../be.kuleuven.dsl.rfsm/src-gen/be/kuleuven/dsl/parser/antlr/internal/InternalRFSM.g:393:3: otherlv_0= 'onevent' ( (lv_event_1_0= RULE_STRING ) )
             {
-            otherlv_0=(Token)match(input,21,FOLLOW_21_in_ruleEvent707); 
+            otherlv_0=(Token)match(input,21,FOLLOW_21_in_ruleEvent729); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getEventAccess().getOneventKeyword_0());
                 
-            // ../be.kuleuven.dsl.rfsm/src-gen/be/kuleuven/dsl/parser/antlr/internal/InternalRFSM.g:379:1: ( (lv_event_1_0= RULE_STRING ) )
-            // ../be.kuleuven.dsl.rfsm/src-gen/be/kuleuven/dsl/parser/antlr/internal/InternalRFSM.g:380:1: (lv_event_1_0= RULE_STRING )
+            // ../be.kuleuven.dsl.rfsm/src-gen/be/kuleuven/dsl/parser/antlr/internal/InternalRFSM.g:397:1: ( (lv_event_1_0= RULE_STRING ) )
+            // ../be.kuleuven.dsl.rfsm/src-gen/be/kuleuven/dsl/parser/antlr/internal/InternalRFSM.g:398:1: (lv_event_1_0= RULE_STRING )
             {
-            // ../be.kuleuven.dsl.rfsm/src-gen/be/kuleuven/dsl/parser/antlr/internal/InternalRFSM.g:380:1: (lv_event_1_0= RULE_STRING )
-            // ../be.kuleuven.dsl.rfsm/src-gen/be/kuleuven/dsl/parser/antlr/internal/InternalRFSM.g:381:3: lv_event_1_0= RULE_STRING
+            // ../be.kuleuven.dsl.rfsm/src-gen/be/kuleuven/dsl/parser/antlr/internal/InternalRFSM.g:398:1: (lv_event_1_0= RULE_STRING )
+            // ../be.kuleuven.dsl.rfsm/src-gen/be/kuleuven/dsl/parser/antlr/internal/InternalRFSM.g:399:3: lv_event_1_0= RULE_STRING
             {
-            lv_event_1_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleEvent724); 
+            lv_event_1_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleEvent746); 
 
             			newLeafNode(lv_event_1_0, grammarAccess.getEventAccess().getEventSTRINGTerminalRuleCall_1_0()); 
             		
@@ -912,7 +939,7 @@ public class InternalRFSMParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleFunction"
-    // ../be.kuleuven.dsl.rfsm/src-gen/be/kuleuven/dsl/parser/antlr/internal/InternalRFSM.g:405:1: entryRuleFunction returns [EObject current=null] : iv_ruleFunction= ruleFunction EOF ;
+    // ../be.kuleuven.dsl.rfsm/src-gen/be/kuleuven/dsl/parser/antlr/internal/InternalRFSM.g:423:1: entryRuleFunction returns [EObject current=null] : iv_ruleFunction= ruleFunction EOF ;
     public final EObject entryRuleFunction() throws RecognitionException {
         EObject current = null;
 
@@ -920,17 +947,17 @@ public class InternalRFSMParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../be.kuleuven.dsl.rfsm/src-gen/be/kuleuven/dsl/parser/antlr/internal/InternalRFSM.g:406:2: (iv_ruleFunction= ruleFunction EOF )
-            // ../be.kuleuven.dsl.rfsm/src-gen/be/kuleuven/dsl/parser/antlr/internal/InternalRFSM.g:407:2: iv_ruleFunction= ruleFunction EOF
+            // ../be.kuleuven.dsl.rfsm/src-gen/be/kuleuven/dsl/parser/antlr/internal/InternalRFSM.g:424:2: (iv_ruleFunction= ruleFunction EOF )
+            // ../be.kuleuven.dsl.rfsm/src-gen/be/kuleuven/dsl/parser/antlr/internal/InternalRFSM.g:425:2: iv_ruleFunction= ruleFunction EOF
             {
              newCompositeNode(grammarAccess.getFunctionRule()); 
-            pushFollow(FOLLOW_ruleFunction_in_entryRuleFunction765);
+            pushFollow(FOLLOW_ruleFunction_in_entryRuleFunction787);
             iv_ruleFunction=ruleFunction();
 
             state._fsp--;
 
              current =iv_ruleFunction; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleFunction775); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleFunction797); 
 
             }
 
@@ -948,7 +975,7 @@ public class InternalRFSMParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleFunction"
-    // ../be.kuleuven.dsl.rfsm/src-gen/be/kuleuven/dsl/parser/antlr/internal/InternalRFSM.g:414:1: ruleFunction returns [EObject current=null] : ( (lv_call_0_0= RULE_STRING ) ) ;
+    // ../be.kuleuven.dsl.rfsm/src-gen/be/kuleuven/dsl/parser/antlr/internal/InternalRFSM.g:432:1: ruleFunction returns [EObject current=null] : ( (lv_call_0_0= RULE_STRING ) ) ;
     public final EObject ruleFunction() throws RecognitionException {
         EObject current = null;
 
@@ -957,16 +984,16 @@ public class InternalRFSMParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../be.kuleuven.dsl.rfsm/src-gen/be/kuleuven/dsl/parser/antlr/internal/InternalRFSM.g:417:28: ( ( (lv_call_0_0= RULE_STRING ) ) )
-            // ../be.kuleuven.dsl.rfsm/src-gen/be/kuleuven/dsl/parser/antlr/internal/InternalRFSM.g:418:1: ( (lv_call_0_0= RULE_STRING ) )
+            // ../be.kuleuven.dsl.rfsm/src-gen/be/kuleuven/dsl/parser/antlr/internal/InternalRFSM.g:435:28: ( ( (lv_call_0_0= RULE_STRING ) ) )
+            // ../be.kuleuven.dsl.rfsm/src-gen/be/kuleuven/dsl/parser/antlr/internal/InternalRFSM.g:436:1: ( (lv_call_0_0= RULE_STRING ) )
             {
-            // ../be.kuleuven.dsl.rfsm/src-gen/be/kuleuven/dsl/parser/antlr/internal/InternalRFSM.g:418:1: ( (lv_call_0_0= RULE_STRING ) )
-            // ../be.kuleuven.dsl.rfsm/src-gen/be/kuleuven/dsl/parser/antlr/internal/InternalRFSM.g:419:1: (lv_call_0_0= RULE_STRING )
+            // ../be.kuleuven.dsl.rfsm/src-gen/be/kuleuven/dsl/parser/antlr/internal/InternalRFSM.g:436:1: ( (lv_call_0_0= RULE_STRING ) )
+            // ../be.kuleuven.dsl.rfsm/src-gen/be/kuleuven/dsl/parser/antlr/internal/InternalRFSM.g:437:1: (lv_call_0_0= RULE_STRING )
             {
-            // ../be.kuleuven.dsl.rfsm/src-gen/be/kuleuven/dsl/parser/antlr/internal/InternalRFSM.g:419:1: (lv_call_0_0= RULE_STRING )
-            // ../be.kuleuven.dsl.rfsm/src-gen/be/kuleuven/dsl/parser/antlr/internal/InternalRFSM.g:420:3: lv_call_0_0= RULE_STRING
+            // ../be.kuleuven.dsl.rfsm/src-gen/be/kuleuven/dsl/parser/antlr/internal/InternalRFSM.g:437:1: (lv_call_0_0= RULE_STRING )
+            // ../be.kuleuven.dsl.rfsm/src-gen/be/kuleuven/dsl/parser/antlr/internal/InternalRFSM.g:438:3: lv_call_0_0= RULE_STRING
             {
-            lv_call_0_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleFunction816); 
+            lv_call_0_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleFunction838); 
 
             			newLeafNode(lv_call_0_0, grammarAccess.getFunctionAccess().getCallSTRINGTerminalRuleCall_0()); 
             		
@@ -1004,7 +1031,7 @@ public class InternalRFSMParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleQualifiedName"
-    // ../be.kuleuven.dsl.rfsm/src-gen/be/kuleuven/dsl/parser/antlr/internal/InternalRFSM.g:444:1: entryRuleQualifiedName returns [String current=null] : iv_ruleQualifiedName= ruleQualifiedName EOF ;
+    // ../be.kuleuven.dsl.rfsm/src-gen/be/kuleuven/dsl/parser/antlr/internal/InternalRFSM.g:462:1: entryRuleQualifiedName returns [String current=null] : iv_ruleQualifiedName= ruleQualifiedName EOF ;
     public final String entryRuleQualifiedName() throws RecognitionException {
         String current = null;
 
@@ -1012,17 +1039,17 @@ public class InternalRFSMParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../be.kuleuven.dsl.rfsm/src-gen/be/kuleuven/dsl/parser/antlr/internal/InternalRFSM.g:445:2: (iv_ruleQualifiedName= ruleQualifiedName EOF )
-            // ../be.kuleuven.dsl.rfsm/src-gen/be/kuleuven/dsl/parser/antlr/internal/InternalRFSM.g:446:2: iv_ruleQualifiedName= ruleQualifiedName EOF
+            // ../be.kuleuven.dsl.rfsm/src-gen/be/kuleuven/dsl/parser/antlr/internal/InternalRFSM.g:463:2: (iv_ruleQualifiedName= ruleQualifiedName EOF )
+            // ../be.kuleuven.dsl.rfsm/src-gen/be/kuleuven/dsl/parser/antlr/internal/InternalRFSM.g:464:2: iv_ruleQualifiedName= ruleQualifiedName EOF
             {
              newCompositeNode(grammarAccess.getQualifiedNameRule()); 
-            pushFollow(FOLLOW_ruleQualifiedName_in_entryRuleQualifiedName857);
+            pushFollow(FOLLOW_ruleQualifiedName_in_entryRuleQualifiedName879);
             iv_ruleQualifiedName=ruleQualifiedName();
 
             state._fsp--;
 
              current =iv_ruleQualifiedName.getText(); 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleQualifiedName868); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleQualifiedName890); 
 
             }
 
@@ -1040,7 +1067,7 @@ public class InternalRFSMParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleQualifiedName"
-    // ../be.kuleuven.dsl.rfsm/src-gen/be/kuleuven/dsl/parser/antlr/internal/InternalRFSM.g:453:1: ruleQualifiedName returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )* ) ;
+    // ../be.kuleuven.dsl.rfsm/src-gen/be/kuleuven/dsl/parser/antlr/internal/InternalRFSM.g:471:1: ruleQualifiedName returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )* ) ;
     public final AntlrDatatypeRuleToken ruleQualifiedName() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -1051,20 +1078,20 @@ public class InternalRFSMParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../be.kuleuven.dsl.rfsm/src-gen/be/kuleuven/dsl/parser/antlr/internal/InternalRFSM.g:456:28: ( (this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )* ) )
-            // ../be.kuleuven.dsl.rfsm/src-gen/be/kuleuven/dsl/parser/antlr/internal/InternalRFSM.g:457:1: (this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )* )
+            // ../be.kuleuven.dsl.rfsm/src-gen/be/kuleuven/dsl/parser/antlr/internal/InternalRFSM.g:474:28: ( (this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )* ) )
+            // ../be.kuleuven.dsl.rfsm/src-gen/be/kuleuven/dsl/parser/antlr/internal/InternalRFSM.g:475:1: (this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )* )
             {
-            // ../be.kuleuven.dsl.rfsm/src-gen/be/kuleuven/dsl/parser/antlr/internal/InternalRFSM.g:457:1: (this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )* )
-            // ../be.kuleuven.dsl.rfsm/src-gen/be/kuleuven/dsl/parser/antlr/internal/InternalRFSM.g:457:6: this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )*
+            // ../be.kuleuven.dsl.rfsm/src-gen/be/kuleuven/dsl/parser/antlr/internal/InternalRFSM.g:475:1: (this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )* )
+            // ../be.kuleuven.dsl.rfsm/src-gen/be/kuleuven/dsl/parser/antlr/internal/InternalRFSM.g:475:6: this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )*
             {
-            this_ID_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleQualifiedName908); 
+            this_ID_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleQualifiedName930); 
 
             		current.merge(this_ID_0);
                 
              
                 newLeafNode(this_ID_0, grammarAccess.getQualifiedNameAccess().getIDTerminalRuleCall_0()); 
                 
-            // ../be.kuleuven.dsl.rfsm/src-gen/be/kuleuven/dsl/parser/antlr/internal/InternalRFSM.g:464:1: (kw= '.' this_ID_2= RULE_ID )*
+            // ../be.kuleuven.dsl.rfsm/src-gen/be/kuleuven/dsl/parser/antlr/internal/InternalRFSM.g:482:1: (kw= '.' this_ID_2= RULE_ID )*
             loop8:
             do {
                 int alt8=2;
@@ -1077,14 +1104,14 @@ public class InternalRFSMParser extends AbstractInternalAntlrParser {
 
                 switch (alt8) {
             	case 1 :
-            	    // ../be.kuleuven.dsl.rfsm/src-gen/be/kuleuven/dsl/parser/antlr/internal/InternalRFSM.g:465:2: kw= '.' this_ID_2= RULE_ID
+            	    // ../be.kuleuven.dsl.rfsm/src-gen/be/kuleuven/dsl/parser/antlr/internal/InternalRFSM.g:483:2: kw= '.' this_ID_2= RULE_ID
             	    {
-            	    kw=(Token)match(input,22,FOLLOW_22_in_ruleQualifiedName927); 
+            	    kw=(Token)match(input,22,FOLLOW_22_in_ruleQualifiedName949); 
 
             	            current.merge(kw);
             	            newLeafNode(kw, grammarAccess.getQualifiedNameAccess().getFullStopKeyword_1_0()); 
             	        
-            	    this_ID_2=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleQualifiedName942); 
+            	    this_ID_2=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleQualifiedName964); 
 
             	    		current.merge(this_ID_2);
             	        
@@ -1143,25 +1170,26 @@ public class InternalRFSMParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_16_in_ruleState412 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleTransition_in_entryRuleTransition448 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleTransition458 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_17_in_ruleTransition495 = new BitSet(new long[]{0x0000000000040000L});
-    public static final BitSet FOLLOW_18_in_ruleTransition507 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_ruleQualifiedName_in_ruleTransition530 = new BitSet(new long[]{0x0000000000080000L});
-    public static final BitSet FOLLOW_19_in_ruleTransition542 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_ruleQualifiedName_in_ruleTransition565 = new BitSet(new long[]{0x0000000000300002L});
-    public static final BitSet FOLLOW_ruleEvent_in_ruleTransition586 = new BitSet(new long[]{0x0000000000300002L});
-    public static final BitSet FOLLOW_20_in_ruleTransition600 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_RULE_INT_in_ruleTransition617 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleEvent_in_entryRuleEvent660 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleEvent670 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_21_in_ruleEvent707 = new BitSet(new long[]{0x0000000000000040L});
-    public static final BitSet FOLLOW_RULE_STRING_in_ruleEvent724 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleFunction_in_entryRuleFunction765 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleFunction775 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_STRING_in_ruleFunction816 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleQualifiedName_in_entryRuleQualifiedName857 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleQualifiedName868 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleQualifiedName908 = new BitSet(new long[]{0x0000000000400002L});
-    public static final BitSet FOLLOW_22_in_ruleQualifiedName927 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleQualifiedName942 = new BitSet(new long[]{0x0000000000400002L});
+    public static final BitSet FOLLOW_17_in_ruleTransition495 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleTransition512 = new BitSet(new long[]{0x0000000000040000L});
+    public static final BitSet FOLLOW_18_in_ruleTransition529 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_ruleQualifiedName_in_ruleTransition552 = new BitSet(new long[]{0x0000000000080000L});
+    public static final BitSet FOLLOW_19_in_ruleTransition564 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_ruleQualifiedName_in_ruleTransition587 = new BitSet(new long[]{0x0000000000300002L});
+    public static final BitSet FOLLOW_ruleEvent_in_ruleTransition608 = new BitSet(new long[]{0x0000000000300002L});
+    public static final BitSet FOLLOW_20_in_ruleTransition622 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_RULE_INT_in_ruleTransition639 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleEvent_in_entryRuleEvent682 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleEvent692 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_21_in_ruleEvent729 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_RULE_STRING_in_ruleEvent746 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleFunction_in_entryRuleFunction787 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleFunction797 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_STRING_in_ruleFunction838 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleQualifiedName_in_entryRuleQualifiedName879 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleQualifiedName890 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleQualifiedName930 = new BitSet(new long[]{0x0000000000400002L});
+    public static final BitSet FOLLOW_22_in_ruleQualifiedName949 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleQualifiedName964 = new BitSet(new long[]{0x0000000000400002L});
 
 }

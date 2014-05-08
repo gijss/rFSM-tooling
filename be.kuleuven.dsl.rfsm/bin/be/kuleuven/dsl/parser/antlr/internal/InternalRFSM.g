@@ -273,9 +273,27 @@ ruleTransition returns [EObject current=null]
     {
     	newLeafNode(otherlv_0, grammarAccess.getTransitionAccess().getTransitionKeyword_0());
     }
-	otherlv_1='from' 
+(
+(
+		lv_name_1_0=RULE_ID
+		{
+			newLeafNode(lv_name_1_0, grammarAccess.getTransitionAccess().getNameIDTerminalRuleCall_1_0()); 
+		}
+		{
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getTransitionRule());
+	        }
+       		setWithLastConsumed(
+       			$current, 
+       			"name",
+        		lv_name_1_0, 
+        		"ID");
+	    }
+
+)
+)	otherlv_2='from' 
     {
-    	newLeafNode(otherlv_1, grammarAccess.getTransitionAccess().getFromKeyword_1());
+    	newLeafNode(otherlv_2, grammarAccess.getTransitionAccess().getFromKeyword_2());
     }
 (
 (
@@ -285,16 +303,16 @@ ruleTransition returns [EObject current=null]
 	        }
         }
 		{ 
-	        newCompositeNode(grammarAccess.getTransitionAccess().getSourceStateCrossReference_2_0()); 
+	        newCompositeNode(grammarAccess.getTransitionAccess().getSourceStateCrossReference_3_0()); 
 	    }
 		ruleQualifiedName		{ 
 	        afterParserOrEnumRuleCall();
 	    }
 
 )
-)	otherlv_3='to' 
+)	otherlv_4='to' 
     {
-    	newLeafNode(otherlv_3, grammarAccess.getTransitionAccess().getToKeyword_3());
+    	newLeafNode(otherlv_4, grammarAccess.getTransitionAccess().getToKeyword_4());
     }
 (
 (
@@ -304,7 +322,7 @@ ruleTransition returns [EObject current=null]
 	        }
         }
 		{ 
-	        newCompositeNode(grammarAccess.getTransitionAccess().getTargetStateCrossReference_4_0()); 
+	        newCompositeNode(grammarAccess.getTransitionAccess().getTargetStateCrossReference_5_0()); 
 	    }
 		ruleQualifiedName		{ 
 	        afterParserOrEnumRuleCall();
@@ -314,30 +332,30 @@ ruleTransition returns [EObject current=null]
 )(
 (
 		{ 
-	        newCompositeNode(grammarAccess.getTransitionAccess().getEventsEventParserRuleCall_5_0()); 
+	        newCompositeNode(grammarAccess.getTransitionAccess().getEventsEventParserRuleCall_6_0()); 
 	    }
-		lv_events_5_0=ruleEvent		{
+		lv_events_6_0=ruleEvent		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getTransitionRule());
 	        }
        		add(
        			$current, 
        			"events",
-        		lv_events_5_0, 
+        		lv_events_6_0, 
         		"Event");
 	        afterParserOrEnumRuleCall();
 	    }
 
 )
-)*(	otherlv_6='priority' 
+)*(	otherlv_7='priority' 
     {
-    	newLeafNode(otherlv_6, grammarAccess.getTransitionAccess().getPriorityKeyword_6_0());
+    	newLeafNode(otherlv_7, grammarAccess.getTransitionAccess().getPriorityKeyword_7_0());
     }
 (
 (
-		lv_priorityNumber_7_0=RULE_INT
+		lv_priorityNumber_8_0=RULE_INT
 		{
-			newLeafNode(lv_priorityNumber_7_0, grammarAccess.getTransitionAccess().getPriorityNumberINTTerminalRuleCall_6_1_0()); 
+			newLeafNode(lv_priorityNumber_8_0, grammarAccess.getTransitionAccess().getPriorityNumberINTTerminalRuleCall_7_1_0()); 
 		}
 		{
 	        if ($current==null) {
@@ -346,7 +364,7 @@ ruleTransition returns [EObject current=null]
        		setWithLastConsumed(
        			$current, 
        			"priorityNumber",
-        		lv_priorityNumber_7_0, 
+        		lv_priorityNumber_8_0, 
         		"INT");
 	    }
 
