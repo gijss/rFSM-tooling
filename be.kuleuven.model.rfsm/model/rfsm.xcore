@@ -1,6 +1,15 @@
+@Ecore(invocationDelegates="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot",
+settingDelegates="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot", validationDelegates="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot")
+
 package be.kuleuven.model.rfsm
 
-class RfsmGraph {
+annotation "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot" as Pivot
+
+/*
+ * This rFSM metamodel is based on a HyperGraph model
+ */
+ 
+ class RfsmGraph {
 	String name
 	contains State rootState
 	contains Transition[] transitions
@@ -9,9 +18,7 @@ class RfsmGraph {
 
 class State {
 	String name
-	contains State[] states opposite parent
-	container State parent opposite states
-	
+	contains State[] states
 	contains Function[0..1] entry
 	contains Function[0..1] doo
 	contains Function[0..1] exit
