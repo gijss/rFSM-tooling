@@ -6,7 +6,7 @@ package be.kuleuven.model.rfsm
 annotation "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot" as Pivot
 
 /*
- * This rFSM metamodel of is based on a HyperGraph model
+ * This rFSM metamodel is based on a HyperGraph model
  */
  
  class RfsmGraph {
