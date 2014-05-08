@@ -162,18 +162,18 @@ public class RFSMGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cPriorityNumberINTTerminalRuleCall_7_1_0 = (RuleCall)cPriorityNumberAssignment_7_1.eContents().get(0);
 		
 		//Transition:
-		//	"transition" name=ID "from" source+=[State|QualifiedName] "to" target+=[State|QualifiedName] events+=Event*
+		//	"transition" name=ID? "from" source+=[State|QualifiedName] "to" target+=[State|QualifiedName] events+=Event*
 		//	("priority" priorityNumber=INT)?;
 		public ParserRule getRule() { return rule; }
 
-		//"transition" name=ID "from" source+=[State|QualifiedName] "to" target+=[State|QualifiedName] events+=Event* ("priority"
+		//"transition" name=ID? "from" source+=[State|QualifiedName] "to" target+=[State|QualifiedName] events+=Event* ("priority"
 		//priorityNumber=INT)?
 		public Group getGroup() { return cGroup; }
 
 		//"transition"
 		public Keyword getTransitionKeyword_0() { return cTransitionKeyword_0; }
 
-		//name=ID
+		//name=ID?
 		public Assignment getNameAssignment_1() { return cNameAssignment_1; }
 
 		//ID
@@ -359,7 +359,7 @@ public class RFSMGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Transition:
-	//	"transition" name=ID "from" source+=[State|QualifiedName] "to" target+=[State|QualifiedName] events+=Event*
+	//	"transition" name=ID? "from" source+=[State|QualifiedName] "to" target+=[State|QualifiedName] events+=Event*
 	//	("priority" priorityNumber=INT)?;
 	public TransitionElements getTransitionAccess() {
 		return (pTransition != null) ? pTransition : (pTransition = new TransitionElements());

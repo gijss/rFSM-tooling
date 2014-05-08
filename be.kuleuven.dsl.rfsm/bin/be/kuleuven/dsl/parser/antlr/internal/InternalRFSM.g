@@ -291,7 +291,7 @@ ruleTransition returns [EObject current=null]
 	    }
 
 )
-)	otherlv_2='from' 
+)?	otherlv_2='from' 
     {
     	newLeafNode(otherlv_2, grammarAccess.getTransitionAccess().getFromKeyword_2());
     }

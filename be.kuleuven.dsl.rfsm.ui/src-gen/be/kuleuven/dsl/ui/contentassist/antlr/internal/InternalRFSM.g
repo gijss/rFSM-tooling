@@ -780,7 +780,7 @@ rule__Transition__Group__1__Impl
 :
 (
 { before(grammarAccess.getTransitionAccess().getNameAssignment_1()); }
-(rule__Transition__NameAssignment_1)
+(rule__Transition__NameAssignment_1)?
 { after(grammarAccess.getTransitionAccess().getNameAssignment_1()); }
 )
 
