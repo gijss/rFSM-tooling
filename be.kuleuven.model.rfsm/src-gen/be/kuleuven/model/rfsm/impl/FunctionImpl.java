@@ -19,6 +19,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * <p>
  * The following features are implemented:
  * <ul>
+ *   <li>{@link be.kuleuven.model.rfsm.impl.FunctionImpl#getName <em>Name</em>}</li>
  *   <li>{@link be.kuleuven.model.rfsm.impl.FunctionImpl#getCall <em>Call</em>}</li>
  * </ul>
  * </p>
@@ -27,6 +28,26 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  */
 public class FunctionImpl extends MinimalEObjectImpl.Container implements Function
 {
+  /**
+   * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getName()
+   * @generated
+   * @ordered
+   */
+  protected static final String NAME_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getName()
+   * @generated
+   * @ordered
+   */
+  protected String name = NAME_EDEFAULT;
+
   /**
    * The default value of the '{@link #getCall() <em>Call</em>}' attribute.
    * <!-- begin-user-doc -->
@@ -73,6 +94,29 @@ public class FunctionImpl extends MinimalEObjectImpl.Container implements Functi
    * <!-- end-user-doc -->
    * @generated
    */
+  public String getName()
+  {
+    return name;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setName(String newName)
+  {
+    String oldName = name;
+    name = newName;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, RfsmPackage.FUNCTION__NAME, oldName, name));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public String getCall()
   {
     return call;
@@ -101,6 +145,8 @@ public class FunctionImpl extends MinimalEObjectImpl.Container implements Functi
   {
     switch (featureID)
     {
+      case RfsmPackage.FUNCTION__NAME:
+        return getName();
       case RfsmPackage.FUNCTION__CALL:
         return getCall();
     }
@@ -117,6 +163,9 @@ public class FunctionImpl extends MinimalEObjectImpl.Container implements Functi
   {
     switch (featureID)
     {
+      case RfsmPackage.FUNCTION__NAME:
+        setName((String)newValue);
+        return;
       case RfsmPackage.FUNCTION__CALL:
         setCall((String)newValue);
         return;
@@ -134,6 +183,9 @@ public class FunctionImpl extends MinimalEObjectImpl.Container implements Functi
   {
     switch (featureID)
     {
+      case RfsmPackage.FUNCTION__NAME:
+        setName(NAME_EDEFAULT);
+        return;
       case RfsmPackage.FUNCTION__CALL:
         setCall(CALL_EDEFAULT);
         return;
@@ -151,6 +203,8 @@ public class FunctionImpl extends MinimalEObjectImpl.Container implements Functi
   {
     switch (featureID)
     {
+      case RfsmPackage.FUNCTION__NAME:
+        return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
       case RfsmPackage.FUNCTION__CALL:
         return CALL_EDEFAULT == null ? call != null : !CALL_EDEFAULT.equals(call);
     }
@@ -168,7 +222,9 @@ public class FunctionImpl extends MinimalEObjectImpl.Container implements Functi
     if (eIsProxy()) return super.toString();
 
     StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (call: ");
+    result.append(" (name: ");
+    result.append(name);
+    result.append(", call: ");
     result.append(call);
     result.append(')');
     return result.toString();

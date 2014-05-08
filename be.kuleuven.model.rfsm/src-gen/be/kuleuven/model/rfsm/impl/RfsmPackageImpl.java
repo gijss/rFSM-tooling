@@ -312,9 +312,19 @@ public class RfsmPackageImpl extends EPackageImpl implements RfsmPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getEvent_Event()
+  public EAttribute getEvent_Name()
   {
     return (EAttribute)eventEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getEvent_Event()
+  {
+    return (EAttribute)eventEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -332,9 +342,19 @@ public class RfsmPackageImpl extends EPackageImpl implements RfsmPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getFunction_Call()
+  public EAttribute getFunction_Name()
   {
     return (EAttribute)functionEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getFunction_Call()
+  {
+    return (EAttribute)functionEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -388,9 +408,11 @@ public class RfsmPackageImpl extends EPackageImpl implements RfsmPackage
     createEAttribute(transitionEClass, TRANSITION__PRIORITY_NUMBER);
 
     eventEClass = createEClass(EVENT);
+    createEAttribute(eventEClass, EVENT__NAME);
     createEAttribute(eventEClass, EVENT__EVENT);
 
     functionEClass = createEClass(FUNCTION);
+    createEAttribute(functionEClass, FUNCTION__NAME);
     createEAttribute(functionEClass, FUNCTION__CALL);
   }
 
@@ -449,9 +471,11 @@ public class RfsmPackageImpl extends EPackageImpl implements RfsmPackage
     initEAttribute(getTransition_PriorityNumber(), theEcorePackage.getEInt(), "priorityNumber", null, 0, 1, Transition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(eventEClass, Event.class, "Event", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getEvent_Name(), theEcorePackage.getEString(), "name", null, 0, 1, Event.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getEvent_Event(), theEcorePackage.getEString(), "event", null, 0, 1, Event.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(functionEClass, Function.class, "Function", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getFunction_Name(), theEcorePackage.getEString(), "name", null, 0, 1, Function.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getFunction_Call(), theEcorePackage.getEString(), "call", null, 0, 1, Function.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     // Create resource

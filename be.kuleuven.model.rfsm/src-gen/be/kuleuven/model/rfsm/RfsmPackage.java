@@ -281,13 +281,22 @@ public interface RfsmPackage extends EPackage
   int EVENT = 3;
 
   /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EVENT__NAME = 0;
+
+  /**
    * The feature id for the '<em><b>Event</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int EVENT__EVENT = 0;
+  int EVENT__EVENT = 1;
 
   /**
    * The number of structural features of the '<em>Event</em>' class.
@@ -296,7 +305,7 @@ public interface RfsmPackage extends EPackage
    * @generated
    * @ordered
    */
-  int EVENT_FEATURE_COUNT = 1;
+  int EVENT_FEATURE_COUNT = 2;
 
   /**
    * The number of operations of the '<em>Event</em>' class.
@@ -318,13 +327,22 @@ public interface RfsmPackage extends EPackage
   int FUNCTION = 4;
 
   /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FUNCTION__NAME = 0;
+
+  /**
    * The feature id for the '<em><b>Call</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int FUNCTION__CALL = 0;
+  int FUNCTION__CALL = 1;
 
   /**
    * The number of structural features of the '<em>Function</em>' class.
@@ -333,7 +351,7 @@ public interface RfsmPackage extends EPackage
    * @generated
    * @ordered
    */
-  int FUNCTION_FEATURE_COUNT = 1;
+  int FUNCTION_FEATURE_COUNT = 2;
 
   /**
    * The number of operations of the '<em>Function</em>' class.
@@ -540,6 +558,17 @@ public interface RfsmPackage extends EPackage
   EClass getEvent();
 
   /**
+   * Returns the meta object for the attribute '{@link be.kuleuven.model.rfsm.Event#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Name</em>'.
+   * @see be.kuleuven.model.rfsm.Event#getName()
+   * @see #getEvent()
+   * @generated
+   */
+  EAttribute getEvent_Name();
+
+  /**
    * Returns the meta object for the attribute '{@link be.kuleuven.model.rfsm.Event#getEvent <em>Event</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -559,6 +588,17 @@ public interface RfsmPackage extends EPackage
    * @generated
    */
   EClass getFunction();
+
+  /**
+   * Returns the meta object for the attribute '{@link be.kuleuven.model.rfsm.Function#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Name</em>'.
+   * @see be.kuleuven.model.rfsm.Function#getName()
+   * @see #getFunction()
+   * @generated
+   */
+  EAttribute getFunction_Name();
 
   /**
    * Returns the meta object for the attribute '{@link be.kuleuven.model.rfsm.Function#getCall <em>Call</em>}'.
@@ -748,6 +788,14 @@ public interface RfsmPackage extends EPackage
     EClass EVENT = eINSTANCE.getEvent();
 
     /**
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute EVENT__NAME = eINSTANCE.getEvent_Name();
+
+    /**
      * The meta object literal for the '<em><b>Event</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -764,6 +812,14 @@ public interface RfsmPackage extends EPackage
      * @generated
      */
     EClass FUNCTION = eINSTANCE.getFunction();
+
+    /**
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute FUNCTION__NAME = eINSTANCE.getFunction_Name();
 
     /**
      * The meta object literal for the '<em><b>Call</b></em>' attribute feature.

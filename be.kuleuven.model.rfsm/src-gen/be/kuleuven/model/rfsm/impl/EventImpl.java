@@ -19,6 +19,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * <p>
  * The following features are implemented:
  * <ul>
+ *   <li>{@link be.kuleuven.model.rfsm.impl.EventImpl#getName <em>Name</em>}</li>
  *   <li>{@link be.kuleuven.model.rfsm.impl.EventImpl#getEvent <em>Event</em>}</li>
  * </ul>
  * </p>
@@ -27,6 +28,26 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  */
 public class EventImpl extends MinimalEObjectImpl.Container implements Event
 {
+  /**
+   * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getName()
+   * @generated
+   * @ordered
+   */
+  protected static final String NAME_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getName()
+   * @generated
+   * @ordered
+   */
+  protected String name = NAME_EDEFAULT;
+
   /**
    * The default value of the '{@link #getEvent() <em>Event</em>}' attribute.
    * <!-- begin-user-doc -->
@@ -73,6 +94,29 @@ public class EventImpl extends MinimalEObjectImpl.Container implements Event
    * <!-- end-user-doc -->
    * @generated
    */
+  public String getName()
+  {
+    return name;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setName(String newName)
+  {
+    String oldName = name;
+    name = newName;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, RfsmPackage.EVENT__NAME, oldName, name));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public String getEvent()
   {
     return event;
@@ -101,6 +145,8 @@ public class EventImpl extends MinimalEObjectImpl.Container implements Event
   {
     switch (featureID)
     {
+      case RfsmPackage.EVENT__NAME:
+        return getName();
       case RfsmPackage.EVENT__EVENT:
         return getEvent();
     }
@@ -117,6 +163,9 @@ public class EventImpl extends MinimalEObjectImpl.Container implements Event
   {
     switch (featureID)
     {
+      case RfsmPackage.EVENT__NAME:
+        setName((String)newValue);
+        return;
       case RfsmPackage.EVENT__EVENT:
         setEvent((String)newValue);
         return;
@@ -134,6 +183,9 @@ public class EventImpl extends MinimalEObjectImpl.Container implements Event
   {
     switch (featureID)
     {
+      case RfsmPackage.EVENT__NAME:
+        setName(NAME_EDEFAULT);
+        return;
       case RfsmPackage.EVENT__EVENT:
         setEvent(EVENT_EDEFAULT);
         return;
@@ -151,6 +203,8 @@ public class EventImpl extends MinimalEObjectImpl.Container implements Event
   {
     switch (featureID)
     {
+      case RfsmPackage.EVENT__NAME:
+        return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
       case RfsmPackage.EVENT__EVENT:
         return EVENT_EDEFAULT == null ? event != null : !EVENT_EDEFAULT.equals(event);
     }
@@ -168,7 +222,9 @@ public class EventImpl extends MinimalEObjectImpl.Container implements Event
     if (eIsProxy()) return super.toString();
 
     StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (event: ");
+    result.append(" (name: ");
+    result.append(name);
+    result.append(", event: ");
     result.append(event);
     result.append(')');
     return result.toString();

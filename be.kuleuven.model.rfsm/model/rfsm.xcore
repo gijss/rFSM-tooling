@@ -33,9 +33,11 @@ class Transition {
 }
 
 class Event {
+	String name
 	String event
 }
 
 class Function {
+	String name
 	String call
 }
