@@ -3,6 +3,7 @@ grammar be.kuleuven.dsl.RFSM with org.eclipse.xtext.common.Terminals
 import "be.kuleuven.model.rfsm"
 
 RfsmGraph returns RfsmGraph:
+		('[RfsmGraphName:' name=ID']')?
 		rootState=State	//can have only one root state
 		//(hyperEdges += Connector)*
 		(transitions += Transition)*	
@@ -27,10 +28,12 @@ Transition returns Transition:
 ;
 
 Event returns Event:
+	('[EventName:' name=ID']')?
 	'onevent' event=STRING
 ;
 
 Function returns Function:
+	('[FunctionName:' name=ID']')?
 	call=STRING
 ;
 

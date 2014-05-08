@@ -38,6 +38,7 @@ public class RFSMParser extends AbstractContentAssistParser {
 				private static final long serialVersionUID = 1L;
 				{
 					put(grammarAccess.getRfsmGraphAccess().getGroup(), "rule__RfsmGraph__Group__0");
+					put(grammarAccess.getRfsmGraphAccess().getGroup_0(), "rule__RfsmGraph__Group_0__0");
 					put(grammarAccess.getStateAccess().getGroup(), "rule__State__Group__0");
 					put(grammarAccess.getStateAccess().getGroup_4(), "rule__State__Group_4__0");
 					put(grammarAccess.getStateAccess().getGroup_5(), "rule__State__Group_5__0");
@@ -45,10 +46,14 @@ public class RFSMParser extends AbstractContentAssistParser {
 					put(grammarAccess.getTransitionAccess().getGroup(), "rule__Transition__Group__0");
 					put(grammarAccess.getTransitionAccess().getGroup_7(), "rule__Transition__Group_7__0");
 					put(grammarAccess.getEventAccess().getGroup(), "rule__Event__Group__0");
+					put(grammarAccess.getEventAccess().getGroup_0(), "rule__Event__Group_0__0");
+					put(grammarAccess.getFunctionAccess().getGroup(), "rule__Function__Group__0");
+					put(grammarAccess.getFunctionAccess().getGroup_0(), "rule__Function__Group_0__0");
 					put(grammarAccess.getQualifiedNameAccess().getGroup(), "rule__QualifiedName__Group__0");
 					put(grammarAccess.getQualifiedNameAccess().getGroup_1(), "rule__QualifiedName__Group_1__0");
-					put(grammarAccess.getRfsmGraphAccess().getRootStateAssignment_0(), "rule__RfsmGraph__RootStateAssignment_0");
-					put(grammarAccess.getRfsmGraphAccess().getTransitionsAssignment_1(), "rule__RfsmGraph__TransitionsAssignment_1");
+					put(grammarAccess.getRfsmGraphAccess().getNameAssignment_0_1(), "rule__RfsmGraph__NameAssignment_0_1");
+					put(grammarAccess.getRfsmGraphAccess().getRootStateAssignment_1(), "rule__RfsmGraph__RootStateAssignment_1");
+					put(grammarAccess.getRfsmGraphAccess().getTransitionsAssignment_2(), "rule__RfsmGraph__TransitionsAssignment_2");
 					put(grammarAccess.getStateAccess().getNameAssignment_1(), "rule__State__NameAssignment_1");
 					put(grammarAccess.getStateAccess().getStatesAssignment_3(), "rule__State__StatesAssignment_3");
 					put(grammarAccess.getStateAccess().getEntryAssignment_4_1(), "rule__State__EntryAssignment_4_1");
@@ -59,8 +64,10 @@ public class RFSMParser extends AbstractContentAssistParser {
 					put(grammarAccess.getTransitionAccess().getTargetAssignment_5(), "rule__Transition__TargetAssignment_5");
 					put(grammarAccess.getTransitionAccess().getEventsAssignment_6(), "rule__Transition__EventsAssignment_6");
 					put(grammarAccess.getTransitionAccess().getPriorityNumberAssignment_7_1(), "rule__Transition__PriorityNumberAssignment_7_1");
-					put(grammarAccess.getEventAccess().getEventAssignment_1(), "rule__Event__EventAssignment_1");
-					put(grammarAccess.getFunctionAccess().getCallAssignment(), "rule__Function__CallAssignment");
+					put(grammarAccess.getEventAccess().getNameAssignment_0_1(), "rule__Event__NameAssignment_0_1");
+					put(grammarAccess.getEventAccess().getEventAssignment_2(), "rule__Event__EventAssignment_2");
+					put(grammarAccess.getFunctionAccess().getNameAssignment_0_1(), "rule__Function__NameAssignment_0_1");
+					put(grammarAccess.getFunctionAccess().getCallAssignment_1(), "rule__Function__CallAssignment_1");
 				}
 			};
 		}

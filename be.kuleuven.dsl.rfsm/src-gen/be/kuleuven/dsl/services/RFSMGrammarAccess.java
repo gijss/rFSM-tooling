@@ -21,35 +21,55 @@ public class RFSMGrammarAccess extends AbstractGrammarElementFinder {
 	public class RfsmGraphElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "RfsmGraph");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Assignment cRootStateAssignment_0 = (Assignment)cGroup.eContents().get(0);
-		private final RuleCall cRootStateStateParserRuleCall_0_0 = (RuleCall)cRootStateAssignment_0.eContents().get(0);
-		private final Assignment cTransitionsAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cTransitionsTransitionParserRuleCall_1_0 = (RuleCall)cTransitionsAssignment_1.eContents().get(0);
+		private final Group cGroup_0 = (Group)cGroup.eContents().get(0);
+		private final Keyword cRfsmGraphNameKeyword_0_0 = (Keyword)cGroup_0.eContents().get(0);
+		private final Assignment cNameAssignment_0_1 = (Assignment)cGroup_0.eContents().get(1);
+		private final RuleCall cNameIDTerminalRuleCall_0_1_0 = (RuleCall)cNameAssignment_0_1.eContents().get(0);
+		private final Keyword cRightSquareBracketKeyword_0_2 = (Keyword)cGroup_0.eContents().get(2);
+		private final Assignment cRootStateAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cRootStateStateParserRuleCall_1_0 = (RuleCall)cRootStateAssignment_1.eContents().get(0);
+		private final Assignment cTransitionsAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cTransitionsTransitionParserRuleCall_2_0 = (RuleCall)cTransitionsAssignment_2.eContents().get(0);
 		
 		//RfsmGraph:
-		//	rootState= //can have only one root state
+		//	("[RfsmGraphName:" name=ID "]")? rootState= //can have only one root state
 		//	State //(hyperEdges += Connector)*
 		//	transitions+=Transition*;
 		public ParserRule getRule() { return rule; }
 
-		//rootState= //can have only one root state
+		//("[RfsmGraphName:" name=ID "]")? rootState= //can have only one root state
 		//State //(hyperEdges += Connector)*
 		//transitions+=Transition*
 		public Group getGroup() { return cGroup; }
 
+		//("[RfsmGraphName:" name=ID "]")?
+		public Group getGroup_0() { return cGroup_0; }
+
+		//"[RfsmGraphName:"
+		public Keyword getRfsmGraphNameKeyword_0_0() { return cRfsmGraphNameKeyword_0_0; }
+
+		//name=ID
+		public Assignment getNameAssignment_0_1() { return cNameAssignment_0_1; }
+
+		//ID
+		public RuleCall getNameIDTerminalRuleCall_0_1_0() { return cNameIDTerminalRuleCall_0_1_0; }
+
+		//"]"
+		public Keyword getRightSquareBracketKeyword_0_2() { return cRightSquareBracketKeyword_0_2; }
+
 		//rootState= //can have only one root state
 		//State
-		public Assignment getRootStateAssignment_0() { return cRootStateAssignment_0; }
+		public Assignment getRootStateAssignment_1() { return cRootStateAssignment_1; }
 
 		////can have only one root state
 		//State
-		public RuleCall getRootStateStateParserRuleCall_0_0() { return cRootStateStateParserRuleCall_0_0; }
+		public RuleCall getRootStateStateParserRuleCall_1_0() { return cRootStateStateParserRuleCall_1_0; }
 
 		//transitions+=Transition*
-		public Assignment getTransitionsAssignment_1() { return cTransitionsAssignment_1; }
+		public Assignment getTransitionsAssignment_2() { return cTransitionsAssignment_2; }
 
 		//Transition
-		public RuleCall getTransitionsTransitionParserRuleCall_1_0() { return cTransitionsTransitionParserRuleCall_1_0; }
+		public RuleCall getTransitionsTransitionParserRuleCall_2_0() { return cTransitionsTransitionParserRuleCall_2_0; }
 	}
 
 	public class StateElements extends AbstractParserRuleElementFinder {
@@ -225,41 +245,85 @@ public class RFSMGrammarAccess extends AbstractGrammarElementFinder {
 	public class EventElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Event");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Keyword cOneventKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final Assignment cEventAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cEventSTRINGTerminalRuleCall_1_0 = (RuleCall)cEventAssignment_1.eContents().get(0);
+		private final Group cGroup_0 = (Group)cGroup.eContents().get(0);
+		private final Keyword cEventNameKeyword_0_0 = (Keyword)cGroup_0.eContents().get(0);
+		private final Assignment cNameAssignment_0_1 = (Assignment)cGroup_0.eContents().get(1);
+		private final RuleCall cNameIDTerminalRuleCall_0_1_0 = (RuleCall)cNameAssignment_0_1.eContents().get(0);
+		private final Keyword cRightSquareBracketKeyword_0_2 = (Keyword)cGroup_0.eContents().get(2);
+		private final Keyword cOneventKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Assignment cEventAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cEventSTRINGTerminalRuleCall_2_0 = (RuleCall)cEventAssignment_2.eContents().get(0);
 		
 		//Event:
-		//	"onevent" event=STRING;
+		//	("[EventName:" name=ID "]")? "onevent" event=STRING;
 		public ParserRule getRule() { return rule; }
 
-		//"onevent" event=STRING
+		//("[EventName:" name=ID "]")? "onevent" event=STRING
 		public Group getGroup() { return cGroup; }
 
+		//("[EventName:" name=ID "]")?
+		public Group getGroup_0() { return cGroup_0; }
+
+		//"[EventName:"
+		public Keyword getEventNameKeyword_0_0() { return cEventNameKeyword_0_0; }
+
+		//name=ID
+		public Assignment getNameAssignment_0_1() { return cNameAssignment_0_1; }
+
+		//ID
+		public RuleCall getNameIDTerminalRuleCall_0_1_0() { return cNameIDTerminalRuleCall_0_1_0; }
+
+		//"]"
+		public Keyword getRightSquareBracketKeyword_0_2() { return cRightSquareBracketKeyword_0_2; }
+
 		//"onevent"
-		public Keyword getOneventKeyword_0() { return cOneventKeyword_0; }
+		public Keyword getOneventKeyword_1() { return cOneventKeyword_1; }
 
 		//event=STRING
-		public Assignment getEventAssignment_1() { return cEventAssignment_1; }
+		public Assignment getEventAssignment_2() { return cEventAssignment_2; }
 
 		//STRING
-		public RuleCall getEventSTRINGTerminalRuleCall_1_0() { return cEventSTRINGTerminalRuleCall_1_0; }
+		public RuleCall getEventSTRINGTerminalRuleCall_2_0() { return cEventSTRINGTerminalRuleCall_2_0; }
 	}
 
 	public class FunctionElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Function");
-		private final Assignment cCallAssignment = (Assignment)rule.eContents().get(1);
-		private final RuleCall cCallSTRINGTerminalRuleCall_0 = (RuleCall)cCallAssignment.eContents().get(0);
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Group cGroup_0 = (Group)cGroup.eContents().get(0);
+		private final Keyword cFunctionNameKeyword_0_0 = (Keyword)cGroup_0.eContents().get(0);
+		private final Assignment cNameAssignment_0_1 = (Assignment)cGroup_0.eContents().get(1);
+		private final RuleCall cNameIDTerminalRuleCall_0_1_0 = (RuleCall)cNameAssignment_0_1.eContents().get(0);
+		private final Keyword cRightSquareBracketKeyword_0_2 = (Keyword)cGroup_0.eContents().get(2);
+		private final Assignment cCallAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cCallSTRINGTerminalRuleCall_1_0 = (RuleCall)cCallAssignment_1.eContents().get(0);
 		
 		//Function:
-		//	call=STRING;
+		//	("[FunctionName:" name=ID "]")? call=STRING;
 		public ParserRule getRule() { return rule; }
 
+		//("[FunctionName:" name=ID "]")? call=STRING
+		public Group getGroup() { return cGroup; }
+
+		//("[FunctionName:" name=ID "]")?
+		public Group getGroup_0() { return cGroup_0; }
+
+		//"[FunctionName:"
+		public Keyword getFunctionNameKeyword_0_0() { return cFunctionNameKeyword_0_0; }
+
+		//name=ID
+		public Assignment getNameAssignment_0_1() { return cNameAssignment_0_1; }
+
+		//ID
+		public RuleCall getNameIDTerminalRuleCall_0_1_0() { return cNameIDTerminalRuleCall_0_1_0; }
+
+		//"]"
+		public Keyword getRightSquareBracketKeyword_0_2() { return cRightSquareBracketKeyword_0_2; }
+
 		//call=STRING
-		public Assignment getCallAssignment() { return cCallAssignment; }
+		public Assignment getCallAssignment_1() { return cCallAssignment_1; }
 
 		//STRING
-		public RuleCall getCallSTRINGTerminalRuleCall_0() { return cCallSTRINGTerminalRuleCall_0; }
+		public RuleCall getCallSTRINGTerminalRuleCall_1_0() { return cCallSTRINGTerminalRuleCall_1_0; }
 	}
 
 	public class QualifiedNameElements extends AbstractParserRuleElementFinder {
@@ -337,7 +401,7 @@ public class RFSMGrammarAccess extends AbstractGrammarElementFinder {
 
 	
 	//RfsmGraph:
-	//	rootState= //can have only one root state
+	//	("[RfsmGraphName:" name=ID "]")? rootState= //can have only one root state
 	//	State //(hyperEdges += Connector)*
 	//	transitions+=Transition*;
 	public RfsmGraphElements getRfsmGraphAccess() {
@@ -370,7 +434,7 @@ public class RFSMGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Event:
-	//	"onevent" event=STRING;
+	//	("[EventName:" name=ID "]")? "onevent" event=STRING;
 	public EventElements getEventAccess() {
 		return (pEvent != null) ? pEvent : (pEvent = new EventElements());
 	}
@@ -380,7 +444,7 @@ public class RFSMGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Function:
-	//	call=STRING;
+	//	("[FunctionName:" name=ID "]")? call=STRING;
 	public FunctionElements getFunctionAccess() {
 		return (pFunction != null) ? pFunction : (pFunction = new FunctionElements());
 	}

@@ -77,19 +77,45 @@ ruleRfsmGraph returns [EObject current=null]
     @init { enterRule(); 
     }
     @after { leaveRule(); }:
-((
+((	otherlv_0='[RfsmGraphName:' 
+    {
+    	newLeafNode(otherlv_0, grammarAccess.getRfsmGraphAccess().getRfsmGraphNameKeyword_0_0());
+    }
+(
+(
+		lv_name_1_0=RULE_ID
+		{
+			newLeafNode(lv_name_1_0, grammarAccess.getRfsmGraphAccess().getNameIDTerminalRuleCall_0_1_0()); 
+		}
+		{
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getRfsmGraphRule());
+	        }
+       		setWithLastConsumed(
+       			$current, 
+       			"name",
+        		lv_name_1_0, 
+        		"ID");
+	    }
+
+)
+)	otherlv_2=']' 
+    {
+    	newLeafNode(otherlv_2, grammarAccess.getRfsmGraphAccess().getRightSquareBracketKeyword_0_2());
+    }
+)?(
 (
 		{ 
-	        newCompositeNode(grammarAccess.getRfsmGraphAccess().getRootStateStateParserRuleCall_0_0()); 
+	        newCompositeNode(grammarAccess.getRfsmGraphAccess().getRootStateStateParserRuleCall_1_0()); 
 	    }
-		lv_rootState_0_0=ruleState		{
+		lv_rootState_3_0=ruleState		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getRfsmGraphRule());
 	        }
        		set(
        			$current, 
        			"rootState",
-        		lv_rootState_0_0, 
+        		lv_rootState_3_0, 
         		"State");
 	        afterParserOrEnumRuleCall();
 	    }
@@ -98,16 +124,16 @@ ruleRfsmGraph returns [EObject current=null]
 )(
 (
 		{ 
-	        newCompositeNode(grammarAccess.getRfsmGraphAccess().getTransitionsTransitionParserRuleCall_1_0()); 
+	        newCompositeNode(grammarAccess.getRfsmGraphAccess().getTransitionsTransitionParserRuleCall_2_0()); 
 	    }
-		lv_transitions_1_0=ruleTransition		{
+		lv_transitions_4_0=ruleTransition		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getRfsmGraphRule());
 	        }
        		add(
        			$current, 
        			"transitions",
-        		lv_transitions_1_0, 
+        		lv_transitions_4_0, 
         		"Transition");
 	        afterParserOrEnumRuleCall();
 	    }
@@ -390,15 +416,41 @@ ruleEvent returns [EObject current=null]
     @init { enterRule(); 
     }
     @after { leaveRule(); }:
-(	otherlv_0='onevent' 
+((	otherlv_0='[EventName:' 
     {
-    	newLeafNode(otherlv_0, grammarAccess.getEventAccess().getOneventKeyword_0());
+    	newLeafNode(otherlv_0, grammarAccess.getEventAccess().getEventNameKeyword_0_0());
     }
 (
 (
-		lv_event_1_0=RULE_STRING
+		lv_name_1_0=RULE_ID
 		{
-			newLeafNode(lv_event_1_0, grammarAccess.getEventAccess().getEventSTRINGTerminalRuleCall_1_0()); 
+			newLeafNode(lv_name_1_0, grammarAccess.getEventAccess().getNameIDTerminalRuleCall_0_1_0()); 
+		}
+		{
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getEventRule());
+	        }
+       		setWithLastConsumed(
+       			$current, 
+       			"name",
+        		lv_name_1_0, 
+        		"ID");
+	    }
+
+)
+)	otherlv_2=']' 
+    {
+    	newLeafNode(otherlv_2, grammarAccess.getEventAccess().getRightSquareBracketKeyword_0_2());
+    }
+)?	otherlv_3='onevent' 
+    {
+    	newLeafNode(otherlv_3, grammarAccess.getEventAccess().getOneventKeyword_1());
+    }
+(
+(
+		lv_event_4_0=RULE_STRING
+		{
+			newLeafNode(lv_event_4_0, grammarAccess.getEventAccess().getEventSTRINGTerminalRuleCall_2_0()); 
 		}
 		{
 	        if ($current==null) {
@@ -407,7 +459,7 @@ ruleEvent returns [EObject current=null]
        		setWithLastConsumed(
        			$current, 
        			"event",
-        		lv_event_1_0, 
+        		lv_event_4_0, 
         		"STRING");
 	    }
 
@@ -433,11 +485,37 @@ ruleFunction returns [EObject current=null]
     @init { enterRule(); 
     }
     @after { leaveRule(); }:
+((	otherlv_0='[FunctionName:' 
+    {
+    	newLeafNode(otherlv_0, grammarAccess.getFunctionAccess().getFunctionNameKeyword_0_0());
+    }
 (
 (
-		lv_call_0_0=RULE_STRING
+		lv_name_1_0=RULE_ID
 		{
-			newLeafNode(lv_call_0_0, grammarAccess.getFunctionAccess().getCallSTRINGTerminalRuleCall_0()); 
+			newLeafNode(lv_name_1_0, grammarAccess.getFunctionAccess().getNameIDTerminalRuleCall_0_1_0()); 
+		}
+		{
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getFunctionRule());
+	        }
+       		setWithLastConsumed(
+       			$current, 
+       			"name",
+        		lv_name_1_0, 
+        		"ID");
+	    }
+
+)
+)	otherlv_2=']' 
+    {
+    	newLeafNode(otherlv_2, grammarAccess.getFunctionAccess().getRightSquareBracketKeyword_0_2());
+    }
+)?(
+(
+		lv_call_3_0=RULE_STRING
+		{
+			newLeafNode(lv_call_3_0, grammarAccess.getFunctionAccess().getCallSTRINGTerminalRuleCall_1_0()); 
 		}
 		{
 	        if ($current==null) {
@@ -446,12 +524,12 @@ ruleFunction returns [EObject current=null]
        		setWithLastConsumed(
        			$current, 
        			"call",
-        		lv_call_0_0, 
+        		lv_call_3_0, 
         		"STRING");
 	    }
 
 )
-)
+))
 ;
 
 
