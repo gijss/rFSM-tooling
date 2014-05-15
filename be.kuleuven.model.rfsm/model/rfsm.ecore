@@ -25,7 +25,11 @@
         eType="#//RfsmGraph" containment="true" resolveProxies="false"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="State">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+      <details key="constraints" value="onlyLeafStatesHaveDoo defineInitialConnectorWhenComposite defineMaxOneInitialConnector"/>
+    </eAnnotations>
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+      <details key="onlyLeafStatesHaveDoo" value="(not self.doo.oclIsUndefined()) implies (self.states->size() = 0)"/>
       <details key="defineInitialConnectorWhenComposite" value="self.states->size() > 0 and Transition.allInstances()->exists(t | t.target->at(1)=self) implies Transition.allInstances()->exists(t | t.target->at(1)->oclAsType(ecore::EObject).eContainer()=self and t.source->at(1)=self) "/>
       <details key="defineMaxOneInitialConnector" value="Transition.allInstances()->select(t | t.target->at(1)->oclAsType(ecore::EObject).eContainer()=self and t.source->at(1)=self)->size() &lt;= 1"/>
     </eAnnotations>
