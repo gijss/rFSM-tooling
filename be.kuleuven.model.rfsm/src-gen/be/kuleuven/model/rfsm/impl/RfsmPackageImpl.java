@@ -10,10 +10,14 @@ import be.kuleuven.model.rfsm.RfsmPackage;
 import be.kuleuven.model.rfsm.State;
 import be.kuleuven.model.rfsm.Transition;
 
+import be.kuleuven.model.rfsm.util.RfsmValidator;
+
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
+import org.eclipse.emf.ecore.EValidator;
 import org.eclipse.emf.ecore.EcorePackage;
 
 import org.eclipse.emf.ecore.impl.EPackageImpl;
@@ -117,6 +121,17 @@ public class RfsmPackageImpl extends EPackageImpl implements RfsmPackage
 
     // Initialize created meta-data
     theRfsmPackage.initializePackageContents();
+
+    // Register package validator
+    EValidator.Registry.INSTANCE.put
+      (theRfsmPackage, 
+       new EValidator.Descriptor()
+       {
+         public EValidator getEValidator()
+         {
+           return RfsmValidator.INSTANCE;
+         }
+       });
 
     // Mark meta-data to indicate it can't be changed
     theRfsmPackage.freeze();
@@ -302,6 +317,16 @@ public class RfsmPackageImpl extends EPackageImpl implements RfsmPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  public EOperation getTransition__IsAncestor__State_State()
+  {
+    return transitionEClass.getEOperations().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EClass getEvent()
   {
     return eventEClass;
@@ -406,6 +431,7 @@ public class RfsmPackageImpl extends EPackageImpl implements RfsmPackage
     createEReference(transitionEClass, TRANSITION__TARGET);
     createEReference(transitionEClass, TRANSITION__EVENTS);
     createEAttribute(transitionEClass, TRANSITION__PRIORITY_NUMBER);
+    createEOperation(transitionEClass, TRANSITION___IS_ANCESTOR__STATE_STATE);
 
     eventEClass = createEClass(EVENT);
     createEAttribute(eventEClass, EVENT__NAME);
@@ -470,6 +496,10 @@ public class RfsmPackageImpl extends EPackageImpl implements RfsmPackage
     initEReference(getTransition_Events(), this.getEvent(), null, "events", null, 0, -1, Transition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getTransition_PriorityNumber(), theEcorePackage.getEInt(), "priorityNumber", null, 0, 1, Transition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
+    EOperation op = initEOperation(getTransition__IsAncestor__State_State(), theEcorePackage.getEBooleanObject(), "isAncestor", 0, 1, !IS_UNIQUE, IS_ORDERED);
+    addEParameter(op, this.getState(), "one", 0, 1, !IS_UNIQUE, IS_ORDERED);
+    addEParameter(op, this.getState(), "two", 0, 1, !IS_UNIQUE, IS_ORDERED);
+
     initEClass(eventEClass, Event.class, "Event", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getEvent_Name(), theEcorePackage.getEString(), "name", null, 0, 1, Event.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getEvent_Event(), theEcorePackage.getEString(), "event", null, 0, 1, Event.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -486,6 +516,8 @@ public class RfsmPackageImpl extends EPackageImpl implements RfsmPackage
     createEcoreAnnotations();
     // http://www.eclipse.org/emf/2011/Xcore
     createXcoreAnnotations();
+    // http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot
+    createPivotAnnotations();
   }
 
   /**
@@ -505,7 +537,21 @@ public class RfsmPackageImpl extends EPackageImpl implements RfsmPackage
        "invocationDelegates", "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot",
        "settingDelegates", "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot",
        "validationDelegates", "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"
+       });					
+    addAnnotation
+      (stateEClass, 
+       source, 
+       new String[] 
+       {
+       "constraints", "onlyLeafStatesHaveDoo defineInitialConnectorWhenComposite defineMaxOneInitialConnector"
        });			
+    addAnnotation
+      (transitionEClass, 
+       source, 
+       new String[] 
+       {
+       "constraints", "legalBoundaryCrossing noGuardFromInitialConnector"
+       });		
   }
 
   /**
@@ -523,7 +569,41 @@ public class RfsmPackageImpl extends EPackageImpl implements RfsmPackage
        new String[] 
        {
        "Pivot", "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"
-       });	
+       });						
+  }
+
+  /**
+   * Initializes the annotations for <b>http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot</b>.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  protected void createPivotAnnotations()
+  {
+    String source = "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot";							
+    addAnnotation
+      (stateEClass, 
+       source, 
+       new String[] 
+       {
+       "onlyLeafStatesHaveDoo", "(not self.doo.oclIsUndefined()) implies (self.states->size() = 0)",
+       "defineInitialConnectorWhenComposite", "self.states->size() > 0 and Transition.allInstances()->exists(t | t.target->at(1)=self) implies Transition.allInstances()->exists(t | t.target->at(1)->oclAsType(ecore::EObject).eContainer()=self and t.source->at(1)=self) ",
+       "defineMaxOneInitialConnector", "Transition.allInstances()->select(t | t.target->at(1)->oclAsType(ecore::EObject).eContainer()=self and t.source->at(1)=self)->size() <= 1"
+       });			
+    addAnnotation
+      (transitionEClass, 
+       source, 
+       new String[] 
+       {
+       "legalBoundaryCrossing", "isAncestor(self.target->at(1)->oclAsType(ecore::EObject).eContainer()->oclAsType(State), self.source->at(1))"
+       });		
+    addAnnotation
+      (getTransition__IsAncestor__State_State(), 
+       source, 
+       new String[] 
+       {
+       "body", "if (one = two)\n\t\t\t\t\tthen true\n\t\t\t\telse\n\t\t\t\t\tif (two->oclAsType(ecore::EObject).eContainer() = null)\n\t\t\t\t\t\tthen false\n\t\t\t\t\telse\n\t\t\t\t\t\tif (two->oclAsType(ecore::EObject).eContainer() = one)\n\t\t\t\t\t\t\tthen true\n\t\t\t\t\t\telse\n\t\t\t\t\t\t\tisAncestor(one, two->oclAsType(ecore::EObject).eContainer()->oclAsType(State))\n\t\t\t\t\t\tendif\n\t\t\t\t\tendif\n\t\t\t\tendif"
+       });
   }
 
 } //RfsmPackageImpl

@@ -7,14 +7,19 @@ import be.kuleuven.model.rfsm.RfsmPackage;
 import be.kuleuven.model.rfsm.State;
 import be.kuleuven.model.rfsm.Transition;
 
+import java.lang.reflect.InvocationTargetException;
+
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
+import org.eclipse.emf.common.util.BasicEList;
 import org.eclipse.emf.common.util.EList;
+import org.eclipse.emf.common.util.WrappedException;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
@@ -223,6 +228,33 @@ public class TransitionImpl extends MinimalEObjectImpl.Container implements Tran
   }
 
   /**
+   * The cached invocation delegate for the '{@link #isAncestor(be.kuleuven.model.rfsm.State, be.kuleuven.model.rfsm.State) <em>Is Ancestor</em>}' operation.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #isAncestor(be.kuleuven.model.rfsm.State, be.kuleuven.model.rfsm.State)
+   * @generated
+   * @ordered
+   */
+  protected static final EOperation.Internal.InvocationDelegate IS_ANCESTOR_STATE_STATE__EINVOCATION_DELEGATE = ((EOperation.Internal)RfsmPackage.Literals.TRANSITION___IS_ANCESTOR__STATE_STATE).getInvocationDelegate();
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Boolean isAncestor(State one, State two)
+  {
+    try
+    {
+      return (Boolean)IS_ANCESTOR_STATE_STATE__EINVOCATION_DELEGATE.dynamicInvoke(this, new BasicEList.UnmodifiableEList<Object>(2, new Object[]{one, two}));
+    }
+    catch (InvocationTargetException ite)
+    {
+      throw new WrappedException(ite);
+    }
+  }
+
+  /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -346,6 +378,22 @@ public class TransitionImpl extends MinimalEObjectImpl.Container implements Tran
         return priorityNumber != PRIORITY_NUMBER_EDEFAULT;
     }
     return super.eIsSet(featureID);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException
+  {
+    switch (operationID)
+    {
+      case RfsmPackage.TRANSITION___IS_ANCESTOR__STATE_STATE:
+        return isAncestor((State)arguments.get(0), (State)arguments.get(1));
+    }
+    return super.eInvoke(operationID, arguments);
   }
 
   /**

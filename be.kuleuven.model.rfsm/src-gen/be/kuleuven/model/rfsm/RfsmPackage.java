@@ -4,6 +4,7 @@ package be.kuleuven.model.rfsm;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 
@@ -262,13 +263,22 @@ public interface RfsmPackage extends EPackage
   int TRANSITION_FEATURE_COUNT = 5;
 
   /**
+   * The operation id for the '<em>Is Ancestor</em>' operation.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int TRANSITION___IS_ANCESTOR__STATE_STATE = 0;
+
+  /**
    * The number of operations of the '<em>Transition</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int TRANSITION_OPERATION_COUNT = 0;
+  int TRANSITION_OPERATION_COUNT = 1;
 
   /**
    * The meta object id for the '{@link be.kuleuven.model.rfsm.impl.EventImpl <em>Event</em>}' class.
@@ -548,6 +558,16 @@ public interface RfsmPackage extends EPackage
   EAttribute getTransition_PriorityNumber();
 
   /**
+   * Returns the meta object for the '{@link be.kuleuven.model.rfsm.Transition#isAncestor(be.kuleuven.model.rfsm.State, be.kuleuven.model.rfsm.State) <em>Is Ancestor</em>}' operation.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the '<em>Is Ancestor</em>' operation.
+   * @see be.kuleuven.model.rfsm.Transition#isAncestor(be.kuleuven.model.rfsm.State, be.kuleuven.model.rfsm.State)
+   * @generated
+   */
+  EOperation getTransition__IsAncestor__State_State();
+
+  /**
    * Returns the meta object for class '{@link be.kuleuven.model.rfsm.Event <em>Event</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -776,6 +796,14 @@ public interface RfsmPackage extends EPackage
      * @generated
      */
     EAttribute TRANSITION__PRIORITY_NUMBER = eINSTANCE.getTransition_PriorityNumber();
+
+    /**
+     * The meta object literal for the '<em><b>Is Ancestor</b></em>' operation.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EOperation TRANSITION___IS_ANCESTOR__STATE_STATE = eINSTANCE.getTransition__IsAncestor__State_State();
 
     /**
      * The meta object literal for the '{@link be.kuleuven.model.rfsm.impl.EventImpl <em>Event</em>}' class.

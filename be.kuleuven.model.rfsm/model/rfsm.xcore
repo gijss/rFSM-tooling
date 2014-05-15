@@ -8,14 +8,23 @@ annotation "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot" as Pivot
 /*
  * This rFSM metamodel is based on a HyperGraph model
  */
+ //using oclAsType(ecore::EObject).eContainer()->oclAsType(State)) instead of parent reference to avoid problems
  
- class RfsmGraph {
+class RfsmGraph {
 	String name
 	contains State rootState
 	contains Transition[] transitions
 	contains RfsmGraph[] rfmsGraphs
 }
 
+@Ecore(constraints="onlyLeafStatesHaveDoo defineInitialConnectorWhenComposite defineMaxOneInitialConnector")
+//Only leaf-states can define a doo function. (not sure about this one)
+@Pivot(onlyLeafStatesHaveDoo="(not self.doo.oclIsUndefined()) implies (self.states->size() = 0)")
+//Each composite state that is target of a transition, defines an initial connector.
+//initial state is defined as transition from parent (composite state) to direct child (initial state)
+@Pivot(defineInitialConnectorWhenComposite="self.states->size() > 0 and Transition.allInstances()->exists(t | t.target->at(1)=self) implies Transition.allInstances()->exists(t | t.target->at(1)->oclAsType(ecore::EObject).eContainer()=self and t.source->at(1)=self) ")
+//A composite state may define at most one initial connector.
+@Pivot(defineMaxOneInitialConnector="Transition.allInstances()->select(t | t.target->at(1)->oclAsType(ecore::EObject).eContainer()=self and t.source->at(1)=self)->size() <= 1")
 class State {
 	String name
 	contains State[] states
@@ -24,12 +33,32 @@ class State {
 	contains Function[0..1] exit
 }
 
+@Ecore(constraints="legalBoundaryCrossing noGuardFromInitialConnector")
+//The transition target should point to a node less or equally nested than source node
+//So the parent of the target node is an ancestor of the source node
+@Pivot(legalBoundaryCrossing="isAncestor(self.target->at(1)->oclAsType(ecore::EObject).eContainer()->oclAsType(State), self.source->at(1))")
 class Transition {
 	String name
 	refers State[] source
 	refers State[] target
 	contains Event[] events
 	int priorityNumber
+	
+	//is one ancestor of two?
+	@Pivot(body="if (one = two)
+					then true
+				else
+					if (two->oclAsType(ecore::EObject).eContainer() = null)
+						then false
+					else
+						if (two->oclAsType(ecore::EObject).eContainer() = one)
+							then true
+						else
+							isAncestor(one, two->oclAsType(ecore::EObject).eContainer()->oclAsType(State))
+						endif
+					endif
+				endif")
+	op Boolean isAncestor(State one, State two)
 }
 
 class Event {
