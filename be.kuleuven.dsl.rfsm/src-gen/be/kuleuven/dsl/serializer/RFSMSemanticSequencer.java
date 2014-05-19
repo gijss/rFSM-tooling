@@ -98,7 +98,14 @@ public class RFSMSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Constraint:
-	 *     (name=ID? source+=[State|QualifiedName] target+=[State|QualifiedName] events+=Event* priorityNumber=INT?)
+	 *     (
+	 *         name=ID? 
+	 *         source+=[State|QualifiedName] 
+	 *         target+=[State|QualifiedName] 
+	 *         events+=Event 
+	 *         events+=Event* 
+	 *         priorityNumber=INT?
+	 *     )
 	 */
 	protected void sequence_Transition(EObject context, Transition semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

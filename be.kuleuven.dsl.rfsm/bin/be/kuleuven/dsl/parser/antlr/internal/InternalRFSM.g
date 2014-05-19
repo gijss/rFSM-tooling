@@ -355,33 +355,59 @@ ruleTransition returns [EObject current=null]
 	    }
 
 )
-)(
+)(	otherlv_6='onevent' 
+    {
+    	newLeafNode(otherlv_6, grammarAccess.getTransitionAccess().getOneventKeyword_6_0());
+    }
+(
 (
 		{ 
-	        newCompositeNode(grammarAccess.getTransitionAccess().getEventsEventParserRuleCall_6_0()); 
+	        newCompositeNode(grammarAccess.getTransitionAccess().getEventsEventParserRuleCall_6_1_0()); 
 	    }
-		lv_events_6_0=ruleEvent		{
+		lv_events_7_0=ruleEvent		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getTransitionRule());
 	        }
        		add(
        			$current, 
        			"events",
-        		lv_events_6_0, 
+        		lv_events_7_0, 
         		"Event");
 	        afterParserOrEnumRuleCall();
 	    }
 
 )
-)*(	otherlv_7='priority' 
+)(	otherlv_8=',' 
     {
-    	newLeafNode(otherlv_7, grammarAccess.getTransitionAccess().getPriorityKeyword_7_0());
+    	newLeafNode(otherlv_8, grammarAccess.getTransitionAccess().getCommaKeyword_6_2_0());
     }
 (
 (
-		lv_priorityNumber_8_0=RULE_INT
+		{ 
+	        newCompositeNode(grammarAccess.getTransitionAccess().getEventsEventParserRuleCall_6_2_1_0()); 
+	    }
+		lv_events_9_0=ruleEvent		{
+	        if ($current==null) {
+	            $current = createModelElementForParent(grammarAccess.getTransitionRule());
+	        }
+       		add(
+       			$current, 
+       			"events",
+        		lv_events_9_0, 
+        		"Event");
+	        afterParserOrEnumRuleCall();
+	    }
+
+)
+))*)(	otherlv_10='priority' 
+    {
+    	newLeafNode(otherlv_10, grammarAccess.getTransitionAccess().getPriorityKeyword_7_0());
+    }
+(
+(
+		lv_priorityNumber_11_0=RULE_INT
 		{
-			newLeafNode(lv_priorityNumber_8_0, grammarAccess.getTransitionAccess().getPriorityNumberINTTerminalRuleCall_7_1_0()); 
+			newLeafNode(lv_priorityNumber_11_0, grammarAccess.getTransitionAccess().getPriorityNumberINTTerminalRuleCall_7_1_0()); 
 		}
 		{
 	        if ($current==null) {
@@ -390,7 +416,7 @@ ruleTransition returns [EObject current=null]
        		setWithLastConsumed(
        			$current, 
        			"priorityNumber",
-        		lv_priorityNumber_8_0, 
+        		lv_priorityNumber_11_0, 
         		"INT");
 	    }
 
@@ -442,15 +468,11 @@ ruleEvent returns [EObject current=null]
     {
     	newLeafNode(otherlv_2, grammarAccess.getEventAccess().getRightSquareBracketKeyword_0_2());
     }
-)?	otherlv_3='onevent' 
-    {
-    	newLeafNode(otherlv_3, grammarAccess.getEventAccess().getOneventKeyword_1());
-    }
+)?(
 (
-(
-		lv_event_4_0=RULE_STRING
+		lv_event_3_0=RULE_STRING
 		{
-			newLeafNode(lv_event_4_0, grammarAccess.getEventAccess().getEventSTRINGTerminalRuleCall_2_0()); 
+			newLeafNode(lv_event_3_0, grammarAccess.getEventAccess().getEventSTRINGTerminalRuleCall_1_0()); 
 		}
 		{
 	        if ($current==null) {
@@ -459,7 +481,7 @@ ruleEvent returns [EObject current=null]
        		setWithLastConsumed(
        			$current, 
        			"event",
-        		lv_event_4_0, 
+        		lv_event_3_0, 
         		"STRING");
 	    }
 

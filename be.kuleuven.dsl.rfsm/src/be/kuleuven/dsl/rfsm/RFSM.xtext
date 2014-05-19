@@ -5,7 +5,6 @@ import "be.kuleuven.model.rfsm"
 RfsmGraph returns RfsmGraph:
 		('[RfsmGraphName:' name=ID']')?
 		(rootState=State)?	//can have only one root state
-		//(hyperEdges += Connector)*
 		(transitions += Transition)*	
 ;
 
@@ -23,13 +22,13 @@ State returns State:
 
 Transition returns Transition:
 	'transition' (name=ID)? 'from' source+=[State|QualifiedName] 'to' target+=[State|QualifiedName]
-	(events += Event)*
+	('onevent' events+=Event (',' events+=Event)*)
 	('priority' priorityNumber=INT)?
 ;
 
 Event returns Event:
 	('[EventName:' name=ID']')?
-	'onevent' event=STRING
+	event=STRING
 ;
 
 Function returns Function:
