@@ -43,9 +43,9 @@ state helloworld {
 		entry: 'function () print("world") end'
 	}
 }
-transition from helloworld to hello
-transition from hello to world onevent 'e_done'
-transition from world to hello onevent 'e_restart'	
+transition from helloworld to helloworld.hello
+transition from helloworld.hello to helloworld.world onevent 'e_done'
+transition from helloworld.world to helloworld.hello onevent 'e_restart'	
 ```
 
 ####Clarifications on the model/grammar
@@ -124,16 +124,16 @@ state root {
 	state fatal_error {}
 }
 
-transition from on to on.waiting
-transition from on.waiting to on.moving onevent 'e_start'
-transition from on.moving to on.waiting onevent 'e_stop'
+transition from root.on to root.on.waiting
+transition from root.on.waiting to root.on.moving onevent 'e_start'
+transition from root.on.moving to root.on.waiting onevent 'e_stop'
 
-transition from root to on effect: 'print("initializing system")'	
+transition from root to root.on effect: 'print("initializing system")'	
 
-transition from on to error onevent 'e_error'
-transition from error to on onevent 'e_error_fixed'
-transition from error to fatal_error onevent 'e_fatal_error'
-transition from fatal_error to initial onevent 'e_reset' 
+transition from root.on to root.error onevent 'e_error'
+transition from root.error to root.on onevent 'e_error_fixed'
+transition from root.error to root.fatal_error onevent 'e_fatal_error'
+transition from root.fatal_error to root onevent 'e_reset' 
 		
 ```
 
