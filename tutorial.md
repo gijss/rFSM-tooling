@@ -4,14 +4,14 @@ rFSM Tooling Demo
 Introduction
 ---
 
-This tutorial will illustrate the purpose and features of the current rFSM modeling project. Basic usage is explained using a simple "hello world" program and more advanced features and constraints on the language are explained using an extended model. For installation instructions, read this project's [README.md](https://github.com/gijss/rfsm-modeling).
+This tutorial will illustrate the purpose and features of the current rFSM modeling project. Basic usage is explained using a simple "hello world" program and more advanced features and constraints on the language are explained using an extended model. For installation instructions, read this project's [README.md](https://github.com/gijss/rfsm-tooling).
 
 The rest of this document assumes at least some basic knowledge of [rFSM Statecharts](https://github.com/kmarkus/rFSM), so please read its [documentation](http://people.mech.kuleuven.be/~mklotzbucher/rfsm/README.html) if you aren't familiar with rFSM.
 
 Installation
 ---
 
-To get started with the tutorial, it's necessary to have the rFSM modeling tools up and running. A complete installation guide can be found in this project's [README.md](https://github.com/gijss/rfsm-modeling). Before continuing, make sure to have completed the installation and building instructions from that readme. The following paragraph assumes the reader completed these instructions and has an Eclipse based rFSM IDE open and ready for use.
+To get started with the tutorial, it's necessary to have the rFSM modeling tools up and running. A complete installation guide can be found in this project's [README.md](https://github.com/gijss/rfsm-tooling). Before continuing, make sure to have completed the installation and building instructions from that readme. The following paragraph assumes the reader completed these instructions and has an Eclipse based rFSM IDE open and ready for use.
 
 Creating your first program
 ---
