@@ -22,7 +22,7 @@ State returns State:
 
 Transition returns Transition:
 	'transition' (name=ID)? 'from' source+=[State|QualifiedName] 'to' target+=[State|QualifiedName]
-	('onevent' events+=Event (',' events+=Event)*)
+	('onevent' events+=Event (',' events+=Event)*)?
 	('priority' priorityNumber=INT)?
 ;
 
