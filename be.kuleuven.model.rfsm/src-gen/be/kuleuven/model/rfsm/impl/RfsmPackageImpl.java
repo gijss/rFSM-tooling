@@ -550,7 +550,7 @@ public class RfsmPackageImpl extends EPackageImpl implements RfsmPackage
        source, 
        new String[] 
        {
-       "constraints", "legalBoundaryCrossing noGuardFromInitialConnector"
+       "constraints", "legalBoundaryCrossing"
        });		
   }
 
@@ -587,22 +587,22 @@ public class RfsmPackageImpl extends EPackageImpl implements RfsmPackage
        new String[] 
        {
        "onlyLeafStatesHaveDoo", "(not self.doo.oclIsUndefined()) implies (self.states->size() = 0)",
-       "defineInitialConnectorWhenComposite", "self.states->size() > 0 and Transition.allInstances()->exists(t | t.target->at(1)=self) implies Transition.allInstances()->exists(t | t.target->at(1)->oclAsType(ecore::EObject).eContainer()=self and t.source->at(1)=self) ",
-       "defineMaxOneInitialConnector", "Transition.allInstances()->select(t | t.target->at(1)->oclAsType(ecore::EObject).eContainer()=self and t.source->at(1)=self)->size() <= 1"
+       "defineInitialConnectorWhenComposite", "(self.states->size() > 0 and Transition.allInstances()->exists(t | t.target->at(1)=self)) implies Transition.allInstances()->exists(t | t.target->at(1).oclContainer()=self and t.source->at(1)=self) ",
+       "defineMaxOneInitialConnector", "Transition.allInstances()->select(t | t.target->at(1).oclContainer()=self and t.source->at(1)=self)->size() <= 1"
        });			
     addAnnotation
       (transitionEClass, 
        source, 
        new String[] 
        {
-       "legalBoundaryCrossing", "isAncestor(self.target->at(1)->oclAsType(ecore::EObject).eContainer()->oclAsType(State), self.source->at(1))"
+       "legalBoundaryCrossing", "isAncestor(self.target->at(1).oclContainer().oclAsType(State), self.source->at(1))"
        });		
     addAnnotation
       (getTransition__IsAncestor__State_State(), 
        source, 
        new String[] 
        {
-       "body", "if (one = two)\n\t\t\t\t\tthen true\n\t\t\t\telse\n\t\t\t\t\tif (two->oclAsType(ecore::EObject).eContainer() = null)\n\t\t\t\t\t\tthen false\n\t\t\t\t\telse\n\t\t\t\t\t\tif (two->oclAsType(ecore::EObject).eContainer() = one)\n\t\t\t\t\t\t\tthen true\n\t\t\t\t\t\telse\n\t\t\t\t\t\t\tisAncestor(one, two->oclAsType(ecore::EObject).eContainer()->oclAsType(State))\n\t\t\t\t\t\tendif\n\t\t\t\t\tendif\n\t\t\t\tendif"
+       "body", "if (one = two)\n\t\t\t\t\tthen true\n\t\t\t\telse\n\t\t\t\t\tif (two.oclContainer().oclIsUndefined())\n\t\t\t\t\t\tthen false\n\t\t\t\t\telse\n\t\t\t\t\t\tif (two.oclContainer() = one)\n\t\t\t\t\t\t\tthen true\n\t\t\t\t\t\telse\n\t\t\t\t\t\t\tisAncestor(one, two.oclContainer().oclAsType(State))\n\t\t\t\t\t\tendif\n\t\t\t\t\tendif\n\t\t\t\tendif"
        });
   }
 

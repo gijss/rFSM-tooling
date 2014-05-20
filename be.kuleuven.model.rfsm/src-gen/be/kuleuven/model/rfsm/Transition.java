@@ -23,8 +23,8 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  *
  * @see be.kuleuven.model.rfsm.RfsmPackage#getTransition()
- * @model annotation="http://www.eclipse.org/emf/2002/Ecore constraints='legalBoundaryCrossing noGuardFromInitialConnector'"
- *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot legalBoundaryCrossing='isAncestor(self.target->at(1)->oclAsType(ecore::EObject).eContainer()->oclAsType(State), self.source->at(1))'"
+ * @model annotation="http://www.eclipse.org/emf/2002/Ecore constraints='legalBoundaryCrossing'"
+ *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot legalBoundaryCrossing='isAncestor(self.target->at(1).oclContainer().oclAsType(State), self.source->at(1))'"
  * @generated
  */
 public interface Transition extends EObject
@@ -133,7 +133,7 @@ public interface Transition extends EObject
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @model unique="false" oneUnique="false" twoUnique="false"
-   *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot body='if (one = two)\n\t\t\t\t\tthen true\n\t\t\t\telse\n\t\t\t\t\tif (two->oclAsType(ecore::EObject).eContainer() = null)\n\t\t\t\t\t\tthen false\n\t\t\t\t\telse\n\t\t\t\t\t\tif (two->oclAsType(ecore::EObject).eContainer() = one)\n\t\t\t\t\t\t\tthen true\n\t\t\t\t\t\telse\n\t\t\t\t\t\t\tisAncestor(one, two->oclAsType(ecore::EObject).eContainer()->oclAsType(State))\n\t\t\t\t\t\tendif\n\t\t\t\t\tendif\n\t\t\t\tendif'"
+   *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot body='if (one = two)\n\t\t\t\t\tthen true\n\t\t\t\telse\n\t\t\t\t\tif (two.oclContainer().oclIsUndefined())\n\t\t\t\t\t\tthen false\n\t\t\t\t\telse\n\t\t\t\t\t\tif (two.oclContainer() = one)\n\t\t\t\t\t\t\tthen true\n\t\t\t\t\t\telse\n\t\t\t\t\t\t\tisAncestor(one, two.oclContainer().oclAsType(State))\n\t\t\t\t\t\tendif\n\t\t\t\t\tendif\n\t\t\t\tendif'"
    * @generated
    */
   Boolean isAncestor(State one, State two);

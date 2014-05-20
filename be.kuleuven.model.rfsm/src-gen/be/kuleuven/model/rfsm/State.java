@@ -24,7 +24,7 @@ import org.eclipse.emf.ecore.EObject;
  *
  * @see be.kuleuven.model.rfsm.RfsmPackage#getState()
  * @model annotation="http://www.eclipse.org/emf/2002/Ecore constraints='onlyLeafStatesHaveDoo defineInitialConnectorWhenComposite defineMaxOneInitialConnector'"
- *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot onlyLeafStatesHaveDoo='(not self.doo.oclIsUndefined()) implies (self.states->size() = 0)' defineInitialConnectorWhenComposite='self.states->size() > 0 and Transition.allInstances()->exists(t | t.target->at(1)=self) implies Transition.allInstances()->exists(t | t.target->at(1)->oclAsType(ecore::EObject).eContainer()=self and t.source->at(1)=self) ' defineMaxOneInitialConnector='Transition.allInstances()->select(t | t.target->at(1)->oclAsType(ecore::EObject).eContainer()=self and t.source->at(1)=self)->size() <= 1'"
+ *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot onlyLeafStatesHaveDoo='(not self.doo.oclIsUndefined()) implies (self.states->size() = 0)' defineInitialConnectorWhenComposite='(self.states->size() > 0 and Transition.allInstances()->exists(t | t.target->at(1)=self)) implies Transition.allInstances()->exists(t | t.target->at(1).oclContainer()=self and t.source->at(1)=self) ' defineMaxOneInitialConnector='Transition.allInstances()->select(t | t.target->at(1).oclContainer()=self and t.source->at(1)=self)->size() <= 1'"
  * @generated
  */
 public interface State extends EObject

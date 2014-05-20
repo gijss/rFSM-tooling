@@ -174,7 +174,7 @@ public class RfsmValidator extends EObjectValidator
    * <!-- end-user-doc -->
    * @generated
    */
-  protected static final String STATE__DEFINE_INITIAL_CONNECTOR_WHEN_COMPOSITE__EEXPRESSION = "self.states->size() > 0 and Transition.allInstances()->exists(t | t.target->at(1)=self) implies Transition.allInstances()->exists(t | t.target->at(1)->oclAsType(ecore::EObject).eContainer()=self and t.source->at(1)=self) ";
+  protected static final String STATE__DEFINE_INITIAL_CONNECTOR_WHEN_COMPOSITE__EEXPRESSION = "(self.states->size() > 0 and Transition.allInstances()->exists(t | t.target->at(1)=self)) implies Transition.allInstances()->exists(t | t.target->at(1).oclContainer()=self and t.source->at(1)=self) ";
 
   /**
    * Validates the defineInitialConnectorWhenComposite constraint of '<em>State</em>'.
@@ -204,7 +204,7 @@ public class RfsmValidator extends EObjectValidator
    * <!-- end-user-doc -->
    * @generated
    */
-  protected static final String STATE__DEFINE_MAX_ONE_INITIAL_CONNECTOR__EEXPRESSION = "Transition.allInstances()->select(t | t.target->at(1)->oclAsType(ecore::EObject).eContainer()=self and t.source->at(1)=self)->size() <= 1";
+  protected static final String STATE__DEFINE_MAX_ONE_INITIAL_CONNECTOR__EEXPRESSION = "Transition.allInstances()->select(t | t.target->at(1).oclContainer()=self and t.source->at(1)=self)->size() <= 1";
 
   /**
    * Validates the defineMaxOneInitialConnector constraint of '<em>State</em>'.
@@ -245,7 +245,6 @@ public class RfsmValidator extends EObjectValidator
     if (result || diagnostics != null) result &= validate_EveryKeyUnique(transition, diagnostics, context);
     if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(transition, diagnostics, context);
     if (result || diagnostics != null) result &= validateTransition_legalBoundaryCrossing(transition, diagnostics, context);
-    if (result || diagnostics != null) result &= validateTransition_noGuardFromInitialConnector(transition, diagnostics, context);
     return result;
   }
 
@@ -255,7 +254,7 @@ public class RfsmValidator extends EObjectValidator
    * <!-- end-user-doc -->
    * @generated
    */
-  protected static final String TRANSITION__LEGAL_BOUNDARY_CROSSING__EEXPRESSION = "isAncestor(self.target->at(1)->oclAsType(ecore::EObject).eContainer()->oclAsType(State), self.source->at(1))";
+  protected static final String TRANSITION__LEGAL_BOUNDARY_CROSSING__EEXPRESSION = "isAncestor(self.target->at(1).oclContainer().oclAsType(State), self.source->at(1))";
 
   /**
    * Validates the legalBoundaryCrossing constraint of '<em>Transition</em>'.
@@ -277,37 +276,6 @@ public class RfsmValidator extends EObjectValidator
          Diagnostic.ERROR,
          DIAGNOSTIC_SOURCE,
          0);
-  }
-
-  /**
-   * Validates the noGuardFromInitialConnector constraint of '<em>Transition</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public boolean validateTransition_noGuardFromInitialConnector(Transition transition, DiagnosticChain diagnostics, Map<Object, Object> context)
-  {
-    // TODO implement the constraint
-    // -> specify the condition that violates the constraint
-    // -> verify the diagnostic details, including severity, code, and message
-    // Ensure that you remove @generated or mark it @generated NOT
-    if (false)
-    {
-      if (diagnostics != null)
-      {
-        diagnostics.add
-          (createDiagnostic
-            (Diagnostic.ERROR,
-             DIAGNOSTIC_SOURCE,
-             0,
-             "_UI_GenericConstraint_diagnostic",
-             new Object[] { "noGuardFromInitialConnector", getObjectLabel(transition, context) },
-             new Object[] { transition },
-             context));
-      }
-      return false;
-    }
-    return true;
   }
 
   /**
