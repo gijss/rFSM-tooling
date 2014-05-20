@@ -150,7 +150,7 @@ This section illustrates some implemented constraints. The reader is encouraged 
 ####Exactly one root state
 rFSM explicitly says that every program is defined inside one composite state. The IDE throws an error when a programmer tries to define multiple root states.
 
-Try to add the following line to the end of the extended example:
+Try to add the following line under the definition of the root state:
 
 ```
 state secondroot {}
@@ -159,10 +159,10 @@ state secondroot {}
 ####Legal boundary crossing
 Again for composability reasons, the transition target should point to a node less or equally nested than source node.
 
-Try to add the following line to the state `root`:
+Try to add the following line to the end of the file:
 
 ```
-transition from error to on.moving onevent 'wrongdirection'
+transition from root.error to root.on.moving onevent 'wrongdirection'
 ```
 
 
