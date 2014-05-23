@@ -102,8 +102,8 @@ public class RFSMSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *         name=ID? 
 	 *         source+=[State|QualifiedName] 
 	 *         target+=[State|QualifiedName] 
-	 *         events+=Event 
-	 *         events+=Event* 
+	 *         guard=Function? 
+	 *         (events+=Event events+=Event*)? 
 	 *         priorityNumber=INT?
 	 *     )
 	 */

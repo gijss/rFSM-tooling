@@ -245,6 +245,7 @@ public class RfsmValidator extends EObjectValidator
     if (result || diagnostics != null) result &= validate_EveryKeyUnique(transition, diagnostics, context);
     if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(transition, diagnostics, context);
     if (result || diagnostics != null) result &= validateTransition_legalBoundaryCrossing(transition, diagnostics, context);
+    if (result || diagnostics != null) result &= validateTransition_noGuardFromInitialTransition(transition, diagnostics, context);
     return result;
   }
 
@@ -273,6 +274,36 @@ public class RfsmValidator extends EObjectValidator
          "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot",
          "legalBoundaryCrossing",
          TRANSITION__LEGAL_BOUNDARY_CROSSING__EEXPRESSION,
+         Diagnostic.ERROR,
+         DIAGNOSTIC_SOURCE,
+         0);
+  }
+
+  /**
+   * The cached validation expression for the noGuardFromInitialTransition constraint of '<em>Transition</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  protected static final String TRANSITION__NO_GUARD_FROM_INITIAL_TRANSITION__EEXPRESSION = "(source->at(1)=target->at(1).oclContainer() implies guard.oclIsUndefined()";
+
+  /**
+   * Validates the noGuardFromInitialTransition constraint of '<em>Transition</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public boolean validateTransition_noGuardFromInitialTransition(Transition transition, DiagnosticChain diagnostics, Map<Object, Object> context)
+  {
+    return
+      validate
+        (RfsmPackage.Literals.TRANSITION,
+         transition,
+         diagnostics,
+         context,
+         "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot",
+         "noGuardFromInitialTransition",
+         TRANSITION__NO_GUARD_FROM_INITIAL_TRANSITION__EEXPRESSION,
          Diagnostic.ERROR,
          DIAGNOSTIC_SOURCE,
          0);

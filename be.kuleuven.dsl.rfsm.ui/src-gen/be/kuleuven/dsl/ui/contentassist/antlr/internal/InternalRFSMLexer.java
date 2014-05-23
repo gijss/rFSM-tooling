@@ -13,6 +13,7 @@ import java.util.ArrayList;
 @SuppressWarnings("all")
 public class InternalRFSMLexer extends Lexer {
     public static final int RULE_ID=4;
+    public static final int T__28=28;
     public static final int T__27=27;
     public static final int T__26=26;
     public static final int T__25=25;
@@ -284,10 +285,10 @@ public class InternalRFSMLexer extends Lexer {
         try {
             int _type = T__22;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../be.kuleuven.dsl.rfsm.ui/src-gen/be/kuleuven/dsl/ui/contentassist/antlr/internal/InternalRFSM.g:22:7: ( 'onevent' )
-            // ../be.kuleuven.dsl.rfsm.ui/src-gen/be/kuleuven/dsl/ui/contentassist/antlr/internal/InternalRFSM.g:22:9: 'onevent'
+            // ../be.kuleuven.dsl.rfsm.ui/src-gen/be/kuleuven/dsl/ui/contentassist/antlr/internal/InternalRFSM.g:22:7: ( 'guard:' )
+            // ../be.kuleuven.dsl.rfsm.ui/src-gen/be/kuleuven/dsl/ui/contentassist/antlr/internal/InternalRFSM.g:22:9: 'guard:'
             {
-            match("onevent"); 
+            match("guard:"); 
 
 
             }
@@ -305,10 +306,11 @@ public class InternalRFSMLexer extends Lexer {
         try {
             int _type = T__23;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../be.kuleuven.dsl.rfsm.ui/src-gen/be/kuleuven/dsl/ui/contentassist/antlr/internal/InternalRFSM.g:23:7: ( ',' )
-            // ../be.kuleuven.dsl.rfsm.ui/src-gen/be/kuleuven/dsl/ui/contentassist/antlr/internal/InternalRFSM.g:23:9: ','
+            // ../be.kuleuven.dsl.rfsm.ui/src-gen/be/kuleuven/dsl/ui/contentassist/antlr/internal/InternalRFSM.g:23:7: ( 'onevent' )
+            // ../be.kuleuven.dsl.rfsm.ui/src-gen/be/kuleuven/dsl/ui/contentassist/antlr/internal/InternalRFSM.g:23:9: 'onevent'
             {
-            match(','); 
+            match("onevent"); 
+
 
             }
 
@@ -325,11 +327,10 @@ public class InternalRFSMLexer extends Lexer {
         try {
             int _type = T__24;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../be.kuleuven.dsl.rfsm.ui/src-gen/be/kuleuven/dsl/ui/contentassist/antlr/internal/InternalRFSM.g:24:7: ( 'priority' )
-            // ../be.kuleuven.dsl.rfsm.ui/src-gen/be/kuleuven/dsl/ui/contentassist/antlr/internal/InternalRFSM.g:24:9: 'priority'
+            // ../be.kuleuven.dsl.rfsm.ui/src-gen/be/kuleuven/dsl/ui/contentassist/antlr/internal/InternalRFSM.g:24:7: ( ',' )
+            // ../be.kuleuven.dsl.rfsm.ui/src-gen/be/kuleuven/dsl/ui/contentassist/antlr/internal/InternalRFSM.g:24:9: ','
             {
-            match("priority"); 
-
+            match(','); 
 
             }
 
@@ -346,10 +347,10 @@ public class InternalRFSMLexer extends Lexer {
         try {
             int _type = T__25;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../be.kuleuven.dsl.rfsm.ui/src-gen/be/kuleuven/dsl/ui/contentassist/antlr/internal/InternalRFSM.g:25:7: ( '[EventName:' )
-            // ../be.kuleuven.dsl.rfsm.ui/src-gen/be/kuleuven/dsl/ui/contentassist/antlr/internal/InternalRFSM.g:25:9: '[EventName:'
+            // ../be.kuleuven.dsl.rfsm.ui/src-gen/be/kuleuven/dsl/ui/contentassist/antlr/internal/InternalRFSM.g:25:7: ( 'priority' )
+            // ../be.kuleuven.dsl.rfsm.ui/src-gen/be/kuleuven/dsl/ui/contentassist/antlr/internal/InternalRFSM.g:25:9: 'priority'
             {
-            match("[EventName:"); 
+            match("priority"); 
 
 
             }
@@ -367,10 +368,10 @@ public class InternalRFSMLexer extends Lexer {
         try {
             int _type = T__26;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../be.kuleuven.dsl.rfsm.ui/src-gen/be/kuleuven/dsl/ui/contentassist/antlr/internal/InternalRFSM.g:26:7: ( '[FunctionName:' )
-            // ../be.kuleuven.dsl.rfsm.ui/src-gen/be/kuleuven/dsl/ui/contentassist/antlr/internal/InternalRFSM.g:26:9: '[FunctionName:'
+            // ../be.kuleuven.dsl.rfsm.ui/src-gen/be/kuleuven/dsl/ui/contentassist/antlr/internal/InternalRFSM.g:26:7: ( '[EventName:' )
+            // ../be.kuleuven.dsl.rfsm.ui/src-gen/be/kuleuven/dsl/ui/contentassist/antlr/internal/InternalRFSM.g:26:9: '[EventName:'
             {
-            match("[FunctionName:"); 
+            match("[EventName:"); 
 
 
             }
@@ -388,10 +389,11 @@ public class InternalRFSMLexer extends Lexer {
         try {
             int _type = T__27;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../be.kuleuven.dsl.rfsm.ui/src-gen/be/kuleuven/dsl/ui/contentassist/antlr/internal/InternalRFSM.g:27:7: ( '.' )
-            // ../be.kuleuven.dsl.rfsm.ui/src-gen/be/kuleuven/dsl/ui/contentassist/antlr/internal/InternalRFSM.g:27:9: '.'
+            // ../be.kuleuven.dsl.rfsm.ui/src-gen/be/kuleuven/dsl/ui/contentassist/antlr/internal/InternalRFSM.g:27:7: ( '[FunctionName:' )
+            // ../be.kuleuven.dsl.rfsm.ui/src-gen/be/kuleuven/dsl/ui/contentassist/antlr/internal/InternalRFSM.g:27:9: '[FunctionName:'
             {
-            match('.'); 
+            match("[FunctionName:"); 
+
 
             }
 
@@ -403,15 +405,35 @@ public class InternalRFSMLexer extends Lexer {
     }
     // $ANTLR end "T__27"
 
+    // $ANTLR start "T__28"
+    public final void mT__28() throws RecognitionException {
+        try {
+            int _type = T__28;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // ../be.kuleuven.dsl.rfsm.ui/src-gen/be/kuleuven/dsl/ui/contentassist/antlr/internal/InternalRFSM.g:28:7: ( '.' )
+            // ../be.kuleuven.dsl.rfsm.ui/src-gen/be/kuleuven/dsl/ui/contentassist/antlr/internal/InternalRFSM.g:28:9: '.'
+            {
+            match('.'); 
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__28"
+
     // $ANTLR start "RULE_ID"
     public final void mRULE_ID() throws RecognitionException {
         try {
             int _type = RULE_ID;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../be.kuleuven.dsl.rfsm.ui/src-gen/be/kuleuven/dsl/ui/contentassist/antlr/internal/InternalRFSM.g:2051:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
-            // ../be.kuleuven.dsl.rfsm.ui/src-gen/be/kuleuven/dsl/ui/contentassist/antlr/internal/InternalRFSM.g:2051:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // ../be.kuleuven.dsl.rfsm.ui/src-gen/be/kuleuven/dsl/ui/contentassist/antlr/internal/InternalRFSM.g:2160:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
+            // ../be.kuleuven.dsl.rfsm.ui/src-gen/be/kuleuven/dsl/ui/contentassist/antlr/internal/InternalRFSM.g:2160:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             {
-            // ../be.kuleuven.dsl.rfsm.ui/src-gen/be/kuleuven/dsl/ui/contentassist/antlr/internal/InternalRFSM.g:2051:11: ( '^' )?
+            // ../be.kuleuven.dsl.rfsm.ui/src-gen/be/kuleuven/dsl/ui/contentassist/antlr/internal/InternalRFSM.g:2160:11: ( '^' )?
             int alt1=2;
             int LA1_0 = input.LA(1);
 
@@ -420,7 +442,7 @@ public class InternalRFSMLexer extends Lexer {
             }
             switch (alt1) {
                 case 1 :
-                    // ../be.kuleuven.dsl.rfsm.ui/src-gen/be/kuleuven/dsl/ui/contentassist/antlr/internal/InternalRFSM.g:2051:11: '^'
+                    // ../be.kuleuven.dsl.rfsm.ui/src-gen/be/kuleuven/dsl/ui/contentassist/antlr/internal/InternalRFSM.g:2160:11: '^'
                     {
                     match('^'); 
 
@@ -438,7 +460,7 @@ public class InternalRFSMLexer extends Lexer {
                 recover(mse);
                 throw mse;}
 
-            // ../be.kuleuven.dsl.rfsm.ui/src-gen/be/kuleuven/dsl/ui/contentassist/antlr/internal/InternalRFSM.g:2051:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // ../be.kuleuven.dsl.rfsm.ui/src-gen/be/kuleuven/dsl/ui/contentassist/antlr/internal/InternalRFSM.g:2160:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             loop2:
             do {
                 int alt2=2;
@@ -487,10 +509,10 @@ public class InternalRFSMLexer extends Lexer {
         try {
             int _type = RULE_INT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../be.kuleuven.dsl.rfsm.ui/src-gen/be/kuleuven/dsl/ui/contentassist/antlr/internal/InternalRFSM.g:2053:10: ( ( '0' .. '9' )+ )
-            // ../be.kuleuven.dsl.rfsm.ui/src-gen/be/kuleuven/dsl/ui/contentassist/antlr/internal/InternalRFSM.g:2053:12: ( '0' .. '9' )+
+            // ../be.kuleuven.dsl.rfsm.ui/src-gen/be/kuleuven/dsl/ui/contentassist/antlr/internal/InternalRFSM.g:2162:10: ( ( '0' .. '9' )+ )
+            // ../be.kuleuven.dsl.rfsm.ui/src-gen/be/kuleuven/dsl/ui/contentassist/antlr/internal/InternalRFSM.g:2162:12: ( '0' .. '9' )+
             {
-            // ../be.kuleuven.dsl.rfsm.ui/src-gen/be/kuleuven/dsl/ui/contentassist/antlr/internal/InternalRFSM.g:2053:12: ( '0' .. '9' )+
+            // ../be.kuleuven.dsl.rfsm.ui/src-gen/be/kuleuven/dsl/ui/contentassist/antlr/internal/InternalRFSM.g:2162:12: ( '0' .. '9' )+
             int cnt3=0;
             loop3:
             do {
@@ -504,7 +526,7 @@ public class InternalRFSMLexer extends Lexer {
 
                 switch (alt3) {
             	case 1 :
-            	    // ../be.kuleuven.dsl.rfsm.ui/src-gen/be/kuleuven/dsl/ui/contentassist/antlr/internal/InternalRFSM.g:2053:13: '0' .. '9'
+            	    // ../be.kuleuven.dsl.rfsm.ui/src-gen/be/kuleuven/dsl/ui/contentassist/antlr/internal/InternalRFSM.g:2162:13: '0' .. '9'
             	    {
             	    matchRange('0','9'); 
 
@@ -536,10 +558,10 @@ public class InternalRFSMLexer extends Lexer {
         try {
             int _type = RULE_STRING;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../be.kuleuven.dsl.rfsm.ui/src-gen/be/kuleuven/dsl/ui/contentassist/antlr/internal/InternalRFSM.g:2055:13: ( ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
-            // ../be.kuleuven.dsl.rfsm.ui/src-gen/be/kuleuven/dsl/ui/contentassist/antlr/internal/InternalRFSM.g:2055:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // ../be.kuleuven.dsl.rfsm.ui/src-gen/be/kuleuven/dsl/ui/contentassist/antlr/internal/InternalRFSM.g:2164:13: ( ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
+            // ../be.kuleuven.dsl.rfsm.ui/src-gen/be/kuleuven/dsl/ui/contentassist/antlr/internal/InternalRFSM.g:2164:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             {
-            // ../be.kuleuven.dsl.rfsm.ui/src-gen/be/kuleuven/dsl/ui/contentassist/antlr/internal/InternalRFSM.g:2055:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // ../be.kuleuven.dsl.rfsm.ui/src-gen/be/kuleuven/dsl/ui/contentassist/antlr/internal/InternalRFSM.g:2164:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             int alt6=2;
             int LA6_0 = input.LA(1);
 
@@ -557,10 +579,10 @@ public class InternalRFSMLexer extends Lexer {
             }
             switch (alt6) {
                 case 1 :
-                    // ../be.kuleuven.dsl.rfsm.ui/src-gen/be/kuleuven/dsl/ui/contentassist/antlr/internal/InternalRFSM.g:2055:16: '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
+                    // ../be.kuleuven.dsl.rfsm.ui/src-gen/be/kuleuven/dsl/ui/contentassist/antlr/internal/InternalRFSM.g:2164:16: '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
                     {
                     match('\"'); 
-                    // ../be.kuleuven.dsl.rfsm.ui/src-gen/be/kuleuven/dsl/ui/contentassist/antlr/internal/InternalRFSM.g:2055:20: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )*
+                    // ../be.kuleuven.dsl.rfsm.ui/src-gen/be/kuleuven/dsl/ui/contentassist/antlr/internal/InternalRFSM.g:2164:20: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )*
                     loop4:
                     do {
                         int alt4=3;
@@ -576,7 +598,7 @@ public class InternalRFSMLexer extends Lexer {
 
                         switch (alt4) {
                     	case 1 :
-                    	    // ../be.kuleuven.dsl.rfsm.ui/src-gen/be/kuleuven/dsl/ui/contentassist/antlr/internal/InternalRFSM.g:2055:21: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' )
+                    	    // ../be.kuleuven.dsl.rfsm.ui/src-gen/be/kuleuven/dsl/ui/contentassist/antlr/internal/InternalRFSM.g:2164:21: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' )
                     	    {
                     	    match('\\'); 
                     	    if ( input.LA(1)=='\"'||input.LA(1)=='\''||input.LA(1)=='\\'||input.LA(1)=='b'||input.LA(1)=='f'||input.LA(1)=='n'||input.LA(1)=='r'||(input.LA(1)>='t' && input.LA(1)<='u') ) {
@@ -592,7 +614,7 @@ public class InternalRFSMLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // ../be.kuleuven.dsl.rfsm.ui/src-gen/be/kuleuven/dsl/ui/contentassist/antlr/internal/InternalRFSM.g:2055:66: ~ ( ( '\\\\' | '\"' ) )
+                    	    // ../be.kuleuven.dsl.rfsm.ui/src-gen/be/kuleuven/dsl/ui/contentassist/antlr/internal/InternalRFSM.g:2164:66: ~ ( ( '\\\\' | '\"' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='!')||(input.LA(1)>='#' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -617,10 +639,10 @@ public class InternalRFSMLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // ../be.kuleuven.dsl.rfsm.ui/src-gen/be/kuleuven/dsl/ui/contentassist/antlr/internal/InternalRFSM.g:2055:86: '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
+                    // ../be.kuleuven.dsl.rfsm.ui/src-gen/be/kuleuven/dsl/ui/contentassist/antlr/internal/InternalRFSM.g:2164:86: '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
                     {
                     match('\''); 
-                    // ../be.kuleuven.dsl.rfsm.ui/src-gen/be/kuleuven/dsl/ui/contentassist/antlr/internal/InternalRFSM.g:2055:91: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )*
+                    // ../be.kuleuven.dsl.rfsm.ui/src-gen/be/kuleuven/dsl/ui/contentassist/antlr/internal/InternalRFSM.g:2164:91: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )*
                     loop5:
                     do {
                         int alt5=3;
@@ -636,7 +658,7 @@ public class InternalRFSMLexer extends Lexer {
 
                         switch (alt5) {
                     	case 1 :
-                    	    // ../be.kuleuven.dsl.rfsm.ui/src-gen/be/kuleuven/dsl/ui/contentassist/antlr/internal/InternalRFSM.g:2055:92: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' )
+                    	    // ../be.kuleuven.dsl.rfsm.ui/src-gen/be/kuleuven/dsl/ui/contentassist/antlr/internal/InternalRFSM.g:2164:92: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' )
                     	    {
                     	    match('\\'); 
                     	    if ( input.LA(1)=='\"'||input.LA(1)=='\''||input.LA(1)=='\\'||input.LA(1)=='b'||input.LA(1)=='f'||input.LA(1)=='n'||input.LA(1)=='r'||(input.LA(1)>='t' && input.LA(1)<='u') ) {
@@ -652,7 +674,7 @@ public class InternalRFSMLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // ../be.kuleuven.dsl.rfsm.ui/src-gen/be/kuleuven/dsl/ui/contentassist/antlr/internal/InternalRFSM.g:2055:137: ~ ( ( '\\\\' | '\\'' ) )
+                    	    // ../be.kuleuven.dsl.rfsm.ui/src-gen/be/kuleuven/dsl/ui/contentassist/antlr/internal/InternalRFSM.g:2164:137: ~ ( ( '\\\\' | '\\'' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='&')||(input.LA(1)>='(' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -695,12 +717,12 @@ public class InternalRFSMLexer extends Lexer {
         try {
             int _type = RULE_ML_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../be.kuleuven.dsl.rfsm.ui/src-gen/be/kuleuven/dsl/ui/contentassist/antlr/internal/InternalRFSM.g:2057:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
-            // ../be.kuleuven.dsl.rfsm.ui/src-gen/be/kuleuven/dsl/ui/contentassist/antlr/internal/InternalRFSM.g:2057:19: '/*' ( options {greedy=false; } : . )* '*/'
+            // ../be.kuleuven.dsl.rfsm.ui/src-gen/be/kuleuven/dsl/ui/contentassist/antlr/internal/InternalRFSM.g:2166:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
+            // ../be.kuleuven.dsl.rfsm.ui/src-gen/be/kuleuven/dsl/ui/contentassist/antlr/internal/InternalRFSM.g:2166:19: '/*' ( options {greedy=false; } : . )* '*/'
             {
             match("/*"); 
 
-            // ../be.kuleuven.dsl.rfsm.ui/src-gen/be/kuleuven/dsl/ui/contentassist/antlr/internal/InternalRFSM.g:2057:24: ( options {greedy=false; } : . )*
+            // ../be.kuleuven.dsl.rfsm.ui/src-gen/be/kuleuven/dsl/ui/contentassist/antlr/internal/InternalRFSM.g:2166:24: ( options {greedy=false; } : . )*
             loop7:
             do {
                 int alt7=2;
@@ -725,7 +747,7 @@ public class InternalRFSMLexer extends Lexer {
 
                 switch (alt7) {
             	case 1 :
-            	    // ../be.kuleuven.dsl.rfsm.ui/src-gen/be/kuleuven/dsl/ui/contentassist/antlr/internal/InternalRFSM.g:2057:52: .
+            	    // ../be.kuleuven.dsl.rfsm.ui/src-gen/be/kuleuven/dsl/ui/contentassist/antlr/internal/InternalRFSM.g:2166:52: .
             	    {
             	    matchAny(); 
 
@@ -755,12 +777,12 @@ public class InternalRFSMLexer extends Lexer {
         try {
             int _type = RULE_SL_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../be.kuleuven.dsl.rfsm.ui/src-gen/be/kuleuven/dsl/ui/contentassist/antlr/internal/InternalRFSM.g:2059:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
-            // ../be.kuleuven.dsl.rfsm.ui/src-gen/be/kuleuven/dsl/ui/contentassist/antlr/internal/InternalRFSM.g:2059:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
+            // ../be.kuleuven.dsl.rfsm.ui/src-gen/be/kuleuven/dsl/ui/contentassist/antlr/internal/InternalRFSM.g:2168:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
+            // ../be.kuleuven.dsl.rfsm.ui/src-gen/be/kuleuven/dsl/ui/contentassist/antlr/internal/InternalRFSM.g:2168:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
             {
             match("//"); 
 
-            // ../be.kuleuven.dsl.rfsm.ui/src-gen/be/kuleuven/dsl/ui/contentassist/antlr/internal/InternalRFSM.g:2059:24: (~ ( ( '\\n' | '\\r' ) ) )*
+            // ../be.kuleuven.dsl.rfsm.ui/src-gen/be/kuleuven/dsl/ui/contentassist/antlr/internal/InternalRFSM.g:2168:24: (~ ( ( '\\n' | '\\r' ) ) )*
             loop8:
             do {
                 int alt8=2;
@@ -773,7 +795,7 @@ public class InternalRFSMLexer extends Lexer {
 
                 switch (alt8) {
             	case 1 :
-            	    // ../be.kuleuven.dsl.rfsm.ui/src-gen/be/kuleuven/dsl/ui/contentassist/antlr/internal/InternalRFSM.g:2059:24: ~ ( ( '\\n' | '\\r' ) )
+            	    // ../be.kuleuven.dsl.rfsm.ui/src-gen/be/kuleuven/dsl/ui/contentassist/antlr/internal/InternalRFSM.g:2168:24: ~ ( ( '\\n' | '\\r' ) )
             	    {
             	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='\t')||(input.LA(1)>='\u000B' && input.LA(1)<='\f')||(input.LA(1)>='\u000E' && input.LA(1)<='\uFFFF') ) {
             	        input.consume();
@@ -793,7 +815,7 @@ public class InternalRFSMLexer extends Lexer {
                 }
             } while (true);
 
-            // ../be.kuleuven.dsl.rfsm.ui/src-gen/be/kuleuven/dsl/ui/contentassist/antlr/internal/InternalRFSM.g:2059:40: ( ( '\\r' )? '\\n' )?
+            // ../be.kuleuven.dsl.rfsm.ui/src-gen/be/kuleuven/dsl/ui/contentassist/antlr/internal/InternalRFSM.g:2168:40: ( ( '\\r' )? '\\n' )?
             int alt10=2;
             int LA10_0 = input.LA(1);
 
@@ -802,9 +824,9 @@ public class InternalRFSMLexer extends Lexer {
             }
             switch (alt10) {
                 case 1 :
-                    // ../be.kuleuven.dsl.rfsm.ui/src-gen/be/kuleuven/dsl/ui/contentassist/antlr/internal/InternalRFSM.g:2059:41: ( '\\r' )? '\\n'
+                    // ../be.kuleuven.dsl.rfsm.ui/src-gen/be/kuleuven/dsl/ui/contentassist/antlr/internal/InternalRFSM.g:2168:41: ( '\\r' )? '\\n'
                     {
-                    // ../be.kuleuven.dsl.rfsm.ui/src-gen/be/kuleuven/dsl/ui/contentassist/antlr/internal/InternalRFSM.g:2059:41: ( '\\r' )?
+                    // ../be.kuleuven.dsl.rfsm.ui/src-gen/be/kuleuven/dsl/ui/contentassist/antlr/internal/InternalRFSM.g:2168:41: ( '\\r' )?
                     int alt9=2;
                     int LA9_0 = input.LA(1);
 
@@ -813,7 +835,7 @@ public class InternalRFSMLexer extends Lexer {
                     }
                     switch (alt9) {
                         case 1 :
-                            // ../be.kuleuven.dsl.rfsm.ui/src-gen/be/kuleuven/dsl/ui/contentassist/antlr/internal/InternalRFSM.g:2059:41: '\\r'
+                            // ../be.kuleuven.dsl.rfsm.ui/src-gen/be/kuleuven/dsl/ui/contentassist/antlr/internal/InternalRFSM.g:2168:41: '\\r'
                             {
                             match('\r'); 
 
@@ -845,10 +867,10 @@ public class InternalRFSMLexer extends Lexer {
         try {
             int _type = RULE_WS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../be.kuleuven.dsl.rfsm.ui/src-gen/be/kuleuven/dsl/ui/contentassist/antlr/internal/InternalRFSM.g:2061:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
-            // ../be.kuleuven.dsl.rfsm.ui/src-gen/be/kuleuven/dsl/ui/contentassist/antlr/internal/InternalRFSM.g:2061:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // ../be.kuleuven.dsl.rfsm.ui/src-gen/be/kuleuven/dsl/ui/contentassist/antlr/internal/InternalRFSM.g:2170:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
+            // ../be.kuleuven.dsl.rfsm.ui/src-gen/be/kuleuven/dsl/ui/contentassist/antlr/internal/InternalRFSM.g:2170:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             {
-            // ../be.kuleuven.dsl.rfsm.ui/src-gen/be/kuleuven/dsl/ui/contentassist/antlr/internal/InternalRFSM.g:2061:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // ../be.kuleuven.dsl.rfsm.ui/src-gen/be/kuleuven/dsl/ui/contentassist/antlr/internal/InternalRFSM.g:2170:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             int cnt11=0;
             loop11:
             do {
@@ -902,8 +924,8 @@ public class InternalRFSMLexer extends Lexer {
         try {
             int _type = RULE_ANY_OTHER;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../be.kuleuven.dsl.rfsm.ui/src-gen/be/kuleuven/dsl/ui/contentassist/antlr/internal/InternalRFSM.g:2063:16: ( . )
-            // ../be.kuleuven.dsl.rfsm.ui/src-gen/be/kuleuven/dsl/ui/contentassist/antlr/internal/InternalRFSM.g:2063:18: .
+            // ../be.kuleuven.dsl.rfsm.ui/src-gen/be/kuleuven/dsl/ui/contentassist/antlr/internal/InternalRFSM.g:2172:16: ( . )
+            // ../be.kuleuven.dsl.rfsm.ui/src-gen/be/kuleuven/dsl/ui/contentassist/antlr/internal/InternalRFSM.g:2172:18: .
             {
             matchAny(); 
 
@@ -918,8 +940,8 @@ public class InternalRFSMLexer extends Lexer {
     // $ANTLR end "RULE_ANY_OTHER"
 
     public void mTokens() throws RecognitionException {
-        // ../be.kuleuven.dsl.rfsm.ui/src-gen/be/kuleuven/dsl/ui/contentassist/antlr/internal/InternalRFSM.g:1:8: ( T__11 | T__12 | T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | RULE_ID | RULE_INT | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER )
-        int alt12=24;
+        // ../be.kuleuven.dsl.rfsm.ui/src-gen/be/kuleuven/dsl/ui/contentassist/antlr/internal/InternalRFSM.g:1:8: ( T__11 | T__12 | T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | RULE_ID | RULE_INT | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER )
+        int alt12=25;
         alt12 = dfa12.predict(input);
         switch (alt12) {
             case 1 :
@@ -1042,49 +1064,56 @@ public class InternalRFSMLexer extends Lexer {
                 }
                 break;
             case 18 :
-                // ../be.kuleuven.dsl.rfsm.ui/src-gen/be/kuleuven/dsl/ui/contentassist/antlr/internal/InternalRFSM.g:1:112: RULE_ID
+                // ../be.kuleuven.dsl.rfsm.ui/src-gen/be/kuleuven/dsl/ui/contentassist/antlr/internal/InternalRFSM.g:1:112: T__28
+                {
+                mT__28(); 
+
+                }
+                break;
+            case 19 :
+                // ../be.kuleuven.dsl.rfsm.ui/src-gen/be/kuleuven/dsl/ui/contentassist/antlr/internal/InternalRFSM.g:1:118: RULE_ID
                 {
                 mRULE_ID(); 
 
                 }
                 break;
-            case 19 :
-                // ../be.kuleuven.dsl.rfsm.ui/src-gen/be/kuleuven/dsl/ui/contentassist/antlr/internal/InternalRFSM.g:1:120: RULE_INT
+            case 20 :
+                // ../be.kuleuven.dsl.rfsm.ui/src-gen/be/kuleuven/dsl/ui/contentassist/antlr/internal/InternalRFSM.g:1:126: RULE_INT
                 {
                 mRULE_INT(); 
 
                 }
                 break;
-            case 20 :
-                // ../be.kuleuven.dsl.rfsm.ui/src-gen/be/kuleuven/dsl/ui/contentassist/antlr/internal/InternalRFSM.g:1:129: RULE_STRING
+            case 21 :
+                // ../be.kuleuven.dsl.rfsm.ui/src-gen/be/kuleuven/dsl/ui/contentassist/antlr/internal/InternalRFSM.g:1:135: RULE_STRING
                 {
                 mRULE_STRING(); 
 
                 }
                 break;
-            case 21 :
-                // ../be.kuleuven.dsl.rfsm.ui/src-gen/be/kuleuven/dsl/ui/contentassist/antlr/internal/InternalRFSM.g:1:141: RULE_ML_COMMENT
+            case 22 :
+                // ../be.kuleuven.dsl.rfsm.ui/src-gen/be/kuleuven/dsl/ui/contentassist/antlr/internal/InternalRFSM.g:1:147: RULE_ML_COMMENT
                 {
                 mRULE_ML_COMMENT(); 
 
                 }
                 break;
-            case 22 :
-                // ../be.kuleuven.dsl.rfsm.ui/src-gen/be/kuleuven/dsl/ui/contentassist/antlr/internal/InternalRFSM.g:1:157: RULE_SL_COMMENT
+            case 23 :
+                // ../be.kuleuven.dsl.rfsm.ui/src-gen/be/kuleuven/dsl/ui/contentassist/antlr/internal/InternalRFSM.g:1:163: RULE_SL_COMMENT
                 {
                 mRULE_SL_COMMENT(); 
 
                 }
                 break;
-            case 23 :
-                // ../be.kuleuven.dsl.rfsm.ui/src-gen/be/kuleuven/dsl/ui/contentassist/antlr/internal/InternalRFSM.g:1:173: RULE_WS
+            case 24 :
+                // ../be.kuleuven.dsl.rfsm.ui/src-gen/be/kuleuven/dsl/ui/contentassist/antlr/internal/InternalRFSM.g:1:179: RULE_WS
                 {
                 mRULE_WS(); 
 
                 }
                 break;
-            case 24 :
-                // ../be.kuleuven.dsl.rfsm.ui/src-gen/be/kuleuven/dsl/ui/contentassist/antlr/internal/InternalRFSM.g:1:181: RULE_ANY_OTHER
+            case 25 :
+                // ../be.kuleuven.dsl.rfsm.ui/src-gen/be/kuleuven/dsl/ui/contentassist/antlr/internal/InternalRFSM.g:1:187: RULE_ANY_OTHER
                 {
                 mRULE_ANY_OTHER(); 
 
@@ -1098,124 +1127,132 @@ public class InternalRFSMLexer extends Lexer {
 
     protected DFA12 dfa12 = new DFA12(this);
     static final String DFA12_eotS =
-        "\1\uffff\1\25\1\uffff\1\33\2\uffff\5\33\1\uffff\1\33\1\uffff\1\25"+
-        "\2\uffff\3\25\6\uffff\1\33\3\uffff\4\33\1\62\2\33\1\uffff\1\33\6"+
-        "\uffff\5\33\1\uffff\6\33\1\uffff\1\33\1\102\2\33\1\105\1\33\1\uffff"+
-        "\1\33\1\uffff\2\33\2\uffff\4\33\1\116\2\33\1\uffff\1\121\1\33\1"+
-        "\uffff\1\123\1\uffff";
+        "\1\uffff\1\26\1\uffff\1\34\2\uffff\6\34\1\uffff\1\34\1\uffff\1\26"+
+        "\2\uffff\3\26\6\uffff\1\34\3\uffff\4\34\1\64\3\34\1\uffff\1\34\6"+
+        "\uffff\5\34\1\uffff\7\34\1\uffff\1\34\1\106\3\34\1\112\1\34\1\uffff"+
+        "\1\34\1\uffff\3\34\2\uffff\1\34\1\uffff\3\34\1\124\2\34\1\uffff"+
+        "\1\127\1\34\1\uffff\1\131\1\uffff";
     static final String DFA12_eofS =
-        "\124\uffff";
+        "\132\uffff";
     static final String DFA12_minS =
-        "\1\0\1\105\1\uffff\1\164\2\uffff\1\156\2\157\1\162\1\156\1\uffff"+
-        "\1\162\1\uffff\1\101\2\uffff\2\0\1\52\6\uffff\1\141\3\uffff\1\164"+
-        "\1\151\1\157\1\141\1\60\1\157\1\145\1\uffff\1\151\6\uffff\1\164"+
-        "\1\162\1\164\1\72\1\156\1\uffff\1\155\1\166\1\157\1\145\1\171\1"+
-        "\72\1\uffff\1\163\1\60\1\145\1\162\1\60\1\72\1\uffff\1\151\1\uffff"+
-        "\1\156\1\151\2\uffff\3\164\1\151\1\60\1\171\1\157\1\uffff\1\60\1"+
-        "\156\1\uffff\1\60\1\uffff";
+        "\1\0\1\105\1\uffff\1\164\2\uffff\1\156\2\157\1\162\1\165\1\156\1"+
+        "\uffff\1\162\1\uffff\1\101\2\uffff\2\0\1\52\6\uffff\1\141\3\uffff"+
+        "\1\164\1\151\1\157\1\141\1\60\1\157\1\141\1\145\1\uffff\1\151\6"+
+        "\uffff\1\164\1\162\1\164\1\72\1\156\1\uffff\1\155\1\162\1\166\1"+
+        "\157\1\145\1\171\1\72\1\uffff\1\163\1\60\1\144\1\145\1\162\1\60"+
+        "\1\72\1\uffff\1\151\1\uffff\1\72\1\156\1\151\2\uffff\1\164\1\uffff"+
+        "\2\164\1\151\1\60\1\171\1\157\1\uffff\1\60\1\156\1\uffff\1\60\1"+
+        "\uffff";
     static final String DFA12_maxS =
-        "\1\uffff\1\122\1\uffff\1\164\2\uffff\1\170\1\157\2\162\1\156\1\uffff"+
-        "\1\162\1\uffff\1\172\2\uffff\2\uffff\1\57\6\uffff\1\141\3\uffff"+
-        "\1\164\1\151\1\157\1\141\1\172\1\157\1\145\1\uffff\1\151\6\uffff"+
-        "\1\164\1\162\1\164\1\72\1\156\1\uffff\1\155\1\166\1\157\1\145\1"+
-        "\171\1\72\1\uffff\1\163\1\172\1\145\1\162\1\172\1\72\1\uffff\1\151"+
-        "\1\uffff\1\156\1\151\2\uffff\3\164\1\151\1\172\1\171\1\157\1\uffff"+
-        "\1\172\1\156\1\uffff\1\172\1\uffff";
+        "\1\uffff\1\122\1\uffff\1\164\2\uffff\1\170\1\157\2\162\1\165\1\156"+
+        "\1\uffff\1\162\1\uffff\1\172\2\uffff\2\uffff\1\57\6\uffff\1\141"+
+        "\3\uffff\1\164\1\151\1\157\1\141\1\172\1\157\1\141\1\145\1\uffff"+
+        "\1\151\6\uffff\1\164\1\162\1\164\1\72\1\156\1\uffff\1\155\1\162"+
+        "\1\166\1\157\1\145\1\171\1\72\1\uffff\1\163\1\172\1\144\1\145\1"+
+        "\162\1\172\1\72\1\uffff\1\151\1\uffff\1\72\1\156\1\151\2\uffff\1"+
+        "\164\1\uffff\2\164\1\151\1\172\1\171\1\157\1\uffff\1\172\1\156\1"+
+        "\uffff\1\172\1\uffff";
     static final String DFA12_acceptS =
-        "\2\uffff\1\2\1\uffff\1\4\1\5\5\uffff\1\15\1\uffff\1\21\1\uffff\1"+
-        "\22\1\23\3\uffff\1\27\1\30\1\1\1\17\1\20\1\2\1\uffff\1\22\1\4\1"+
-        "\5\7\uffff\1\15\1\uffff\1\21\1\23\1\24\1\25\1\26\1\27\5\uffff\1"+
-        "\13\6\uffff\1\7\6\uffff\1\10\1\uffff\1\12\2\uffff\1\3\1\6\7\uffff"+
-        "\1\14\2\uffff\1\16\1\uffff\1\11";
+        "\2\uffff\1\2\1\uffff\1\4\1\5\6\uffff\1\16\1\uffff\1\22\1\uffff\1"+
+        "\23\1\24\3\uffff\1\30\1\31\1\1\1\20\1\21\1\2\1\uffff\1\23\1\4\1"+
+        "\5\10\uffff\1\16\1\uffff\1\22\1\24\1\25\1\26\1\27\1\30\5\uffff\1"+
+        "\13\7\uffff\1\7\7\uffff\1\10\1\uffff\1\12\3\uffff\1\3\1\6\1\uffff"+
+        "\1\14\6\uffff\1\15\2\uffff\1\17\1\uffff\1\11";
     static final String DFA12_specialS =
-        "\1\0\20\uffff\1\2\1\1\101\uffff}>";
+        "\1\2\21\uffff\1\0\1\1\106\uffff}>";
     static final String[] DFA12_transitionS = {
-            "\11\25\2\24\2\25\1\24\22\25\1\24\1\25\1\21\4\25\1\22\4\25\1"+
-            "\13\1\25\1\15\1\23\12\20\7\25\32\17\1\1\1\25\1\2\1\16\1\17\1"+
-            "\25\3\17\1\7\1\6\1\11\10\17\1\12\1\14\2\17\1\3\1\10\6\17\1\4"+
-            "\1\25\1\5\uff82\25",
-            "\1\27\1\30\13\uffff\1\26",
+            "\11\26\2\25\2\26\1\25\22\26\1\25\1\26\1\22\4\26\1\23\4\26\1"+
+            "\14\1\26\1\16\1\24\12\21\7\26\32\20\1\1\1\26\1\2\1\17\1\20\1"+
+            "\26\3\20\1\7\1\6\1\11\1\12\7\20\1\13\1\15\2\20\1\3\1\10\6\20"+
+            "\1\4\1\26\1\5\uff82\26",
+            "\1\30\1\31\13\uffff\1\27",
             "",
-            "\1\32",
+            "\1\33",
             "",
             "",
-            "\1\36\11\uffff\1\37",
-            "\1\40",
-            "\1\42\2\uffff\1\41",
-            "\1\43",
+            "\1\37\11\uffff\1\40",
+            "\1\41",
+            "\1\43\2\uffff\1\42",
             "\1\44",
-            "",
+            "\1\45",
             "\1\46",
             "",
-            "\32\33\4\uffff\1\33\1\uffff\32\33",
+            "\1\50",
+            "",
+            "\32\34\4\uffff\1\34\1\uffff\32\34",
             "",
             "",
-            "\0\51",
-            "\0\51",
-            "\1\52\4\uffff\1\53",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "\1\55",
+            "\0\53",
+            "\0\53",
+            "\1\54\4\uffff\1\55",
             "",
             "",
             "",
-            "\1\56",
+            "",
+            "",
+            "",
             "\1\57",
+            "",
+            "",
+            "",
             "\1\60",
             "\1\61",
-            "\12\33\7\uffff\32\33\4\uffff\1\33\1\uffff\32\33",
+            "\1\62",
             "\1\63",
-            "\1\64",
-            "",
+            "\12\34\7\uffff\32\34\4\uffff\1\34\1\uffff\32\34",
             "\1\65",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
             "\1\66",
             "\1\67",
+            "",
             "\1\70",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
             "\1\71",
             "\1\72",
-            "",
             "\1\73",
             "\1\74",
             "\1\75",
+            "",
             "\1\76",
             "\1\77",
             "\1\100",
-            "",
             "\1\101",
-            "\12\33\7\uffff\32\33\4\uffff\1\33\1\uffff\32\33",
+            "\1\102",
             "\1\103",
             "\1\104",
-            "\12\33\7\uffff\32\33\4\uffff\1\33\1\uffff\32\33",
-            "\1\106",
             "",
+            "\1\105",
+            "\12\34\7\uffff\32\34\4\uffff\1\34\1\uffff\32\34",
             "\1\107",
-            "",
             "\1\110",
             "\1\111",
-            "",
-            "",
-            "\1\112",
+            "\12\34\7\uffff\32\34\4\uffff\1\34\1\uffff\32\34",
             "\1\113",
+            "",
             "\1\114",
+            "",
             "\1\115",
-            "\12\33\7\uffff\32\33\4\uffff\1\33\1\uffff\32\33",
+            "\1\116",
             "\1\117",
+            "",
+            "",
             "\1\120",
             "",
-            "\12\33\7\uffff\32\33\4\uffff\1\33\1\uffff\32\33",
+            "\1\121",
             "\1\122",
+            "\1\123",
+            "\12\34\7\uffff\32\34\4\uffff\1\34\1\uffff\32\34",
+            "\1\125",
+            "\1\126",
             "",
-            "\12\33\7\uffff\32\33\4\uffff\1\33\1\uffff\32\33",
+            "\12\34\7\uffff\32\34\4\uffff\1\34\1\uffff\32\34",
+            "\1\130",
+            "",
+            "\12\34\7\uffff\32\34\4\uffff\1\34\1\uffff\32\34",
             ""
     };
 
@@ -1249,13 +1286,33 @@ public class InternalRFSMLexer extends Lexer {
             this.transition = DFA12_transition;
         }
         public String getDescription() {
-            return "1:1: Tokens : ( T__11 | T__12 | T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | RULE_ID | RULE_INT | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER );";
+            return "1:1: Tokens : ( T__11 | T__12 | T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | RULE_ID | RULE_INT | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER );";
         }
         public int specialStateTransition(int s, IntStream _input) throws NoViableAltException {
             IntStream input = _input;
         	int _s = s;
             switch ( s ) {
                     case 0 : 
+                        int LA12_18 = input.LA(1);
+
+                        s = -1;
+                        if ( ((LA12_18>='\u0000' && LA12_18<='\uFFFF')) ) {s = 43;}
+
+                        else s = 22;
+
+                        if ( s>=0 ) return s;
+                        break;
+                    case 1 : 
+                        int LA12_19 = input.LA(1);
+
+                        s = -1;
+                        if ( ((LA12_19>='\u0000' && LA12_19<='\uFFFF')) ) {s = 43;}
+
+                        else s = 22;
+
+                        if ( s>=0 ) return s;
+                        break;
+                    case 2 : 
                         int LA12_0 = input.LA(1);
 
                         s = -1;
@@ -1277,49 +1334,31 @@ public class InternalRFSMLexer extends Lexer {
 
                         else if ( (LA12_0=='f') ) {s = 9;}
 
-                        else if ( (LA12_0=='o') ) {s = 10;}
+                        else if ( (LA12_0=='g') ) {s = 10;}
 
-                        else if ( (LA12_0==',') ) {s = 11;}
+                        else if ( (LA12_0=='o') ) {s = 11;}
 
-                        else if ( (LA12_0=='p') ) {s = 12;}
+                        else if ( (LA12_0==',') ) {s = 12;}
 
-                        else if ( (LA12_0=='.') ) {s = 13;}
+                        else if ( (LA12_0=='p') ) {s = 13;}
 
-                        else if ( (LA12_0=='^') ) {s = 14;}
+                        else if ( (LA12_0=='.') ) {s = 14;}
 
-                        else if ( ((LA12_0>='A' && LA12_0<='Z')||LA12_0=='_'||(LA12_0>='a' && LA12_0<='c')||(LA12_0>='g' && LA12_0<='n')||(LA12_0>='q' && LA12_0<='r')||(LA12_0>='u' && LA12_0<='z')) ) {s = 15;}
+                        else if ( (LA12_0=='^') ) {s = 15;}
 
-                        else if ( ((LA12_0>='0' && LA12_0<='9')) ) {s = 16;}
+                        else if ( ((LA12_0>='A' && LA12_0<='Z')||LA12_0=='_'||(LA12_0>='a' && LA12_0<='c')||(LA12_0>='h' && LA12_0<='n')||(LA12_0>='q' && LA12_0<='r')||(LA12_0>='u' && LA12_0<='z')) ) {s = 16;}
 
-                        else if ( (LA12_0=='\"') ) {s = 17;}
+                        else if ( ((LA12_0>='0' && LA12_0<='9')) ) {s = 17;}
 
-                        else if ( (LA12_0=='\'') ) {s = 18;}
+                        else if ( (LA12_0=='\"') ) {s = 18;}
 
-                        else if ( (LA12_0=='/') ) {s = 19;}
+                        else if ( (LA12_0=='\'') ) {s = 19;}
 
-                        else if ( ((LA12_0>='\t' && LA12_0<='\n')||LA12_0=='\r'||LA12_0==' ') ) {s = 20;}
+                        else if ( (LA12_0=='/') ) {s = 20;}
 
-                        else if ( ((LA12_0>='\u0000' && LA12_0<='\b')||(LA12_0>='\u000B' && LA12_0<='\f')||(LA12_0>='\u000E' && LA12_0<='\u001F')||LA12_0=='!'||(LA12_0>='#' && LA12_0<='&')||(LA12_0>='(' && LA12_0<='+')||LA12_0=='-'||(LA12_0>=':' && LA12_0<='@')||LA12_0=='\\'||LA12_0=='`'||LA12_0=='|'||(LA12_0>='~' && LA12_0<='\uFFFF')) ) {s = 21;}
+                        else if ( ((LA12_0>='\t' && LA12_0<='\n')||LA12_0=='\r'||LA12_0==' ') ) {s = 21;}
 
-                        if ( s>=0 ) return s;
-                        break;
-                    case 1 : 
-                        int LA12_18 = input.LA(1);
-
-                        s = -1;
-                        if ( ((LA12_18>='\u0000' && LA12_18<='\uFFFF')) ) {s = 41;}
-
-                        else s = 21;
-
-                        if ( s>=0 ) return s;
-                        break;
-                    case 2 : 
-                        int LA12_17 = input.LA(1);
-
-                        s = -1;
-                        if ( ((LA12_17>='\u0000' && LA12_17<='\uFFFF')) ) {s = 41;}
-
-                        else s = 21;
+                        else if ( ((LA12_0>='\u0000' && LA12_0<='\b')||(LA12_0>='\u000B' && LA12_0<='\f')||(LA12_0>='\u000E' && LA12_0<='\u001F')||LA12_0=='!'||(LA12_0>='#' && LA12_0<='&')||(LA12_0>='(' && LA12_0<='+')||LA12_0=='-'||(LA12_0>=':' && LA12_0<='@')||LA12_0=='\\'||LA12_0=='`'||LA12_0=='|'||(LA12_0>='~' && LA12_0<='\uFFFF')) ) {s = 22;}
 
                         if ( s>=0 ) return s;
                         break;

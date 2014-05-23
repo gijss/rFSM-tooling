@@ -33,15 +33,18 @@ class State {
 	contains Function[0..1] exit
 }
 
-@Ecore(constraints="legalBoundaryCrossing")
+@Ecore(constraints="legalBoundaryCrossing noGuardFromInitialTransition")
 //The transition target should point to a node less or equally nested than source node
 //So the parent of the target node is an ancestor of the source node
 @Pivot(legalBoundaryCrossing="isAncestor(self.target->at(1).oclContainer().oclAsType(State), self.source->at(1))")
+//An outgoing transition from an initial connector can't have a guard function
+@Pivot(noGuardFromInitialTransition="(source->at(1)=target->at(1).oclContainer() implies guard.oclIsUndefined()")
 class Transition {
 	String name
 	refers State[] source
 	refers State[] target
 	contains Event[] events
+	contains Function[0..1] guard
 	int priorityNumber
 	
 	//is one ancestor of two?

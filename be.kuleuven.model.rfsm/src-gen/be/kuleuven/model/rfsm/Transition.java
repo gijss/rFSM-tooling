@@ -18,13 +18,14 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link be.kuleuven.model.rfsm.Transition#getSource <em>Source</em>}</li>
  *   <li>{@link be.kuleuven.model.rfsm.Transition#getTarget <em>Target</em>}</li>
  *   <li>{@link be.kuleuven.model.rfsm.Transition#getEvents <em>Events</em>}</li>
+ *   <li>{@link be.kuleuven.model.rfsm.Transition#getGuard <em>Guard</em>}</li>
  *   <li>{@link be.kuleuven.model.rfsm.Transition#getPriorityNumber <em>Priority Number</em>}</li>
  * </ul>
  * </p>
  *
  * @see be.kuleuven.model.rfsm.RfsmPackage#getTransition()
- * @model annotation="http://www.eclipse.org/emf/2002/Ecore constraints='legalBoundaryCrossing'"
- *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot legalBoundaryCrossing='isAncestor(self.target->at(1).oclContainer().oclAsType(State), self.source->at(1))'"
+ * @model annotation="http://www.eclipse.org/emf/2002/Ecore constraints='legalBoundaryCrossing noGuardFromInitialTransition'"
+ *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot legalBoundaryCrossing='isAncestor(self.target->at(1).oclContainer().oclAsType(State), self.source->at(1))' noGuardFromInitialTransition='(source->at(1)=target->at(1).oclContainer() implies guard.oclIsUndefined()'"
  * @generated
  */
 public interface Transition extends EObject
@@ -102,6 +103,32 @@ public interface Transition extends EObject
    * @generated
    */
   EList<Event> getEvents();
+
+  /**
+   * Returns the value of the '<em><b>Guard</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Guard</em>' containment reference isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Guard</em>' containment reference.
+   * @see #setGuard(Function)
+   * @see be.kuleuven.model.rfsm.RfsmPackage#getTransition_Guard()
+   * @model containment="true"
+   * @generated
+   */
+  Function getGuard();
+
+  /**
+   * Sets the value of the '{@link be.kuleuven.model.rfsm.Transition#getGuard <em>Guard</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Guard</em>' containment reference.
+   * @see #getGuard()
+   * @generated
+   */
+  void setGuard(Function value);
 
   /**
    * Returns the value of the '<em><b>Priority Number</b></em>' attribute.

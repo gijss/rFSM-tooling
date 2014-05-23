@@ -307,9 +307,19 @@ public class RfsmPackageImpl extends EPackageImpl implements RfsmPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  public EReference getTransition_Guard()
+  {
+    return (EReference)transitionEClass.getEStructuralFeatures().get(4);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EAttribute getTransition_PriorityNumber()
   {
-    return (EAttribute)transitionEClass.getEStructuralFeatures().get(4);
+    return (EAttribute)transitionEClass.getEStructuralFeatures().get(5);
   }
 
   /**
@@ -430,6 +440,7 @@ public class RfsmPackageImpl extends EPackageImpl implements RfsmPackage
     createEReference(transitionEClass, TRANSITION__SOURCE);
     createEReference(transitionEClass, TRANSITION__TARGET);
     createEReference(transitionEClass, TRANSITION__EVENTS);
+    createEReference(transitionEClass, TRANSITION__GUARD);
     createEAttribute(transitionEClass, TRANSITION__PRIORITY_NUMBER);
     createEOperation(transitionEClass, TRANSITION___IS_ANCESTOR__STATE_STATE);
 
@@ -494,6 +505,7 @@ public class RfsmPackageImpl extends EPackageImpl implements RfsmPackage
     initEReference(getTransition_Source(), this.getState(), null, "source", null, 0, -1, Transition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getTransition_Target(), this.getState(), null, "target", null, 0, -1, Transition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getTransition_Events(), this.getEvent(), null, "events", null, 0, -1, Transition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getTransition_Guard(), this.getFunction(), null, "guard", null, 0, 1, Transition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getTransition_PriorityNumber(), theEcorePackage.getEInt(), "priorityNumber", null, 0, 1, Transition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     EOperation op = initEOperation(getTransition__IsAncestor__State_State(), theEcorePackage.getEBooleanObject(), "isAncestor", 0, 1, !IS_UNIQUE, IS_ORDERED);
@@ -550,7 +562,7 @@ public class RfsmPackageImpl extends EPackageImpl implements RfsmPackage
        source, 
        new String[] 
        {
-       "constraints", "legalBoundaryCrossing"
+       "constraints", "legalBoundaryCrossing noGuardFromInitialTransition"
        });		
   }
 
@@ -595,7 +607,8 @@ public class RfsmPackageImpl extends EPackageImpl implements RfsmPackage
        source, 
        new String[] 
        {
-       "legalBoundaryCrossing", "isAncestor(self.target->at(1).oclContainer().oclAsType(State), self.source->at(1))"
+       "legalBoundaryCrossing", "isAncestor(self.target->at(1).oclContainer().oclAsType(State), self.source->at(1))",
+       "noGuardFromInitialTransition", "(source->at(1)=target->at(1).oclContainer() implies guard.oclIsUndefined()"
        });		
     addAnnotation
       (getTransition__IsAncestor__State_State(), 

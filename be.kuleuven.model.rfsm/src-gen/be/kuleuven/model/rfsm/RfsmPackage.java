@@ -245,13 +245,22 @@ public interface RfsmPackage extends EPackage
   int TRANSITION__EVENTS = 3;
 
   /**
+   * The feature id for the '<em><b>Guard</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int TRANSITION__GUARD = 4;
+
+  /**
    * The feature id for the '<em><b>Priority Number</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int TRANSITION__PRIORITY_NUMBER = 4;
+  int TRANSITION__PRIORITY_NUMBER = 5;
 
   /**
    * The number of structural features of the '<em>Transition</em>' class.
@@ -260,7 +269,7 @@ public interface RfsmPackage extends EPackage
    * @generated
    * @ordered
    */
-  int TRANSITION_FEATURE_COUNT = 5;
+  int TRANSITION_FEATURE_COUNT = 6;
 
   /**
    * The operation id for the '<em>Is Ancestor</em>' operation.
@@ -547,6 +556,17 @@ public interface RfsmPackage extends EPackage
   EReference getTransition_Events();
 
   /**
+   * Returns the meta object for the containment reference '{@link be.kuleuven.model.rfsm.Transition#getGuard <em>Guard</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Guard</em>'.
+   * @see be.kuleuven.model.rfsm.Transition#getGuard()
+   * @see #getTransition()
+   * @generated
+   */
+  EReference getTransition_Guard();
+
+  /**
    * Returns the meta object for the attribute '{@link be.kuleuven.model.rfsm.Transition#getPriorityNumber <em>Priority Number</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -788,6 +808,14 @@ public interface RfsmPackage extends EPackage
      * @generated
      */
     EReference TRANSITION__EVENTS = eINSTANCE.getTransition_Events();
+
+    /**
+     * The meta object literal for the '<em><b>Guard</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference TRANSITION__GUARD = eINSTANCE.getTransition_Guard();
 
     /**
      * The meta object literal for the '<em><b>Priority Number</b></em>' attribute feature.

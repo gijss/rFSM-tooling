@@ -3,6 +3,7 @@
 package be.kuleuven.model.rfsm.impl;
 
 import be.kuleuven.model.rfsm.Event;
+import be.kuleuven.model.rfsm.Function;
 import be.kuleuven.model.rfsm.RfsmPackage;
 import be.kuleuven.model.rfsm.State;
 import be.kuleuven.model.rfsm.Transition;
@@ -40,6 +41,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link be.kuleuven.model.rfsm.impl.TransitionImpl#getSource <em>Source</em>}</li>
  *   <li>{@link be.kuleuven.model.rfsm.impl.TransitionImpl#getTarget <em>Target</em>}</li>
  *   <li>{@link be.kuleuven.model.rfsm.impl.TransitionImpl#getEvents <em>Events</em>}</li>
+ *   <li>{@link be.kuleuven.model.rfsm.impl.TransitionImpl#getGuard <em>Guard</em>}</li>
  *   <li>{@link be.kuleuven.model.rfsm.impl.TransitionImpl#getPriorityNumber <em>Priority Number</em>}</li>
  * </ul>
  * </p>
@@ -97,6 +99,16 @@ public class TransitionImpl extends MinimalEObjectImpl.Container implements Tran
    * @ordered
    */
   protected EList<Event> events;
+
+  /**
+   * The cached value of the '{@link #getGuard() <em>Guard</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getGuard()
+   * @generated
+   * @ordered
+   */
+  protected Function guard;
 
   /**
    * The default value of the '{@link #getPriorityNumber() <em>Priority Number</em>}' attribute.
@@ -209,6 +221,54 @@ public class TransitionImpl extends MinimalEObjectImpl.Container implements Tran
    * <!-- end-user-doc -->
    * @generated
    */
+  public Function getGuard()
+  {
+    return guard;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetGuard(Function newGuard, NotificationChain msgs)
+  {
+    Function oldGuard = guard;
+    guard = newGuard;
+    if (eNotificationRequired())
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, RfsmPackage.TRANSITION__GUARD, oldGuard, newGuard);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setGuard(Function newGuard)
+  {
+    if (newGuard != guard)
+    {
+      NotificationChain msgs = null;
+      if (guard != null)
+        msgs = ((InternalEObject)guard).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - RfsmPackage.TRANSITION__GUARD, null, msgs);
+      if (newGuard != null)
+        msgs = ((InternalEObject)newGuard).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - RfsmPackage.TRANSITION__GUARD, null, msgs);
+      msgs = basicSetGuard(newGuard, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, RfsmPackage.TRANSITION__GUARD, newGuard, newGuard));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public int getPriorityNumber()
   {
     return priorityNumber;
@@ -266,6 +326,8 @@ public class TransitionImpl extends MinimalEObjectImpl.Container implements Tran
     {
       case RfsmPackage.TRANSITION__EVENTS:
         return ((InternalEList<?>)getEvents()).basicRemove(otherEnd, msgs);
+      case RfsmPackage.TRANSITION__GUARD:
+        return basicSetGuard(null, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -288,6 +350,8 @@ public class TransitionImpl extends MinimalEObjectImpl.Container implements Tran
         return getTarget();
       case RfsmPackage.TRANSITION__EVENTS:
         return getEvents();
+      case RfsmPackage.TRANSITION__GUARD:
+        return getGuard();
       case RfsmPackage.TRANSITION__PRIORITY_NUMBER:
         return getPriorityNumber();
     }
@@ -320,6 +384,9 @@ public class TransitionImpl extends MinimalEObjectImpl.Container implements Tran
         getEvents().clear();
         getEvents().addAll((Collection<? extends Event>)newValue);
         return;
+      case RfsmPackage.TRANSITION__GUARD:
+        setGuard((Function)newValue);
+        return;
       case RfsmPackage.TRANSITION__PRIORITY_NUMBER:
         setPriorityNumber((Integer)newValue);
         return;
@@ -349,6 +416,9 @@ public class TransitionImpl extends MinimalEObjectImpl.Container implements Tran
       case RfsmPackage.TRANSITION__EVENTS:
         getEvents().clear();
         return;
+      case RfsmPackage.TRANSITION__GUARD:
+        setGuard((Function)null);
+        return;
       case RfsmPackage.TRANSITION__PRIORITY_NUMBER:
         setPriorityNumber(PRIORITY_NUMBER_EDEFAULT);
         return;
@@ -374,6 +444,8 @@ public class TransitionImpl extends MinimalEObjectImpl.Container implements Tran
         return target != null && !target.isEmpty();
       case RfsmPackage.TRANSITION__EVENTS:
         return events != null && !events.isEmpty();
+      case RfsmPackage.TRANSITION__GUARD:
+        return guard != null;
       case RfsmPackage.TRANSITION__PRIORITY_NUMBER:
         return priorityNumber != PRIORITY_NUMBER_EDEFAULT;
     }
