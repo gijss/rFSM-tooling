@@ -97,4 +97,9 @@ rfsm.[%self.printTransitionBodyToLua();
 		}
 		%]}[%
 	}
+	
+		/*print guard function*/
+	if(transition.guard <> null) {
+		%], guard=[%out.print(transition.guard.sourcecode);%][%
+	}
 }%]
